@@ -3,4 +3,13 @@
     "subTitle":"博客——记录点点滴滴",
     "avatarUrl":"https://github.com/seeu100/blog/assets/138188931/f7f99053-8cce-4845-bed7-a0de9f8e3211",
     "GMEEK_VERSION":"last"
+    "onePageListNum":100,
+    "singlePage":["about"],
+    "startSite":"04/18/2024",
+    "i18n":"CN",
+    "UTC":8,
+    "bottomText":"这里才是你的开始",
+    "rssSplit":"$$$$$$$"
+    "commentLabelColor":"#006b75",
+    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
 }

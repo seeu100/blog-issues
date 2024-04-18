@@ -102,4 +102,6 @@ passwd #设置密码
 passwd newuser #设置密码
 ```
 
+接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 
+
 <!-- ##{"timestamp":1682524800}## -->

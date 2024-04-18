@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Thu, 18 Apr 2024 15:01:31 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>博客笔记</title><link>https://blog.00002000.xyz/post/24.html</link><description>## 2017&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Thu, 18 Apr 2024 16:18:10 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>区块链行业 投资</title><link>https://blog.00002000.xyz/post/27.html</link><description>| 日期 | 投资金额| 公司/项目 | 备注 |&#13;
+| ---      |        ---      |  ---    |        ---      |&#13;
+|2024-04-19 | 750 万美元 | Thruster| Blast 生态 DEX 项目，总部位于新加坡 |&#13;
+$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/27.html</guid><pubDate>Thu, 18 Apr 2024 16:14:23 +0000</pubDate></item><item><title>博客笔记</title><link>https://blog.00002000.xyz/post/24.html</link><description>## 2017&#13;
 * 采用hugo框架搭建博客&#13;
 ## 2023&#13;
 * 重新整理博客并上线 blog.00002000.xyz&#13;

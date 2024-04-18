@@ -9,9 +9,9 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="关于我">
-<title>关于我</title>
-
+<meta name="description" content="Linux开启休眠以及设置低电量自动休眠">
+<title>Linux开启休眠以及设置低电量自动休眠</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 </head>
 <style>
@@ -41,7 +41,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">关于我</h1>
+<h1 class="postTitle">Linux开启休眠以及设置低电量自动休眠</h1>
 <div class="title-right">
     <a href="https://blog.00002000.xyz" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -49,7 +49,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/seeu100/blog/issues/4" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/seeu100/blog/issues/11" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -65,34 +65,50 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><blockquote>
-<p>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</p>
-</blockquote>
-<h2>我的技能</h2>
+<div class="markdown-body" id="postBody"><h2>内核resume恢复机制</h2>
+<ol>
+<li>添加<code class="notranslate">resume</code>钩子，编辑<code class="notranslate">/etc/mkinitcpio.conf</code>，将<code class="notranslate">resume</code>加入HOOKS。</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block filesystems resume fsck)</pre></div>
+<blockquote>
 <ul>
-<li>Linux：日常使用、内核编译、环境搭建、Docker</li>
-<li>网站搭建：Ngnix、DNS解析、Hugo、Github Pages</li>
-<li>基因组组装注释</li>
-<li>系统发育建树</li>
+<li>交换分区都是通过 <code class="notranslate">udev</code> 设备节点来引用的，因此 <code class="notranslate">resume</code> 钩子必须在 <code class="notranslate">udev</code> 钩子之后。</li>
+<li>当使用带有 <code class="notranslate">systemd</code> 钩子的 initramfs 时，已经提供了恢复机制，不需要额外添加钩子。</li>
 </ul>
-<p>半桶水技能：</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Shell 编程</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Python</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> R</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Rust</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> ruby</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> C</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Openwrt</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Android</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Java</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> javascript</li>
-</ul>
-<h2>我的经历</h2>
-<ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> 2021-2024 十大功劳属的分类修订</li>
-</ul></div>
-<div style="font-size:small;margin-top:8px;float:right;"></div>
+</blockquote>
+<ol start="2">
+<li>重新生成<code class="notranslate">initramfs</code>。</li>
+</ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate">mkinitcpio -P</pre></div>
+<h2>Grub 参数</h2>
+<div class="highlight highlight-source-shell"><pre class="notranslate">sudo blkid <span class="pl-c"><span class="pl-c">#</span>查看UUID</span>
+sudo vim /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT=<span class="pl-s"><span class="pl-pds">"</span>loglevel=3 quiet resume=UUID=3c2e77b2-456f-42d2-a455-f5425be5ba71<span class="pl-pds">"</span></span>
+GRUB_CMDLINE_LINUX_DEFAULT=<span class="pl-s"><span class="pl-pds">"</span>loglevel=3 quiet resume=UUID=d5b73551-aefc-47bd-8936-31c05ce47299 resume_offset=3417344<span class="pl-pds">"</span></span> <span class="pl-c"><span class="pl-c">#</span>swapfile</span>
+sudo grub-mkconfig -o /boot/grub/grub.cfg</pre></div>
+<h3>Swapfile</h3>
+<p>除了<code class="notranslate">resume=UUID</code>外，还需<code class="notranslate">resume_offset=</code>:</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">findmnt -no UUID -T /swapfile <span class="pl-c"><span class="pl-c">#</span> 获取resume=UUID</span>
+<span class="pl-c"><span class="pl-c">#</span> resume_offset</span>
+filefrag -v /swapfile <span class="pl-k">|</span> awk <span class="pl-s"><span class="pl-pds">'</span>$1=="0:" {print substr($4, 1, length($4)-2)}<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> 大多数情况</span>
+btrfs inspect-internal map-swapfile -r /swap/swapfile <span class="pl-c"><span class="pl-c">#</span>btrfs文件系统运行这条</span></pre></div>
+<h3>btrfs swapfile</h3>
+<div class="highlight highlight-source-shell"><pre class="notranslate">btrfs subvolume create /swap 
+btrfs filesystem mkswapfile --size 16g --uuid clear /swap/swapfile
+swapon /swap/swapfile
+
+<span class="pl-c"><span class="pl-c">#</span>编辑/etc/fstab 添加</span>
+/swap/swapfile none swap defaults 0 0</pre></div>
+<h2>设置低电量休眠</h2>
+<p>当电池电量极低时，使其休眠，以免丢失数据。<br>
+<code class="notranslate">sudo vim /etc/UPower/UPower.conf</code></p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">PercentageLow=15  <span class="pl-c"><span class="pl-c">#</span> &lt;=15%低电量</span>
+PercentageCritical=10  <span class="pl-c"><span class="pl-c">#</span> &lt;=10%警告电量</span>
+PercentageAction=5  <span class="pl-c"><span class="pl-c">#</span> &lt;=5%执行动作（即CriticalPowerAction)的电量</span>
+CriticalPowerAction=Hibernate <span class="pl-c"><span class="pl-c">#</span> 电量&lt;=5%执行关机</span></pre></div>
+<p>CriticalPowerAction的取值有：<code class="notranslate">Poweroff</code>、<code class="notranslate">Hibernate</code>和<code class="notranslate">Hybid-sleep</code>。</p>
+</div>
+<div style="font-size:small;margin-top:8px;float:right;">这里才是你的开始，<span id="busuanzi">❤️感谢第<span></span>位小伙伴的<span></span>次访问本站。</span></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
 </div>

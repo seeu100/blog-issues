@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/seeu100/blog/assets/138188931/f7f99053-8cce-4845-bed7-a0de9f8e3211</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Thu, 18 Apr 2024 09:52:17 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>13个免费下载 SVG 图标网站</title><link>https://blog.00002000.xyz/post/13-ge-mian-fei-xia-zai-%20SVG%20-tu-biao-wang-zhan.html</link><description>[原文链接](https://blog.csdn.net/Me_Ordinary/article/details/108992807)&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/seeu100/blog/assets/138188931/f7f99053-8cce-4845-bed7-a0de9f8e3211</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Thu, 18 Apr 2024 09:58:01 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>刷机工具-adb、fastboot</title><link>https://blog.00002000.xyz/post/shua-ji-gong-ju--adb%E3%80%81fastboot.html</link><description>下载地址如下：&#13;
+&#13;
+- https://dl.google.com/android/repository/platform-tools-latest-darwin.zip&#13;
+- https://dl.google.com/android/repository/platform-tools-latest-linux.zip&#13;
+- https://dl.google.com/android/repository/platform-tools-latest-windows.zip&#13;
+&#13;
+从此地址下载的工具包将永远是最新版本。$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/shua-ji-gong-ju--adb%E3%80%81fastboot.html</guid><pubDate>Thu, 18 Apr 2024 09:57:36 +0000</pubDate></item><item><title>13个免费下载 SVG 图标网站</title><link>https://blog.00002000.xyz/post/13-ge-mian-fei-xia-zai-%20SVG%20-tu-biao-wang-zhan.html</link><description>[原文链接](https://blog.csdn.net/Me_Ordinary/article/details/108992807)&#13;
 &#13;
 在前端开发过程中，经常会用到各种图标。在各种图标格式中，因为 SVG 既能满足现有图片的功能的前提下，又是矢量图，在可访问性上面也非常不错，并且有利于 SEO 和无障碍，在性能和维护性方面也比 iconfont 要出色许多，是目前使用最广的类型，今天就给大家介绍一些可以免费 SVG 图标的网站。&#13;
 &#13;

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/seeu100/blog/assets/138188931/f7f99053-8cce-4845-bed7-a0de9f8e3211</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Thu, 18 Apr 2024 11:34:25 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>Linux禁止主板蜂鸣音</title><link>https://blog.00002000.xyz/post/Linux-jin-zhi-zhu-ban-feng-ming-yin.html</link><description>在笔记本电脑安装ArchLinux时，启动安装盘系统的时候往往`beep`一声。启动后输命令习惯tab一下，可是命令前面没输对，tab不到后面的时候，又`beep`一声。&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/seeu100/blog/assets/138188931/f7f99053-8cce-4845-bed7-a0de9f8e3211</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Thu, 18 Apr 2024 11:36:37 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>Linux禁止主板蜂鸣音</title><link>https://blog.00002000.xyz/post/Linux-jin-zhi-zhu-ban-feng-ming-yin.html</link><description>在笔记本电脑安装ArchLinux时，启动安装盘系统的时候往往`beep`一声。启动后输命令习惯tab一下，可是命令前面没输对，tab不到后面的时候，又`beep`一声。&#13;
 &#13;
 下面是关闭蜂鸣音的方法：&#13;
 &#13;
@@ -352,7 +352,7 @@ CriticalPowerAction=Hibernate # 电量&lt;=5%执行关机&#13;
 ```&#13;
 CriticalPowerAction的取值有：`Poweroff`、`Hibernate`和`Hybid-sleep`。&#13;
 &#13;
-&lt;!-- ##{"timestamp":1690041600}## --&gt;$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/Linux-kai-qi-xiu-mian-yi-ji-she-zhi-di-dian-liang-zi-dong-xiu-mian.html</guid><pubDate>Sat, 22 Jul 2023 16:00:00 +0000</pubDate></item><item><title>archlinux配置</title><link>https://blog.00002000.xyz/post/archlinux-pei-zhi.html</link><description>接上篇 #15 &#13;
+&lt;!-- ##{"timestamp":1690041600}## --&gt;$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/Linux-kai-qi-xiu-mian-yi-ji-she-zhi-di-dian-liang-zi-dong-xiu-mian.html</guid><pubDate>Sat, 22 Jul 2023 16:00:00 +0000</pubDate></item><item><title>archlinux配置</title><link>https://blog.00002000.xyz/post/archlinux-pei-zhi.html</link><description>接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/archlinux%20-an-zhuang.html) &#13;
 &#13;
 ### 配置镜像&#13;
 ```shell&#13;

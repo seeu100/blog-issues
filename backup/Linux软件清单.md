@@ -88,10 +88,10 @@ virtualbox virtualbox-guest-iso #虚拟机
 sudo systemctl enable --now sycnthing@erwa
 
 
-
+ranger #命令行下文件管理工具
 
 ntfs-3g #读取其他文件系统
-teeworlds #联机对战游戏
+
 keepassxc #密码管理器
 
 
@@ -126,7 +126,11 @@ sudo systemctl enable --now bluetooth
 
 downgrade #降级软件包
 texlive-core #pdf
-```
 
+```
+## 游戏
+```shell
+teeworlds #联机对战游戏
+```
 
 <!-- ##{"timestamp":1682524800}## -->

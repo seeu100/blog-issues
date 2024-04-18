@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/seeu100/blog/assets/138188931/f7f99053-8cce-4845-bed7-a0de9f8e3211</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Thu, 18 Apr 2024 10:11:34 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>nssm - Windows服务封装程序</title><link>https://blog.00002000.xyz/post/nssm%20-%20Windows-fu-wu-feng-zhuang-cheng-xu.html</link><description>**对于Windows平台来说，很多软件或系统的后台服务是基于windows服务的方式运行的，它的优势是稳定可靠，有进程保护**。&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.com/seeu100/blog/assets/138188931/f7f99053-8cce-4845-bed7-a0de9f8e3211</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Thu, 18 Apr 2024 10:13:19 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>nssm - Windows服务封装程序</title><link>https://blog.00002000.xyz/post/nssm%20-%20Windows-fu-wu-feng-zhuang-cheng-xu.html</link><description>**对于Windows平台来说，很多软件或系统的后台服务是基于windows服务的方式运行的，它的优势是稳定可靠，有进程保护**。&#13;
 &#13;
 **NSSM是一个服务封装程序，它可以将普通exe程序或bat文件封装成服务，使之像windows服务一样运行**。&#13;
 同类型的工具还有微软自己的srvany，不过nssm更加简单易用，并且功能强大。它的特点如下：&#13;
@@ -36,7 +36,20 @@ nssm continue &lt;servicename&gt; #暂停/继续服务&#13;
 nssm status &lt;servicename&gt; #查看服务状态&#13;
 &#13;
 ```&#13;
-$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/nssm%20-%20Windows-fu-wu-feng-zhuang-cheng-xu.html</guid><pubDate>Thu, 18 Apr 2024 10:03:49 +0000</pubDate></item><item><title>刷机工具-adb、fastboot</title><link>https://blog.00002000.xyz/post/shua-ji-gong-ju--adb%E3%80%81fastboot.html</link><description>下载地址如下：&#13;
+$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/nssm%20-%20Windows-fu-wu-feng-zhuang-cheng-xu.html</guid><pubDate>Thu, 18 Apr 2024 10:03:49 +0000</pubDate></item><item><title>小米 13 Pro 刷机资源</title><link>https://blog.00002000.xyz/post/xiao-mi-%2013%20Pro%20-shua-ji-zi-yuan.html</link><description>## Recovery - TWRP&#13;
+- [General - 📌 [Shared\] OFFICIAL TWRP by skkk | XDA Forums](https://xdaforums.com/t/shared-official-twrp-by-skkk.4549575/)&#13;
+- https://sourceforge.net/projects/recovery-for-xiaomi-devices/files/nuwa/&#13;
+&#13;
+## ROM&#13;
+- [Download Paranoid Android for xiaomi13](https://paranoidandroid.co/xiaomi13/uvite-beta-1)&#13;
+- [Development - Paranoid Android Uvite - Xiaomi 13 (Pro) | XDA Forums](https://xdaforums.com/t/paranoid-android-uvite-xiaomi-13-pro.4648715/)&#13;
+- [Development - Paranoid Android Uvite - Xiaomi 13 (Pro) | XDA Forums](https://xdaforums.com/t/paranoid-android-uvite-xiaomi-13-pro.4630549/)&#13;
+- [Xiaomi 13 Pro (nuwa) Firmware Downloads | Xiaomi Firmware Updater](https://xiaomifirmwareupdater.com/archive/firmware/nuwa/)&#13;
+- [小米 13 Pro (nuwa) 全球版 Fastboot 线刷包 &amp; Recovery 卡刷包 ROM | XiaomiROM.com](https://xiaomirom.com/rom/xiaomi-13-pro-nuwa-global-fastboot-recovery-rom/#下载-小米-13-pro-稳定版-recovery-卡刷包)&#13;
+&#13;
+&#13;
+&#13;
+$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/xiao-mi-%2013%20Pro%20-shua-ji-zi-yuan.html</guid><pubDate>Thu, 18 Apr 2024 09:59:30 +0000</pubDate></item><item><title>刷机工具-adb、fastboot</title><link>https://blog.00002000.xyz/post/shua-ji-gong-ju--adb%E3%80%81fastboot.html</link><description>下载地址如下：&#13;
 &#13;
 - https://dl.google.com/android/repository/platform-tools-latest-darwin.zip&#13;
 - https://dl.google.com/android/repository/platform-tools-latest-linux.zip&#13;
@@ -168,7 +181,7 @@ illustrio 不仅素材库全面，还可以在线自定义配色预览定制的 
 &#13;
 ```html&#13;
 &lt;!-- ##{"timestamp":1490764800}## --&gt;&#13;
-```$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/qian-yi-bo-ke-dao-%20github%20issues.html</guid><pubDate>Thu, 18 Apr 2024 03:52:02 +0000</pubDate></item><item><title>链接</title><link>https://blog.00002000.xyz/link.html</link><description>- [00002000导航](https://00002000.xyz/)$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/link.html</guid><pubDate>Thu, 18 Apr 2024 10:11:08 +0000</pubDate></item><item><title>关于</title><link>https://blog.00002000.xyz/about.html</link><description>&gt; 我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。&#13;
+```$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/qian-yi-bo-ke-dao-%20github%20issues.html</guid><pubDate>Thu, 18 Apr 2024 03:52:02 +0000</pubDate></item><item><title>关于</title><link>https://blog.00002000.xyz/about.html</link><description>&gt; 我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。&#13;
 &#13;
 ## 我的技能&#13;
 &#13;
@@ -193,4 +206,4 @@ illustrio 不仅素材库全面，还可以在线自定义配色预览定制的 
 &#13;
 - [ ] 2021-2024 十大功劳属的分类修订&#13;
 &#13;
-$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/about.html</guid><pubDate>Thu, 18 Apr 2024 09:51:48 +0000</pubDate></item></channel></rss>
+$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/about.html</guid><pubDate>Thu, 18 Apr 2024 09:51:48 +0000</pubDate></item><item><title>链接</title><link>https://blog.00002000.xyz/link.html</link><description>- [00002000导航](https://00002000.xyz/)$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/link.html</guid><pubDate>Thu, 18 Apr 2024 10:11:08 +0000</pubDate></item></channel></rss>

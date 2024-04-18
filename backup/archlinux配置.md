@@ -1,4 +1,4 @@
-接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/archlinux%20-an-zhuang.html) 
+接上篇 #15  [archlinux 安装](https://blog.00002000.xyz/post/15.html) 
 
 ### 配置镜像
 ```shell

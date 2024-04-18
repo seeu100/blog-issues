@@ -14,6 +14,6 @@
     "style":"<style>#busuanzi_value_site_uv{color:red}#busuanzi_value_site_pv{color:red}</style>",
     "rssSplit":"$$$$$$$",
     "commentLabelColor":"#006b75",
-    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"]
-    "urlMode":"issue",
+    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
+    "urlMode":"issue"
 }

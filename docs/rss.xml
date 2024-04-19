@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 19 Apr 2024 09:00:06 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>test</title><link>https://blog.00002000.xyz/post/46.html</link><guid isPermaLink="true">https://blog.00002000.xyz/post/46.html</guid><pubDate>Fri, 19 Apr 2024 08:51:34 +0000</pubDate></item><item><title>TypeError: object of type 'NoneType' has no len()</title><link>https://blog.00002000.xyz/post/45.html</link><description>实例脚本：https://github.com/Meekdai/Gmeek/blob/main/Gmeek.py&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 19 Apr 2024 09:23:03 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>好看的颜色</title><link>https://blog.00002000.xyz/post/46.html</link><description>| 序号 | 名称 | RGB | 十六进制 |&#13;
+| --- | --- | --- | --- |&#13;
+| 1 | &lt;span style="background:#C7EDCC;"&gt;豆沙绿&lt;/span&gt; | (199, 237, 204) | #C7EDCC |&#13;
+| 2 | &lt;span style="background:#FFFFFF;"&gt;银河白&lt;/span&gt; | (255, 255, 255) | #FFFFFF |&#13;
+| 3 | &lt;span style="background:#FAF9DE;"&gt;杏仁黄&lt;/span&gt; | (250, 249, 222) | #FAF9DE |&#13;
+| 4 | &lt;span style="background:#FFF2E2;"&gt;秋叶褐&lt;/span&gt; | (255, 242, 226) | #FFF2E2 |&#13;
+| 5 | &lt;span style="background:#FDE6E0;"&gt;胭脂红&lt;/span&gt; | (253, 230, 224) | #FDE6E0 |&#13;
+| 6 | &lt;span style="background:#E3EDCD;"&gt;青草绿&lt;/span&gt; | (227, 237, 205) | #E3EDCD |&#13;
+| 7 | &lt;span style="background:#DCE2F1;"&gt;海天蓝&lt;/span&gt; | (220, 226, 241) | #DCE2F1 |&#13;
+| 8 | &lt;span style="background:#E9EBFE;"&gt;葛巾紫&lt;/span&gt; | (233, 235, 254) | #E9EBFE |&#13;
+| 9 | &lt;span style="background:#EAEAEF;"&gt;极光灰&lt;/span&gt; | (234, 234, 239) | #EAEAEF |&#13;
+| 10 | &lt;span style="background:#B7E8BD;"&gt;苹果绿&lt;/span&gt; | (183, 232, 189) | #B7E8BD |&#13;
+| 11 | &lt;span style="background:#CCE8CF;"&gt;豆沙绿-略暗&lt;/span&gt; | (204, 232, 207) | #CCE8CF |&#13;
+&#13;
+$$$$$$$</description><guid isPermaLink="true">https://blog.00002000.xyz/post/46.html</guid><pubDate>Fri, 19 Apr 2024 08:51:34 +0000</pubDate></item><item><title>TypeError: object of type 'NoneType' has no len()</title><link>https://blog.00002000.xyz/post/45.html</link><description>实例脚本：https://github.com/Meekdai/Gmeek/blob/main/Gmeek.py&#13;
 &#13;
 错误信息：&#13;
 ```python&#13;

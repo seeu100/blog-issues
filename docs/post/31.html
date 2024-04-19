@@ -68,7 +68,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><h2>Linux 命令行睡眠和休眠</h2>
 <div class="highlight highlight-source-shell"><pre class="notranslate">systemctl <span class="pl-c1">suspend</span> <span class="pl-c"><span class="pl-c">#</span>睡眠</span>
 systemctl hibernate <span class="pl-c"><span class="pl-c">#</span>休眠</span></pre></div>
-<p>休眠需要先设置好参数和重新生成<code class="notranslate">initramfs</code>，参考<a href="https://blog.00002000.xyz/post/11.html" rel="nofollow">Linux开启休眠以及设置低电量自动休眠</a>。</p></div>
+<p>休眠需要先设置好参数和重新生成<code class="notranslate">initramfs</code>，参考<a href="https://blog.00002000.xyz/post/11.html" rel="nofollow">Linux开启休眠以及设置低电量自动休眠</a>。</p>
+<h2>调节亮度</h2>
+<div class="highlight highlight-source-shell"><pre class="notranslate">sudo tee /sys/class/backlight/amdgpu_bl0（不同电脑不同）/brightness <span class="pl-k">&lt;&lt;&lt;</span><span class="pl-s">99</span></pre></div>
+<h2>开外置屏幕</h2>
+<div class="highlight highlight-source-shell"><pre class="notranslate">xrandr --output HDMI-1 --auto <span class="pl-c"><span class="pl-c">#</span>开启HDMI-1</span>
+xrandr --output HDMI-1 --above eDP-1 <span class="pl-c"><span class="pl-c">#</span>将HDMI-1置于eDP-1上</span>
+xrandr --output HDMI-1 --primary <span class="pl-c"><span class="pl-c">#</span>将HDMI-1设为主屏幕</span>
+xrandr --output HDMI-1 --off <span class="pl-c"><span class="pl-c">#</span>关闭外置屏幕HDMI-1</span></pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">这里才是你的开始，<span id="busuanzi">❤️感谢第<span></span>位小伙伴的<span></span>次访问本站。</span></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>

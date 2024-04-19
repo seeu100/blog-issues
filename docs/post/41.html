@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="//cdn.staticfile.net/Primer/21.0.7/primer.css" rel="stylesheet" />
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="ArchLinux 生物学软件">
+<title>ArchLinux 生物学软件</title>
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+</style>
+<style>#busuanzi_value_site_uv{color:red}#busuanzi_value_site_pv{color:red}</style>
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">ArchLinux 生物学软件</h1>
+<div class="title-right">
+    <a href="https://blog.00002000.xyz" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/seeu100/blog/issues/41" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>Arch Linux 庞大的的AUR软件库对于装软件的人来说是一种福音。</p>
+<p>利用<code class="notranslate">paru</code>、<code class="notranslate">yay</code>等AUR helper 可以直接安装。</p>
+<h2>目前ArchLinux官方库和AUR里有的软件</h2>
+<p>下面是对列出的生物信息学软件按照其主要作用分类和简要说明，并非严格意义上的排序，因为这些软件服务于不同的生物信息学任务，无法直接进行顺序排列：</p>
+<ol>
+<li>
+<p><strong>序列比对工具</strong></p>
+<ul>
+<li><strong>MAFFT</strong>：快速、灵活的多重序列比对工具，适合处理大规模的蛋白质或核酸序列集。</li>
+<li><strong>ClustalW</strong>：经典的多序列比对软件，常用于小到中规模序列的比对分析。</li>
+<li><strong>muscle</strong>：高效、准确的多序列比对程序，能够快速产生高质量的比对结果。</li>
+</ul>
+</li>
+<li>
+<p><strong>序列修剪</strong></p>
+<ul>
+<li><strong>Gblocks</strong>：从DNA或蛋白质序列比对中移除对齐质量差的位置和高度变异区域。</li>
+<li><strong>trimal</strong>：</li>
+</ul>
+</li>
+<li>
+<p><strong>进化模型选择</strong></p>
+<ul>
+<li><strong>jModelTest</strong> / <strong>modeltest-ng</strong> / <strong>mrmodeltest</strong>：用于选择最优的分子进化模型，对序列数据集的进化速率、替换类型等参数进行估计。</li>
+</ul>
+</li>
+<li>
+<p><strong>系统发育重建与进化树构建</strong></p>
+<ul>
+<li><strong>mrbayes</strong>：基于贝叶斯方法进行系统发育推断，可以生成概率型系统发育树。</li>
+<li><strong>mrbayes-mpi</strong>：mrbayes的并行版本，用于加速大规模数据分析。</li>
+<li><strong>iqtree</strong> / <strong>iqtree-mpi</strong>：高性能的系统发育树构建程序，采用集成似然方法。</li>
+<li><strong>raxml</strong> / <strong>raxml-ng</strong>：快速的最大似然法系统发育树构建软件。</li>
+<li><strong>paup</strong>*：广泛应用于系统发育、生物地理学和分子进化分析的软件包。</li>
+<li><strong>phylip</strong>：一套历史悠久的系统发育和分子进化分析软件集合。</li>
+<li><strong>FastTree</strong>：快速构建大规模进化树的程序，特别是对于超大数据集。</li>
+<li><strong>phyml</strong>：基于最大似然、贝叶斯和邻接法的系统发育树构建工具。</li>
+<li><strong>BEAST</strong> / <strong>BEAST2</strong>：贝叶斯进化分析套件，用于估算物种分化时间、种群动态参数等，并构建带时间尺度的系统发育树。</li>
+<li><strong>paml (PAML)</strong>: 全称“Phylogenetic Analysis by Maximum Likelihood”，基于最大似然法进行分子进化分析的软件包，特别用于研究基因或蛋白质序列的系统发育和自然选择压力。它包含多个模块，其中最著名的可能是codeml，该模块用来检测正选择（positive selection），通过比较不同基因模型下的似然率，计算ω值（非同义替代速率与同义替代速率的比值），从而推断蛋白质编码基因是否经历过适应性进化。</li>
+<li><strong>pamlX</strong>: PAML的图形用户界面版本。</li>
+<li><strong><del>bali-phy</del></strong>: 基于贝叶斯框架进行序列比对和系统发育分析的软件。它能同时估计序列比对和系统发育树，尤其擅长处理高噪声序列数据和具有插入删除事件的数据集。</li>
+</ul>
+</li>
+<li>
+<p><strong>系统发育图形可视化</strong></p>
+<ul>
+<li><strong>figtree</strong>：绘制系统发育树的图形界面软件，易于阅读和修改。</li>
+<li><strong>TreeViewX</strong>：显示和打印系统发育树，提供了对系统发育树分支的排序功能，并且支持导出SVG矢量图像格式的树状图。</li>
+</ul>
+</li>
+<li>
+<p><strong>数据分析与辅助工具</strong></p>
+<ul>
+<li><strong>tracer</strong>：贝叶斯分析结果后处理工具，主要用于检查MCMC模拟的收敛性和有效性。</li>
+<li><strong>seqencematrix</strong>：用于生成序列差异矩阵的工具。</li>
+<li><strong>seaview</strong>：交互式多序列比对和系统发育分析软件。</li>
+<li><strong>MEGA</strong>：分子进化遗传分析软件，可进行多种序列分析和系统发育工作。</li>
+<li><strong>mesquite</strong>：整合了多种演化分析方法的交互式软件包。</li>
+</ul>
+</li>
+<li>
+<p><strong>其他特定用途软件</strong></p>
+<ul>
+<li><strong>popart</strong>：用于展示和分析种群遗传数据的软件。</li>
+<li><strong>MorphoJ</strong>：形态学数据分析工具，适用于形态学特征的系统发育分析。</li>
+<li><strong>Open DELTA</strong>：用于描述分类单元和分析形态数据的软件。</li>
+<li><strong>QGIS</strong>：地理信息系统软件，可用于生态学和地理分布相关的数据分析。</li>
+<li><strong>RStudio</strong>：集成开发环境，支持使用R语言进行广泛的统计分析，包括生物信息学分析。</li>
+<li><strong>python</strong>：编程语言，可通过各种第三方库（如biopython等）进行生物信息学数据处理和分析。</li>
+</ul>
+</li>
+</ol>
+<h2>AUR 包名和简介</h2>
+<p>可在AUR官网查询上游等信息：<a href="https://aur.archlinux.org" rel="nofollow">https://aur.archlinux.org</a></p>
+<ul>
+<li>aur/mafft 7.525-1 [+14 ~0.00]<br>
+Multiple alignment program for amino acid or nucleotide sequences.<br>
+<a href="https://doi.org/10.1093/molbev/mst010" rel="nofollow">https://doi.org/10.1093/molbev/mst010</a></li>
+<li>aur/mafft-extensions 7.525-1 [+14 ~0.00]<br>
+MAFFT extensions</li>
+<li>aur/mafft-mpi 7.525-1 [+14 ~0.00]<br>
+MAFFT MPI support</li>
+<li>aur/mafft-desktop 1.0-1 [+1 ~0.00]<br>
+Desktop File For MAFFT</li>
+<li>aur/clustal-omega 1.2.4-1 [+12 ~0.00]<br>
+Protein sequence alignment program</li>
+<li>aur/clustalw 2.1-4 [+4 ~0.00]<br>
+Clustal W multiple sequence alignment program, version 2.0</li>
+<li>aur/clustalx 2.1-6 [+3 ~0.00]<br>
+Multiple alignment of nucleic acid and protein sequences</li>
+<li>aur/muscle 5.1-1 [+11 ~0.00]<br>
+Multiple sequence comparison by log-expectation</li>
+<li>aur/r-airway 1.22.0-1 [+0 ~0.00]<br>
+RangedSummarizedExperiment for RNA-Seq in airway smooth muscle cells, by Himes et al PLoS<br>
+One 2014</li>
+<li>aur/r-hsmmsinglecell 1.22.0-2 [+0 ~0.00]<br>
+Single-cell RNA-Seq for differentiating human skeletal muscle myoblasts (HSMM)</li>
+<li>aur/r-meat 1.14.0-1 [+0 ~0.00]<br>
+Muscle Epigenetic Age Test</li>
+<li>aur/r-muscle 3.44.0-1 [+0 ~0.00]<br>
+Multiple Sequence Alignment with MUSCLE</li>
+<li>aur/gblocks 0.91b-7 [+1 ~0.00]<br>
+A program written in ANSI C language that eliminates poorly aligned positions and divergent<br>
+regions of an alignment of DNA or protein sequences.<br>
+<a href="https://doi.org/10.1093/oxfordjournals.molbev.a026334" rel="nofollow">https://doi.org/10.1093/oxfordjournals.molbev.a026334</a></li>
+<li>aur/phyml 1:3.3.20220408-1 [+6 ~0.00]<br>
+Builds phylogenies from DNA or protein sequences using a maximum likelihood approach</li>
+<li>aur/staden-io_lib 1.15.0-1 [+6 ~0.00]<br>
+DNA sequence assembly (Gap4) and editing and analysis tools (Spin)</li>
+<li>aur/tcoffee 13.46.0.919e8c6b-1 [+6 ~0.00]<br>
+An alignment tool for Protein, DNA and RNA sequences</li>
+<li>aur/escribe-suite-bin 2_SP55-1 [+5 ~0.00]<br>
+Evolv eScribe Suite - DNA Management Suite and Ecigstats - INTL Version</li>
+<li>aur/jellyfish 2.3.1-1 [+5 ~0.00]<br>
+A tool for fast, memory-efficient counting of k-mers in DNA</li>
+<li>aur/diamond 2.1.9-1 [+3 ~0.00]<br>
+High performance sequence aligner for protein and translated DNA searches with big sequence<br>
+data. <a href="https://doi.org/10.1038/s41592-021-01101-x" rel="nofollow">https://doi.org/10.1038/s41592-021-01101-x</a></li>
+<li>aur/oxdna-cuda 3.6.0-1 [+1 ~0.19] [过时：2024-03-23]<br>
+DNA/RNA/etc simulator, with CUDA support and analysis tools.</li>
+<li>aur/phyml-mpi 1:3.3.20220408-1 [+1 ~0.00]<br>
+Builds phylogenies from DNA or protein sequences using a maximum likelihood approach, using<br>
+multiple processors</li>
+<li>aur/r-minfi 1.48.0-1 [+1 ~0.18]<br>
+Analyze Illumina Infinium DNA methylation arrays</li>
+<li>aur/sequencematrix 1.9-6 [+1 ~0.00]<br>
+Taxonomy-aware DNA sequence processing toolkit</li>
+<li>aur/speciesidentifier 1.9-6 [+1 ~0.00]<br>
+Taxonomy-aware DNA sequence processing toolkit</li>
+<li>aur/genbankexplorer 1.9-6 [+1 ~0.00]<br>
+Taxonomy-aware DNA sequence processing toolkit</li>
+<li>aur/infernal 1.1.5-1 [+1 ~0.00]<br>
+Search DNA sequence databases for RNA structure and sequence similarities using covariance<br>
+models (CMs)</li>
+<li>aur/jmodeltest 2.1.10r20160303-7 [+1 ~0.00]<br>
+Phylogenetic Model Averaging, more models, new heuristics and high-performance computing.<br>
+<a href="https://doi.org/10.1093/molbev/msn083" rel="nofollow">https://doi.org/10.1093/molbev/msn083</a></li>
+<li>aur/raxmlgui 2.0.10-2 [+1 ~0.00]<br>
+A new user-friendly program integrating RAxML-NG and ModelTest-NG for cutting-edge<br>
+phylogenetic analysis. <a href="https://doi.org/10.1111/2041-210X.13512" rel="nofollow">https://doi.org/10.1111/2041-210X.13512</a></li>
+<li>aur/modeltest-gui 0.1.7-8 [+0 ~0.00]<br>
+A New and Scalable Tool for the Selection of DNA and Protein Evolutionary Models.<br>
+<a href="https://doi.org/10.1093/molbev/msz189" rel="nofollow">https://doi.org/10.1093/molbev/msz189</a></li>
+<li>aur/modeltest-ng 0.1.7-6 [+0 ~0.00]<br>
+A New and Scalable Tool for the Selection of DNA and Protein Evolutionary Models.<br>
+<a href="https://doi.org/10.1093/molbev/msz189" rel="nofollow">https://doi.org/10.1093/molbev/msz189</a></li>
+<li>aur/modeltest-ng-mpi 0.1.7-7 [+0 ~0.00]<br>
+A New and Scalable Tool for the Selection of DNA and Protein Evolutionary Models.<br>
+<a href="https://doi.org/10.1093/molbev/msz189" rel="nofollow">https://doi.org/10.1093/molbev/msz189</a></li>
+<li>aur/mrmodeltest 2.4-1 [+0 ~0.00]<br>
+C program for selecting DNA substitution models using PAUP*</li>
+<li>aur/paml 4.10.7-1 [+0 ~0.00]<br>
+Phylogenetic analysis by maximum likelihood. <a href="https://doi.org/10.1093/molbev/msm088" rel="nofollow">https://doi.org/10.1093/molbev/msm088</a></li>
+<li>aur/pamlx 1.3.1-4 [+0 ~0.00]<br>
+A Graphical User Interface for PAML <a href="https://doi.org/10.1093/molbev/mst179" rel="nofollow">https://doi.org/10.1093/molbev/mst179</a></li>
+<li>aur/treeviewx 0.5.0-1 [+0 ~0.00]<br>
+Program to display phylogenetic trees</li>
+<li>aur/ugene 50.0-1 [+1 ~0.00]<br>
+A free open-source cross-platform bioinformatics software</li>
+<li>aur/menugenerator 1.1-1 [+5 ~0.00]<br>
+A simple menu generator for fluxbox openbox jwm that uses xdg-menu.</li>
+<li>aur/ugene-bin 49.1-1 [+4 ~0.00]<br>
+A free cross-platform genome analysis suite (binary release)</li>
+<li>aur/ugene-git 38.1.r485.g113d9908d0-1 [+2 ~0.00]<br>
+A free cross-platform genome analysis suite.</li>
+<li>aur/ugene-cuda 50.0-1 [+1 ~0.00]<br>
+A free open-source cross-platform bioinformatics software (with CUDA)</li>
+<li>aur/r-occugene 1.62.0-2 [+0 ~0.00]<br>
+Functions for Multinomial Occupancy Distribution</li>
+<li>aur/trimal 1.4.1-1 [+0 ~0.00]<br>
+A tool for automated alignment trimming in large-scale phylogenetic analyses</li>
+<li>aur/python-pytrimal 0.7.0-1 [+0 ~0.00]<br>
+Cython bindings and Python interface to trimAl, a tool for automated alignment trimming.</li>
+</ul>
+<ul>
+<li>MAFFT（序列比对）</li>
+<li>ClustalW（序列比对）</li>
+<li>muscle</li>
+<li>gblocks</li>
+<li>jmodeltest</li>
+<li><del>modeltest</del></li>
+<li>modeltest-ng</li>
+<li><del>mrmodeltest</del></li>
+<li>mrbayes（贝叶斯建树）</li>
+<li>mrbayes-mpi</li>
+<li>paup*</li>
+<li>raxml</li>
+<li>raxml-ng</li>
+<li>FastTree</li>
+<li>phyml</li>
+<li>BEAST</li>
+<li>BEAST2</li>
+<li>iqtree</li>
+<li>phylobayes</li>
+<li>phylobayes-mpi</li>
+<li>figtree</li>
+<li><del>treeviewx</del></li>
+<li>tracer</li>
+<li>seqencematrix</li>
+<li>phylip</li>
+<li>ugene</li>
+<li>seaview</li>
+<li>MEGA</li>
+<li>mesquite</li>
+<li><del>paml</del></li>
+<li><del>pamlX</del></li>
+<li><del>bali-phy</del></li>
+<li>phylonium</li>
+<li>popart</li>
+<li>MorphoJ</li>
+<li>Open DELTA</li>
+<li>QGIS</li>
+<li>RStudio</li>
+<li>python</li>
+</ul></div>
+<div style="font-size:small;margin-top:8px;float:right;">这里才是你的开始，<span id="busuanzi">❤️感谢第<span></span>位小伙伴的<span></span>次访问本站。</span></div>
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+</div>
+    <div id="footer">Copyright © <span id="year"></span><a href="https://blog.00002000.xyz"> 一百年后再见 </a>
+<p>
+<span id="runday"></span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a>
+</p>
+
+<script>
+if("03/30/2019"!=""){
+    var now=new Date();
+    var startSite=new Date("03/30/2019");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("year").innerHTML=now.getFullYear();
+    if(""!=""){document.getElementById("runday").innerHTML=" • "+"网站运行"+diffDay+"天"+" • ";}
+    else{document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";}
+}
+</script>
+</div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n\n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","seeu100/blog");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+</script>
+
+
+<script>document.getElementById('busuanzi').id='busuanzi_container_site_uv';busuanzi=document.getElementById('busuanzi_container_site_uv');busuanzi.style.display='none';busuanzi.childNodes[1].id='busuanzi_value_site_uv';busuanzi.childNodes[3].id='busuanzi_value_site_pv';</script><script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>
+</html>

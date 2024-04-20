@@ -9,9 +9,9 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="- 2008年11月：中本聪发表《比特币：一种点对点的电子现金系统》白皮书，提出比特币概念以及其背后的区块链技术。">
+<meta name="description" content="- 2008年11月：中本聪发表了论文“bitcoin：A Peer-to-Peer Electronic Cash System”（《比特币：一种点对点的电子现金系统》）。">
 <meta property="og:title" content="区块链大事记">
-<meta property="og:description" content="- 2008年11月：中本聪发表《比特币：一种点对点的电子现金系统》白皮书，提出比特币概念以及其背后的区块链技术。">
+<meta property="og:description" content="- 2008年11月：中本聪发表了论文“bitcoin：A Peer-to-Peer Electronic Cash System”（《比特币：一种点对点的电子现金系统》）。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.00002000.xyz/post/51.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg">
@@ -71,8 +71,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ul>
-<li>2008年11月：中本聪发表《比特币：一种点对点的电子现金系统》白皮书，提出比特币概念以及其背后的区块链技术。</li>
-<li>2009年1月3日：区块链技术首次实践应用，比特币创世区块被挖出，标志着比特币网络正式启动。</li>
+<li>2008年11月：中本聪发表了论文“bitcoin：A Peer-to-Peer Electronic Cash System”（《比特币：一种点对点的电子现金系统》）。</li>
+<li>2009年1月3日：中本聪在位于芬兰赫尔辛基的一个小型服务器上挖出了第一批50个比特币，被称作上帝区块。</li>
 <li>2011年：Vitalik Buterin首次提出以太坊概念，计划创建一个通用的、图灵完备的区块链平台，支持智能合约。</li>
 <li>2015年：以太坊主网正式上线，智能合约得以大规模应用。</li>
 <li>2016年：DAO攻击事件：以太坊智能合约出现重大漏洞导致大量ETH被盗，此后以太坊进行硬分叉以修复问题。</li>
@@ -154,7 +154,11 @@ console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n\n","padding:5p
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
-
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="1";
+    cmButton.appendChild(span);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");

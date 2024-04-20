@@ -14,7 +14,6 @@
     "bottomText": "这里才是你的开始，<span id=\"busuanzi\">❤️感谢第<span></span>位小伙伴的<span></span>次访问本站。</span>",
     "script":"<script>document.getElementById('busuanzi').id='busuanzi_container_site_uv';busuanzi=document.getElementById('busuanzi_container_site_uv');busuanzi.style.display='none';busuanzi.childNodes[1].id='busuanzi_value_site_uv';busuanzi.childNodes[3].id='busuanzi_value_site_pv';</script><script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>",
     "style":"<style>#busuanzi_value_site_uv{color:red}#busuanzi_value_site_pv{color:red}</style>",
-    "rssSplit":"㥁",
     "commentLabelColor":"#CCE8CF",
     "yearColorList":["#DCDCDC", "＃D3D3D3", "＃C0C0C0", "＃A9A9A9", "＃B0C4DE", "＃8FBC8F", "＃EEE8AA"],
     "urlMode":"issue",

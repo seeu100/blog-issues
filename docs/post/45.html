@@ -9,36 +9,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="实例脚本：https://github.com/Meekdai/Gmeek/blob/main/Gmeek.py
-
-错误信息：
-```python
-TypeError: object of type 'NoneType' has no len()
-```
-
-错误代码定位：
-```python
-self.blogBase[listJsonName][postNum]["wordCount"]=len(issue.body)
-```
-
-尝试获取 `issue.body` 的长度，但 `issue.body` 的值是 `None` 类型，而在 Python 中对 `None` 类型对象调用 `len()` 函数是不合法的，因为 `None` 表示没有值或空值。">
-<meta property="og:title" content="TypeError: object of type 'NoneType' has no len()">
-<meta property="og:description" content="实例脚本：https://github.com/Meekdai/Gmeek/blob/main/Gmeek.py
-
-错误信息：
-```python
-TypeError: object of type 'NoneType' has no len()
-```
-
-错误代码定位：
-```python
-self.blogBase[listJsonName][postNum]["wordCount"]=len(issue.body)
-```
-
-尝试获取 `issue.body` 的长度，但 `issue.body` 的值是 `None` 类型，而在 Python 中对 `None` 类型对象调用 `len()` 函数是不合法的，因为 `None` 表示没有值或空值。">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.00002000.xyz/post/45.html">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg">
+<meta name="description" content="TypeError: object of type 'NoneType' has no len()">
 <title>TypeError: object of type 'NoneType' has no len()</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 

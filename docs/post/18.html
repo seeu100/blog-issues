@@ -9,52 +9,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```shell
-sudo pacman -S docker #安装docker（archlinux为例）
-sudo usermod -aG docker username #添加用户到docker组，否则要root权限才能运行
-newgrp docker
-sudo mkdir /etc/docker
-#添加镜像：
-MIRROR=http://hub-mirror.c.163.com
-cat <<EOF | sudo tee /etc/docker/daemon.json
-{
-  "log-driver": "json-file",
-  "log-opts": {
-    "max-size": "100m"
-  },
-  "registry-mirrors": ["$MIRROR"]
-}
-EOF
-
-sudo systemctl enable docker #开机自启docker服务
-```
-
-<!-- ##{"timestamp":1682524800}## -->。">
-<meta property="og:title" content="docker 镜像">
-<meta property="og:description" content="```shell
-sudo pacman -S docker #安装docker（archlinux为例）
-sudo usermod -aG docker username #添加用户到docker组，否则要root权限才能运行
-newgrp docker
-sudo mkdir /etc/docker
-#添加镜像：
-MIRROR=http://hub-mirror.c.163.com
-cat <<EOF | sudo tee /etc/docker/daemon.json
-{
-  "log-driver": "json-file",
-  "log-opts": {
-    "max-size": "100m"
-  },
-  "registry-mirrors": ["$MIRROR"]
-}
-EOF
-
-sudo systemctl enable docker #开机自启docker服务
-```
-
-<!-- ##{"timestamp":1682524800}## -->。">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.00002000.xyz/post/18.html">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg">
+<meta name="description" content="docker 镜像">
 <title>docker 镜像</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 

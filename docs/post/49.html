@@ -9,13 +9,25 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="[LLaMA 3 模型](https://llama.meta.com/llama3/)：Meta 新一代开源模型，拥有 80 亿和 700 亿两种参数规模，拥有 8K 上下文窗口，经过 15T tokens 训练。">
-<meta property="og:title" content="人工智能大模型">
-<meta property="og:description" content="[LLaMA 3 模型](https://llama.meta.com/llama3/)：Meta 新一代开源模型，拥有 80 亿和 700 亿两种参数规模，拥有 8K 上下文窗口，经过 15T tokens 训练。">
+<meta name="description" content="报错如下：
+Enforce HTTPS — Unavailable for your site because your domain is not properly configured to support HTTPS ([`00002000.xyz`](http://00002000.xyz/)) — [Troubleshooting custom domains](https://docs.github.com/articles/troubleshooting-custom-domains/#https-errors)
+
+HTTPS provides a layer of encryption that prevents others from snooping on or tampering with traffic to your site.
+When HTTPS is enforced, your site will only be served over HTTPS. [Learn more about securing your GitHub Pages site with HTTPS](https://docs.github.com/articles/securing-your-github-pages-site-with-https).
+
+原因：用cloudflare解析DNS记录并开启了代理（proxy），先**取消代理**即可。">
+<meta property="og:title" content="Github Page 自定义域名无法开启强制HTTPS">
+<meta property="og:description" content="报错如下：
+Enforce HTTPS — Unavailable for your site because your domain is not properly configured to support HTTPS ([`00002000.xyz`](http://00002000.xyz/)) — [Troubleshooting custom domains](https://docs.github.com/articles/troubleshooting-custom-domains/#https-errors)
+
+HTTPS provides a layer of encryption that prevents others from snooping on or tampering with traffic to your site.
+When HTTPS is enforced, your site will only be served over HTTPS. [Learn more about securing your GitHub Pages site with HTTPS](https://docs.github.com/articles/securing-your-github-pages-site-with-https).
+
+原因：用cloudflare解析DNS记录并开启了代理（proxy），先**取消代理**即可。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.00002000.xyz/post/28.html">
+<meta property="og:url" content="https://blog.00002000.xyz/post/49.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg">
-<title>人工智能大模型</title>
+<title>Github Page 自定义域名无法开启强制HTTPS</title>
 
 
 </head>
@@ -46,7 +58,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">人工智能大模型</h1>
+<h1 class="postTitle">Github Page 自定义域名无法开启强制HTTPS</h1>
 <div class="title-right">
     <a href="https://blog.00002000.xyz" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -54,7 +66,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/seeu100/blog/issues/28" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/seeu100/blog/issues/49" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -70,7 +82,23 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p><a href="https://llama.meta.com/llama3/" rel="nofollow">LLaMA 3 模型</a>：Meta 新一代开源模型，拥有 80 亿和 700 亿两种参数规模，拥有 8K 上下文窗口，经过 15T tokens 训练。</p></div>
+<div class="markdown-body" id="postBody"><p>报错如下：<br>
+Enforce HTTPS — Unavailable for your site because your domain is not properly configured to support HTTPS (<a href="http://00002000.xyz/" rel="nofollow"><code class="notranslate">00002000.xyz</code></a>) — <a href="https://docs.github.com/articles/troubleshooting-custom-domains/#https-errors">Troubleshooting custom domains</a></p>
+<p>HTTPS provides a layer of encryption that prevents others from snooping on or tampering with traffic to your site.<br>
+When HTTPS is enforced, your site will only be served over HTTPS. <a href="https://docs.github.com/articles/securing-your-github-pages-site-with-https">Learn more about securing your GitHub Pages site with HTTPS</a>.</p>
+<p>原因：用cloudflare解析DNS记录并开启了代理（proxy），先<strong>取消代理</strong>即可。<br>
+运行命令：<code class="notranslate">dig blog.00002000.xyz +noall +answer -t A</code></p>
+<p>开启代理时：</p>
+<pre class="notranslate"><code class="notranslate">blog.00002000.xyz.      600     IN      A       104.21.82.3
+blog.00002000.xyz.      600     IN      A       172.67.167.86
+</code></pre>
+<p>关闭代理时：</p>
+<pre class="notranslate"><code class="notranslate">blog.00002000.xyz.      300     IN      CNAME   seeu100.github.io.
+seeu100.github.io.      3600    IN      A       185.199.108.153
+seeu100.github.io.      3600    IN      A       185.199.109.153
+seeu100.github.io.      3600    IN      A       185.199.110.153
+seeu100.github.io.      3600    IN      A       185.199.111.153
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">这里才是你的开始，<span id="hitokoto"><a href="#" target="_blank" id="hitokoto_text">疏影横斜水清浅，暗香浮动月黄昏。</a></span><span id="busuanzi">❤️感谢第<span></span>位小伙伴的<span></span>次访问本站。</span></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>

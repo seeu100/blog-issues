@@ -15,20 +15,7 @@
 systemctl suspend #睡眠
 systemctl hibernate #休眠
 ```
-休眠需要先设置好参数和重新生成`initramfs`，参考[Linux开启休眠以及设置低电量自动休眠](https://blog.00002000.xyz/post/11.html)。
-
-## 调节亮度
-```shell
-sudo tee /sys/class/backlight/amdgpu_bl0（不同电脑不同）/brightness <<<99
-```
-
-## 开外置屏幕
-```shell
-xrandr --output HDMI-1 --auto #开启HDMI-1
-xrandr --output HDMI-1 --above eDP-1 #将HDMI-1置于eDP-1上
-xrandr --output HDMI-1 --primary #将HDMI-1设为主屏幕
-xrandr --output HDMI-1 --off #关闭外置屏幕HDMI-1
-```㥁">
+休眠需要先设置好参数和重新生成`initramfs`，参考[Linux开启休眠以及设置低电量自动休眠](https://blog.00002000.xyz/post/11.html)。">
 <meta property="og:title" content="Linux系统管理常用命令">
 <meta property="og:description" content="## Linux 命令行睡眠和休眠
 
@@ -36,20 +23,7 @@ xrandr --output HDMI-1 --off #关闭外置屏幕HDMI-1
 systemctl suspend #睡眠
 systemctl hibernate #休眠
 ```
-休眠需要先设置好参数和重新生成`initramfs`，参考[Linux开启休眠以及设置低电量自动休眠](https://blog.00002000.xyz/post/11.html)。
-
-## 调节亮度
-```shell
-sudo tee /sys/class/backlight/amdgpu_bl0（不同电脑不同）/brightness <<<99
-```
-
-## 开外置屏幕
-```shell
-xrandr --output HDMI-1 --auto #开启HDMI-1
-xrandr --output HDMI-1 --above eDP-1 #将HDMI-1置于eDP-1上
-xrandr --output HDMI-1 --primary #将HDMI-1设为主屏幕
-xrandr --output HDMI-1 --off #关闭外置屏幕HDMI-1
-```㥁">
+休眠需要先设置好参数和重新生成`initramfs`，参考[Linux开启休眠以及设置低电量自动休眠](https://blog.00002000.xyz/post/11.html)。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.00002000.xyz/post/31.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg">

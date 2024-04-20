@@ -71,20 +71,33 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><p>在官方示例的基础上增加了来源，效果参考 <a href="https://blog.00002000.xyz/" rel="nofollow">https://blog.00002000.xyz/</a> 底部。</p>
-<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">span</span> <span class="pl-c1">id</span>="<span class="pl-s">hitokoto_text</span>"<span class="pl-kos">&gt;</span>:D<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span> —— <span class="pl-kos">&lt;</span><span class="pl-ent">span</span> <span class="pl-c1">id</span>="<span class="pl-s">hitokoto_from_who</span>"<span class="pl-kos">&gt;</span>:D<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>「<span class="pl-kos">&lt;</span><span class="pl-ent">span</span> <span class="pl-c1">id</span>="<span class="pl-s">hitokoto_from</span>"<span class="pl-kos">&gt;</span>:D<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>」
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c">&lt;!-- 这段代码的功能是从指定API获取一条随机的句子（Hitokoto）并将它展示在HTML页面上 --&gt;</span>
+
+<span class="pl-kos">&lt;</span><span class="pl-ent">span</span> <span class="pl-c1">id</span>="<span class="pl-s">hitokoto_text</span>"<span class="pl-kos">&gt;</span>:D<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span> —— <span class="pl-kos">&lt;</span><span class="pl-ent">span</span> <span class="pl-c1">id</span>="<span class="pl-s">hitokoto_from_who</span>"<span class="pl-kos">&gt;</span>:D<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>「<span class="pl-kos">&lt;</span><span class="pl-ent">span</span> <span class="pl-c1">id</span>="<span class="pl-s">hitokoto_from</span>"<span class="pl-kos">&gt;</span>:D<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>」
+
 <span class="pl-kos">&lt;</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span>
-	<span class="pl-en">fetch</span><span class="pl-kos">(</span><span class="pl-s">'https://v1.hitokoto.cn'</span><span class="pl-kos">)</span>
-	  <span class="pl-kos">.</span><span class="pl-en">then</span><span class="pl-kos">(</span><span class="pl-s1">response</span> <span class="pl-c1">=&gt;</span> <span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-en">json</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">)</span>
-	  <span class="pl-kos">.</span><span class="pl-en">then</span><span class="pl-kos">(</span><span class="pl-s1">data</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
-		<span class="pl-k">const</span> <span class="pl-s1">hitokoto_text</span> <span class="pl-c1">=</span> <span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-en">querySelector</span><span class="pl-kos">(</span><span class="pl-s">'#hitokoto_text'</span><span class="pl-kos">)</span>
-		<span class="pl-s1">hitokoto_text</span><span class="pl-kos">.</span><span class="pl-c1">innerText</span> <span class="pl-c1">=</span> <span class="pl-s1">data</span><span class="pl-kos">.</span><span class="pl-c1">hitokoto</span>
-		<span class="pl-k">const</span> <span class="pl-s1">hitokoto_from</span> <span class="pl-c1">=</span> <span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-en">querySelector</span><span class="pl-kos">(</span><span class="pl-s">'#hitokoto_from'</span><span class="pl-kos">)</span>
-		<span class="pl-s1">hitokoto_from</span><span class="pl-kos">.</span><span class="pl-c1">innerText</span> <span class="pl-c1">=</span> <span class="pl-s1">data</span><span class="pl-kos">.</span><span class="pl-c1">from</span>
-		<span class="pl-k">const</span> <span class="pl-s1">hitokoto_from_who</span> <span class="pl-c1">=</span> <span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-en">querySelector</span><span class="pl-kos">(</span><span class="pl-s">'#hitokoto_from_who'</span><span class="pl-kos">)</span>
-		<span class="pl-s1">hitokoto_from_who</span><span class="pl-kos">.</span><span class="pl-c1">innerText</span> <span class="pl-c1">=</span> <span class="pl-s1">data</span><span class="pl-kos">.</span><span class="pl-c1">from_who</span>
-	  <span class="pl-kos">}</span><span class="pl-kos">)</span>
-	  <span class="pl-kos">.</span><span class="pl-en">catch</span><span class="pl-kos">(</span><span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-c1">error</span><span class="pl-kos">)</span>
-  <span class="pl-kos">&lt;/</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span></pre></div>
+  <span class="pl-c">// 使用fetch API发起一个GET请求到'https://v1.hitokoto.cn'这个API地址</span>
+  <span class="pl-en">fetch</span><span class="pl-kos">(</span><span class="pl-s">'https://v1.hitokoto.cn'</span><span class="pl-kos">)</span>
+    <span class="pl-c">// 当请求成功返回响应后，转化为JSON格式的数据</span>
+    <span class="pl-kos">.</span><span class="pl-en">then</span><span class="pl-kos">(</span><span class="pl-s1">response</span> <span class="pl-c1">=&gt;</span> <span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-en">json</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">)</span>
+    <span class="pl-c">// 对JSON数据进一步处理</span>
+    <span class="pl-kos">.</span><span class="pl-en">then</span><span class="pl-kos">(</span><span class="pl-s1">data</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
+      <span class="pl-c">// 获取页面中id为'hitokoto_text'的元素，并将其文本内容设置为API返回的hitokoto字段值</span>
+      <span class="pl-k">const</span> <span class="pl-s1">hitokoto_text</span> <span class="pl-c1">=</span> <span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-en">querySelector</span><span class="pl-kos">(</span><span class="pl-s">'#hitokoto_text'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+      <span class="pl-s1">hitokoto_text</span><span class="pl-kos">.</span><span class="pl-c1">innerText</span> <span class="pl-c1">=</span> <span class="pl-s1">data</span><span class="pl-kos">.</span><span class="pl-c1">hitokoto</span><span class="pl-kos">;</span>
+
+      <span class="pl-c">// 获取页面中id为'hitokoto_from'的元素，并将其文本内容设置为API返回的from字段值</span>
+      <span class="pl-k">const</span> <span class="pl-s1">hitokoto_from</span> <span class="pl-c1">=</span> <span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-en">querySelector</span><span class="pl-kos">(</span><span class="pl-s">'#hitokoto_from'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+      <span class="pl-s1">hitokoto_from</span><span class="pl-kos">.</span><span class="pl-c1">innerText</span> <span class="pl-c1">=</span> <span class="pl-s1">data</span><span class="pl-kos">.</span><span class="pl-c1">from</span><span class="pl-kos">;</span>
+
+      <span class="pl-c">// 获取页面中id为'hitokoto_from_who'的元素，并将其文本内容设置为API返回的from_who字段值</span>
+      <span class="pl-k">const</span> <span class="pl-s1">hitokoto_from_who</span> <span class="pl-c1">=</span> <span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-en">querySelector</span><span class="pl-kos">(</span><span class="pl-s">'#hitokoto_from_who'</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+      <span class="pl-s1">hitokoto_from_who</span><span class="pl-kos">.</span><span class="pl-c1">innerText</span> <span class="pl-c1">=</span> <span class="pl-s1">data</span><span class="pl-kos">.</span><span class="pl-c1">from_who</span><span class="pl-kos">;</span>
+    <span class="pl-kos">}</span><span class="pl-kos">)</span>
+    <span class="pl-c">// 如果在上述过程中出现任何错误，则在控制台输出错误信息</span>
+    <span class="pl-kos">.</span><span class="pl-en">catch</span><span class="pl-kos">(</span><span class="pl-s1">error</span> <span class="pl-c1">=&gt;</span> <span class="pl-smi">console</span><span class="pl-kos">.</span><span class="pl-en">error</span><span class="pl-kos">(</span><span class="pl-s1">error</span><span class="pl-kos">)</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span></pre></div>
+<p>注释说明：这段JavaScript代码会动态加载来自<code class="notranslate">https://v1.hitokoto.cn</code> API接口的一条日文名言（Hitokoto）及相关的作者和出处信息，并将它们分别填充到HTML文档中对应ID的<code class="notranslate">&lt;span&gt;</code>标签内，实现页面内容的动态更新。</p>
 <p><a href="https://developer.hitokoto.cn/sentence/demo.html" rel="nofollow">使用示例 | 一言开发者中心</a><br>
 <a href="https://github.com/hitokoto-osc/sentences-bundle">hitokoto-osc/sentences-bundle: 一言开源社区官方提供的语句库，系 hitokoto.cn 数据库打包集合。语句接口默认使用此库。</a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>

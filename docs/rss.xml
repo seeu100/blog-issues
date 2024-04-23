@@ -1,9 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Tue, 23 Apr 2024 12:02:51 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>免费授权的图片网站</title><link>https://blog.00002000.xyz/post/65.html</link><description>- [4.4 million+ Stunning Free Images to Use Anywhere - Pixabay - Pixabay](https://pixabay.com/)&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Tue, 23 Apr 2024 16:09:13 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>免费授权的图片网站</title><link>https://blog.00002000.xyz/post/65.html</link><description>- [4.4 million+ Stunning Free Images to Use Anywhere - Pixabay - Pixabay](https://pixabay.com/)&#13;
 - [Beautiful Free Images &amp; Pictures | Unsplash](https://unsplash.com/)&#13;
 - [免费素材图片](https://www.pexels.com/zh-cn/)&#13;
 - [NASA](https://www.nasa.gov/)。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/65.html</guid><pubDate>Tue, 23 Apr 2024 12:02:24 +0000</pubDate></item><item><title>植物界</title><link>https://blog.00002000.xyz/post/61.html</link><description>1. **生物界分类历史**：&#13;
-   - 1866年，海克尔提出三界系统。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/61.html</guid><pubDate>Tue, 23 Apr 2024 03:44:36 +0000</pubDate></item><item><title>解决linux挂载U盘时:Not authorized to perform operation</title><link>https://blog.00002000.xyz/post/58.html</link><description>找到文件：`/usr/share/polkit-1/actions/org.freedesktop.udisks2.policy`&#13;
+   - 1866年，海克尔提出三界系统。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/61.html</guid><pubDate>Tue, 23 Apr 2024 03:44:36 +0000</pubDate></item><item><title>conda</title><link>https://blog.00002000.xyz/post/60.html</link><description>```shell&#13;
+conda create -n phylosuite python=3.6.7&#13;
+conda activate phylosuite&#13;
+```。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/60.html</guid><pubDate>Mon, 22 Apr 2024 02:11:13 +0000</pubDate></item><item><title>AI图像生成</title><link>https://blog.00002000.xyz/post/59.html</link><description>## 扩散模型&#13;
+## GAN模型&#13;
+## 一致性模型（Consistency Model）&#13;
+其一，无需对抗训练（adversarial training），就能直接生成高质量的图像样本。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/59.html</guid><pubDate>Mon, 22 Apr 2024 00:02:51 +0000</pubDate></item><item><title>解决linux挂载U盘时:Not authorized to perform operation</title><link>https://blog.00002000.xyz/post/58.html</link><description>找到文件：`/usr/share/polkit-1/actions/org.freedesktop.udisks2.policy`&#13;
 &#13;
 找到对应的action id， 把相应权限都改成Yes即可.&#13;
 ```xml&#13;

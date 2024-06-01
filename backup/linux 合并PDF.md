@@ -1,5 +1,9 @@
 ```shell
 pdftk input1.pdf input2.pdf input3.pdf cat output output.pdf
+
+#提取1-15页为一个文件
+$ pdftk input.pdf cat 1-15 output new.pdf
+
 ```
 
 该命令行使用了`pdftk`工具，它是一个用于处理PDF文件的强大的命令行工具。这条命令的具体功能是将多个PDF文件合并成一个单一的PDF文件。下面是对该命令的详细解释：

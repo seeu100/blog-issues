@@ -11,12 +11,20 @@
     </script>
 <meta name="description" content="```shell
 pdftk input1.pdf input2.pdf input3.pdf cat output output.pdf
+
+#提取1-15页为一个文件
+$ pdftk input.pdf cat 1-15 output new.pdf
+
 ```
 
 该命令行使用了`pdftk`工具，它是一个用于处理PDF文件的强大的命令行工具。">
 <meta property="og:title" content="linux 合并PDF">
 <meta property="og:description" content="```shell
 pdftk input1.pdf input2.pdf input3.pdf cat output output.pdf
+
+#提取1-15页为一个文件
+$ pdftk input.pdf cat 1-15 output new.pdf
+
 ```
 
 该命令行使用了`pdftk`工具，它是一个用于处理PDF文件的强大的命令行工具。">
@@ -78,7 +86,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><div class="highlight highlight-source-shell"><pre class="notranslate">pdftk input1.pdf input2.pdf input3.pdf cat output output.pdf</pre></div>
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-shell"><pre class="notranslate">pdftk input1.pdf input2.pdf input3.pdf cat output output.pdf
+
+<span class="pl-c"><span class="pl-c">#</span>提取1-15页为一个文件</span>
+$ pdftk input.pdf cat 1-15 output new.pdf
+</pre></div>
 <p>该命令行使用了<code class="notranslate">pdftk</code>工具，它是一个用于处理PDF文件的强大的命令行工具。这条命令的具体功能是将多个PDF文件合并成一个单一的PDF文件。下面是对该命令的详细解释：</p>
 <ul>
 <li>

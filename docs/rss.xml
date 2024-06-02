@@ -1,5 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Sat, 01 Jun 2024 03:56:56 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>linux 合并PDF</title><link>https://blog.00002000.xyz/post/78.html</link><description>```shell&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Sun, 02 Jun 2024 03:36:51 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>小果十大功劳 异名考</title><link>https://blog.00002000.xyz/post/79.html</link><description>*M. bodinieri* Gagnep. in Bull. Soc. Bot. France 55: 85, **1908**. &#13;
+**TYPE**: China. Guizhou, environs de Gan-pin, dans les bois et rocailles, et mont du Collège à Kouy-yang[Guiyang], 19 Jul 1898, E. Bodinier 2465 (Holotype: P!, possible fragment (leaflet and dissected flowers) ofholotype: A!).&#13;
+——*Berberis bodinieri* (Gagnep.) Laferr. in Bot. Žurn. (Moscow &amp; Leningrad) 82(9): 96. 19 Nov 1997, non *B. bodinieri* H. Lév., Repert. Spec. Nov. Regni Veg. 9: 454. 1911. &#13;
+&#13;
+---&#13;
+*Berberis*(*Mahonia*) *elegans* H. Lév. in Bull. Soc. Bot. France 51 (4th ser. , 4): 298, 1904. , non Petz. &amp; G. Kirchn., Arbor. Muscav.132, no.101. **1864**. &#13;
+**TYPE**: China. Guizhou, environs de Ganpin, en Chinois Houang-tse, 27 Jul 1897, L. Martin &amp; E. Bodinier 2465 (Lectotype: E!, photograph at A).&#13;
+&#13;
+*Mahonia elegans* Rehder, J. Arnold Arbor. 17: 322. **1936**. &#13;
+Based on the illegitimate name *Berberis elegans* H. Lév. (see above) and typified by the same specimen: CHINA. Guizhou: environs de Gan-pin, en Chinois Houang-tse, 27 Jul 1897, L. Martin &amp; E. Bodinier **2465** (Lectotype, here designated: E, photograph at A).&#13;
+&#13;
+&gt; *Berberis elegans* H. Lév是*B. elegans* Petz. &amp; G. Kirchn. 的晚出同名。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/79.html</guid><pubDate>Sun, 02 Jun 2024 03:36:29 +0000</pubDate></item><item><title>linux 合并PDF</title><link>https://blog.00002000.xyz/post/78.html</link><description>```shell&#13;
 pdftk input1.pdf input2.pdf input3.pdf cat output output.pdf&#13;
 &#13;
 #提取1-15页为一个文件&#13;

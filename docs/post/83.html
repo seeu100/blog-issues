@@ -9,7 +9,26 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="## Arch4edu
+<meta name="description" content="### Bioarchlinux
+
+Add the following content to the `/etc/pacman.conf`
+
+```
+[bioarchlinux]
+Server = https://repo.bioarchlinux.org/$arch
+
+```
+
+install GPG keyring to use bioarchlinux
+
+```
+pacman-key --recv-keys B1F96021DB62254D
+pacman-key --finger B1F96021DB62254D
+pacman-key --lsign-key B1F96021DB62254D
+```
+
+
+## Arch4edu
 
 其中涵盖以下方向的包：
 
@@ -27,7 +46,26 @@
 
 Arch4edu 是面向高校用户推出的非官方软件仓库， 支持 Arch Linux 和 Arch Linux ARM， 主要包含高校用户常用的科研、教学及开发软件。">
 <meta property="og:title" content="archlinux第三方源">
-<meta property="og:description" content="## Arch4edu
+<meta property="og:description" content="### Bioarchlinux
+
+Add the following content to the `/etc/pacman.conf`
+
+```
+[bioarchlinux]
+Server = https://repo.bioarchlinux.org/$arch
+
+```
+
+install GPG keyring to use bioarchlinux
+
+```
+pacman-key --recv-keys B1F96021DB62254D
+pacman-key --finger B1F96021DB62254D
+pacman-key --lsign-key B1F96021DB62254D
+```
+
+
+## Arch4edu
 
 其中涵盖以下方向的包：
 
@@ -102,7 +140,18 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h2>Arch4edu</h2>
+<div class="markdown-body" id="postBody"><h3>Bioarchlinux</h3>
+<p>Add the following content to the <code class="notranslate">/etc/pacman.conf</code></p>
+<pre class="notranslate"><code class="notranslate">[bioarchlinux]
+Server = https://repo.bioarchlinux.org/$arch
+
+</code></pre>
+<p>install GPG keyring to use bioarchlinux</p>
+<pre class="notranslate"><code class="notranslate">pacman-key --recv-keys B1F96021DB62254D
+pacman-key --finger B1F96021DB62254D
+pacman-key --lsign-key B1F96021DB62254D
+</code></pre>
+<h2>Arch4edu</h2>
 <p>其中涵盖以下方向的包：</p>
 <ul>
 <li>

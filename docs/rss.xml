@@ -1,5 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 14 Jun 2024 12:43:44 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>archlinux第三方源</title><link>https://blog.00002000.xyz/post/83.html</link><description>## Arch4edu&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 14 Jun 2024 12:55:34 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>archlinux第三方源</title><link>https://blog.00002000.xyz/post/83.html</link><description>### Bioarchlinux&#13;
+&#13;
+Add the following content to the `/etc/pacman.conf`&#13;
+&#13;
+```&#13;
+[bioarchlinux]&#13;
+Server = https://repo.bioarchlinux.org/$arch&#13;
+&#13;
+```&#13;
+&#13;
+install GPG keyring to use bioarchlinux&#13;
+&#13;
+```&#13;
+pacman-key --recv-keys B1F96021DB62254D&#13;
+pacman-key --finger B1F96021DB62254D&#13;
+pacman-key --lsign-key B1F96021DB62254D&#13;
+```&#13;
+&#13;
+&#13;
+## Arch4edu&#13;
 &#13;
 其中涵盖以下方向的包：&#13;
 &#13;

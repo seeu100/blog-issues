@@ -1,3 +1,22 @@
+### Bioarchlinux
+
+Add the following content to the `/etc/pacman.conf`
+
+```
+[bioarchlinux]
+Server = https://repo.bioarchlinux.org/$arch
+
+```
+
+install GPG keyring to use bioarchlinux
+
+```
+pacman-key --recv-keys B1F96021DB62254D
+pacman-key --finger B1F96021DB62254D
+pacman-key --lsign-key B1F96021DB62254D
+```
+
+
 ## Arch4edu
 
 其中涵盖以下方向的包：
@@ -78,5 +97,7 @@ BlackArch 主页
 收录的工具列表
 
 *[https://blackarch.org/tools.html](https://blackarch.org/tools.html)*
+
+
 
 https://www.cnblogs.com/vconlln/p/17065422.html

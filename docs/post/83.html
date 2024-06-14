@@ -9,9 +9,41 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="Arch4edu 是面向高校用户推出的非官方软件仓库，支持 Arch Linux 和 Arch Linux ARM，主要包含高校用户常用的科研、教学及开发软件。">
+<meta name="description" content="## Arch4edu
+
+其中涵盖以下方向的包：
+
+*   机器学习工具：tensorflow, caffe, torch等等
+
+*   IDE及编辑器：android-studio, pycharm, vs code, sublime等等
+
+*   Android开发：android-studio, android-sdk, android-ndk等等
+
+*   语音信号处理：kaldi, cmusphinx, opensmile等等(我实验室的方向)
+
+*   图像处理：opencv-git
+
+*   通用：anaconda, zotero, atlas-lapack, openblas等等
+
+Arch4edu 是面向高校用户推出的非官方软件仓库， 支持 Arch Linux 和 Arch Linux ARM， 主要包含高校用户常用的科研、教学及开发软件。">
 <meta property="og:title" content="archlinux第三方源">
-<meta property="og:description" content="Arch4edu 是面向高校用户推出的非官方软件仓库，支持 Arch Linux 和 Arch Linux ARM，主要包含高校用户常用的科研、教学及开发软件。">
+<meta property="og:description" content="## Arch4edu
+
+其中涵盖以下方向的包：
+
+*   机器学习工具：tensorflow, caffe, torch等等
+
+*   IDE及编辑器：android-studio, pycharm, vs code, sublime等等
+
+*   Android开发：android-studio, android-sdk, android-ndk等等
+
+*   语音信号处理：kaldi, cmusphinx, opensmile等等(我实验室的方向)
+
+*   图像处理：opencv-git
+
+*   通用：anaconda, zotero, atlas-lapack, openblas等等
+
+Arch4edu 是面向高校用户推出的非官方软件仓库， 支持 Arch Linux 和 Arch Linux ARM， 主要包含高校用户常用的科研、教学及开发软件。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.00002000.xyz/post/83.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg">
@@ -70,8 +102,38 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>Arch4edu 是面向高校用户推出的非官方软件仓库，支持 Arch Linux 和 Arch Linux ARM，主要包含高校用户常用的科研、教学及开发软件。</p>
-<h2>使用方法</h2>
+<div class="markdown-body" id="postBody"><h2>Arch4edu</h2>
+<p>其中涵盖以下方向的包：</p>
+<ul>
+<li>
+<p>机器学习工具：tensorflow, caffe, torch等等</p>
+</li>
+<li>
+<p>IDE及编辑器：android-studio, pycharm, vs code, sublime等等</p>
+</li>
+<li>
+<p>Android开发：android-studio, android-sdk, android-ndk等等</p>
+</li>
+<li>
+<p>语音信号处理：kaldi, cmusphinx, opensmile等等(我实验室的方向)</p>
+</li>
+<li>
+<p>图像处理：opencv-git</p>
+</li>
+<li>
+<p>通用：anaconda, zotero, atlas-lapack, openblas等等</p>
+</li>
+</ul>
+<p>Arch4edu 是面向高校用户推出的非官方软件仓库， 支持 Arch Linux 和 Arch Linux ARM， 主要包含高校用户常用的科研、教学及开发软件。</p>
+<ul>
+<li>
+<p>项目地址：<em><a href="https://github.com/arch4edu/arch4edu">https://github.com/arch4edu/arch4edu</a></em></p>
+</li>
+<li>
+<p>镜像地址：<em><a href="https://mirrors.tuna.tsinghua.edu.cn/arch4edu" rel="nofollow">https://mirrors.tuna.tsinghua.edu.cn/arch4edu</a></em></p>
+</li>
+</ul>
+<h3>使用方法</h3>
 <ol>
 <li>导入 GPG key</li>
 </ol>
@@ -82,7 +144,30 @@ pacman-key --lsign-key 7931B6D628C8D3BA</pre></div>
 <li>在 <code class="notranslate">/etc/pacman.conf</code> 文件末尾添加以下内容：</li>
 </ol>
 <div class="highlight highlight-source-shell"><pre class="notranslate">[arch4edu]
-Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/<span class="pl-smi">$arch</span></pre></div></div>
+Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/<span class="pl-smi">$arch</span></pre></div>
+<h2>Black Arch</h2>
+<p>地址</p>
+<p><em><a href="https://mirrors.ustc.edu.cn/blackarch/" rel="nofollow">https://mirrors.ustc.edu.cn/blackarch/</a></em></p>
+<p>说明</p>
+<p>BlackArch 是一款基于 ArchLinux 的为渗透测试及安全研究人员开发的发行版，相当于 Arch 版的 BackTrack/Kali。</p>
+<p>仓库地址：<em><a href="https://blackarch.org/blackarch/" rel="nofollow">https://blackarch.org/blackarch/</a></em></p>
+<p>收录架构</p>
+<p>i686, x86_64, ARM 相关（目前包含 armv6h/armv7h/aarch64）</p>
+<p>使用说明</p>
+<p>在 /etc/pacman.conf 文件末尾添加两行：</p>
+<div class="highlight highlight-source-ini"><pre class="notranslate"><span class="pl-en">[blackarch]</span>
+
+<span class="pl-k">Server</span> = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
+</pre></div>
+<p>然后请安装 blackarch-keyring 包以导入 GPG key。</p>
+<p>小技巧</p>
+<p>Black Arch 软件源仅包含其打包的工具等软件。如果需要更换 Arch Linux 基础系统的软件源，请查看 Arch Linux 源使用帮助。</p>
+<p>相关链接</p>
+<p>BlackArch 主页</p>
+<p><em><a href="https://blackarch.org" rel="nofollow">https://blackarch.org</a></em></p>
+<p>收录的工具列表</p>
+<p><em><a href="https://blackarch.org/tools.html" rel="nofollow">https://blackarch.org/tools.html</a></em></p>
+<p><a href="https://www.cnblogs.com/vconlln/p/17065422.html" rel="nofollow">https://www.cnblogs.com/vconlln/p/17065422.html</a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>

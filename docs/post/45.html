@@ -96,14 +96,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><p>实例脚本：<a href="https://github.com/Meekdai/Gmeek/blob/main/Gmeek.py">https://github.com/Meekdai/Gmeek/blob/main/Gmeek.py</a></p>
 <p>错误信息：</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-v">TypeError</span>: <span class="pl-s1">object</span> <span class="pl-s1">of</span> <span class="pl-s1">type</span> <span class="pl-s">'NoneType'</span> <span class="pl-s1">has</span> <span class="pl-s1">no</span> <span class="pl-en">len</span>()</pre></div>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-v">TypeError</span>: <span class="pl-s1">object</span> <span class="pl-s1">of</span> type <span class="pl-s">'NoneType'</span> <span class="pl-s1">has</span> <span class="pl-s1">no</span> <span class="pl-en">len</span>()</pre></div>
 <p>错误代码定位：</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">self</span>.<span class="pl-s1">blogBase</span>[<span class="pl-s1">listJsonName</span>][<span class="pl-s1">postNum</span>][<span class="pl-s">"wordCount"</span>]<span class="pl-c1">=</span><span class="pl-en">len</span>(<span class="pl-s1">issue</span>.<span class="pl-s1">body</span>)</pre></div>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">self</span>.<span class="pl-c1">blogBase</span>[<span class="pl-s1">listJsonName</span>][<span class="pl-s1">postNum</span>][<span class="pl-s">"wordCount"</span>]<span class="pl-c1">=</span><span class="pl-en">len</span>(<span class="pl-s1">issue</span>.<span class="pl-c1">body</span>)</pre></div>
 <p>尝试获取 <code class="notranslate">issue.body</code> 的长度，但 <code class="notranslate">issue.body</code> 的值是 <code class="notranslate">None</code> 类型，而在 Python 中对 <code class="notranslate">None</code> 类型对象调用 <code class="notranslate">len()</code> 函数是不合法的，因为 <code class="notranslate">None</code> 表示没有值或空值。</p>
 <p>即将某个 GitHub issue 的正文内容（即 <code class="notranslate">issue.body</code>）的长度赋值给博客基础数据结构（<code class="notranslate">self.blogBase[listJsonName][postNum]["wordCount"]</code>）。当遇到无法获取到 issue 正文或者正文为空时，会引发 TypeError。</p>
 <p>解决这个问题的办法是在执行 <code class="notranslate">len(issue.body)</code> 之前，先检查 <code class="notranslate">issue.body</code> 是否非空：</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">if</span> <span class="pl-s1">issue</span>.<span class="pl-s1">body</span> <span class="pl-c1">is</span> <span class="pl-c1">not</span> <span class="pl-c1">None</span>:
-    <span class="pl-s1">self</span>.<span class="pl-s1">blogBase</span>[<span class="pl-s1">listJsonName</span>][<span class="pl-s1">postNum</span>][<span class="pl-s">"wordCount"</span>] <span class="pl-c1">=</span> <span class="pl-en">len</span>(<span class="pl-s1">issue</span>.<span class="pl-s1">body</span>)
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">if</span> <span class="pl-s1">issue</span>.<span class="pl-c1">body</span> <span class="pl-c1"><span class="pl-c1">is</span> <span class="pl-c1">not</span></span> <span class="pl-c1">None</span>:
+    <span class="pl-s1">self</span>.<span class="pl-c1">blogBase</span>[<span class="pl-s1">listJsonName</span>][<span class="pl-s1">postNum</span>][<span class="pl-s">"wordCount"</span>] <span class="pl-c1">=</span> <span class="pl-en">len</span>(<span class="pl-s1">issue</span>.<span class="pl-c1">body</span>)
 <span class="pl-k">else</span>:
     <span class="pl-c"># 处理 body 为空的情况，可以设置默认值或者跳过</span>
     <span class="pl-k">pass</span></pre></div></div>

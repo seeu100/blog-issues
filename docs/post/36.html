@@ -73,14 +73,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><p>有几种方式，这是对其效率的测试。</p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">os</span>
 <span class="pl-k">import</span> <span class="pl-s1">time</span>
-<span class="pl-s1">a</span><span class="pl-c1">=</span> <span class="pl-s1">time</span>.<span class="pl-en">time</span>()
+<span class="pl-s1">a</span><span class="pl-c1">=</span> <span class="pl-s1">time</span>.<span class="pl-c1">time</span>()
 <span class="pl-c">#os.system('gunzip 1-Input_sequence_R2.fastq.gz')  # 89s</span>
 <span class="pl-c">#os.system('./unpigz -p 4 1-Input_sequence_R2.fastq.gz') #37s</span>
 
 <span class="pl-c">#os.system('gzip 1-Input_sequence_R2.fastq')       # 1200s</span>
 <span class="pl-c">#os.system('./pigz -p 4 1-Input_sequence_R2.fastq') # 292s</span>
 
-<span class="pl-s1">b</span><span class="pl-c1">=</span><span class="pl-s1">time</span>.<span class="pl-en">time</span>()
+<span class="pl-s1">b</span><span class="pl-c1">=</span><span class="pl-s1">time</span>.<span class="pl-c1">time</span>()
 <span class="pl-k">print</span> <span class="pl-s1">b</span><span class="pl-c1">-</span><span class="pl-s1">a</span></pre></div>
 <p>最终pigz得胜，使用方法如下：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">unpigz -p 4 1-Input_sequence_R2.fastq.gz <span class="pl-c"><span class="pl-c">#</span>解压</span>

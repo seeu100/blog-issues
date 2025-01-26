@@ -20,7 +20,7 @@ TreeView X 是一款开源程序，专为Linux、Unix、Mac OS X和Windows操作
 <meta property="og:url" content="https://blog.00002000.xyz/post/39.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/seeu100/blog/logo.svg">
 <title>treeviewx - 系统发育树可视化</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 </head>
 <style>
@@ -83,53 +83,51 @@ License: <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html" rel="no
 Labels:<br>
 <a href="https://code.google.com/archive/search?q=domain:code.google.com%20label:CPlusPlus" rel="nofollow">CPlusPlus</a> <a href="https://code.google.com/archive/search?q=domain:code.google.com%20label:visualisation" rel="nofollow">visualisation</a> <a href="https://code.google.com/archive/search?q=domain:code.google.com%20label:phylogeny" rel="nofollow">phylogeny</a></p>
 <h2>编译安装</h2>
-<pre lang="shell" class="notranslate"><code class="notranslate">待补充
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">待补充</pre></div>
 <p>参考<a href="https://code.google.com/archive/p/treeviewx/wikis/Compiling.wiki" rel="nofollow">Compiling.wiki</a></p>
 <h2>ArchLinux AUR编译安装</h2>
 <p>AUR: <a href="https://aur.archlinux.org/packages/treeviewx" rel="nofollow">https://aur.archlinux.org/packages/treeviewx</a></p>
-<pre lang="shell" class="notranslate"><code class="notranslate"># Maintainer: Guoyi Zhang &lt;myname at malacology dot net&gt;
-# Contributor: Stunts &lt;f.pinamartins@gmail.com&gt;
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> Maintainer: Guoyi Zhang &lt;myname at malacology dot net&gt;</span>
+<span class="pl-c"><span class="pl-c">#</span> Contributor: Stunts &lt;f.pinamartins@gmail.com&gt;</span>
 
 pkgname=treeviewx
 _pkgname=tv
 pkgver=0.5.0
 pkgrel=1
-pkgdesc="Program to display phylogenetic trees"
-arch=('x86_64')
-url="https://code.google.com/archive/p/treeviewx/"
-license=('GPL')
-depends=('wxwidgets-gtk3')
-makedepends=('git')
-source=("git+https://github.com/rdmpage/treeviewx.git"
-	"https://storage.googleapis.com/google-code-archive/v2/code.google.com/treeviewx/logo.png"
-	"$pkgname.desktop"
-	"arch.patch")
-md5sums=('SKIP'
-         '52f1937a3e0d194dba9fc00f87105ca7'
-         '5045bd3f49af4088085e30c0270962d5'
-         '096d5f3f7beb7e0ef749cca6fa60c601')
-prepare(){
-  cd $srcdir/$pkgname
-  patch -np1 &lt; $srcdir/arch.patch
+pkgdesc=<span class="pl-s"><span class="pl-pds">"</span>Program to display phylogenetic trees<span class="pl-pds">"</span></span>
+arch=(<span class="pl-s"><span class="pl-pds">'</span>x86_64<span class="pl-pds">'</span></span>)
+url=<span class="pl-s"><span class="pl-pds">"</span>https://code.google.com/archive/p/treeviewx/<span class="pl-pds">"</span></span>
+license=(<span class="pl-s"><span class="pl-pds">'</span>GPL<span class="pl-pds">'</span></span>)
+depends=(<span class="pl-s"><span class="pl-pds">'</span>wxwidgets-gtk3<span class="pl-pds">'</span></span>)
+makedepends=(<span class="pl-s"><span class="pl-pds">'</span>git<span class="pl-pds">'</span></span>)
+source=(<span class="pl-s"><span class="pl-pds">"</span>git+https://github.com/rdmpage/treeviewx.git<span class="pl-pds">"</span></span>
+	<span class="pl-s"><span class="pl-pds">"</span>https://storage.googleapis.com/google-code-archive/v2/code.google.com/treeviewx/logo.png<span class="pl-pds">"</span></span>
+	<span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$pkgname</span>.desktop<span class="pl-pds">"</span></span>
+	<span class="pl-s"><span class="pl-pds">"</span>arch.patch<span class="pl-pds">"</span></span>)
+md5sums=(<span class="pl-s"><span class="pl-pds">'</span>SKIP<span class="pl-pds">'</span></span>
+         <span class="pl-s"><span class="pl-pds">'</span>52f1937a3e0d194dba9fc00f87105ca7<span class="pl-pds">'</span></span>
+         <span class="pl-s"><span class="pl-pds">'</span>5045bd3f49af4088085e30c0270962d5<span class="pl-pds">'</span></span>
+         <span class="pl-s"><span class="pl-pds">'</span>096d5f3f7beb7e0ef749cca6fa60c601<span class="pl-pds">'</span></span>)
+<span class="pl-en">prepare</span>(){
+  <span class="pl-c1">cd</span> <span class="pl-smi">$srcdir</span>/<span class="pl-smi">$pkgname</span>
+  patch -np1 <span class="pl-k">&lt;</span> <span class="pl-smi">$srcdir</span>/arch.patch
   mv configure.{in,ac}
-  echo "Roderic D.M. Page" &gt; AUTHORS
-  echo "version 0.5, Feb 4, 2023 Guoyi Zhang, BioArchLinux" &gt; ChangeLog
+  <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>Roderic D.M. Page<span class="pl-pds">"</span></span> <span class="pl-k">&gt;</span> AUTHORS
+  <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>version 0.5, Feb 4, 2023 Guoyi Zhang, BioArchLinux<span class="pl-pds">"</span></span> <span class="pl-k">&gt;</span> ChangeLog
 }
-build() {
-  cd $srcdir/$pkgname
+<span class="pl-en">build</span>() {
+  <span class="pl-c1">cd</span> <span class="pl-smi">$srcdir</span>/<span class="pl-smi">$pkgname</span>
   autoupdate
-  aclocal &amp;&amp; automake -a &amp;&amp; autoconf
+  aclocal <span class="pl-k">&amp;&amp;</span> automake -a <span class="pl-k">&amp;&amp;</span> autoconf
   ./configure  --prefix=/usr
   make
 }
-package() {
-  cd $srcdir/$pkgname
-  make DESTDIR="$pkgdir" install
-  install -Dm 644 $srcdir/logo.png $pkgdir/usr/share/pixmaps/$pkgname.png
-  install -Dm 644 $srcdir/$pkgname.desktop $pkgdir/usr/share/applications/$pkgname.desktop
-}
-</code></pre></div>
+<span class="pl-en">package</span>() {
+  <span class="pl-c1">cd</span> <span class="pl-smi">$srcdir</span>/<span class="pl-smi">$pkgname</span>
+  make DESTDIR=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$pkgdir</span><span class="pl-pds">"</span></span> install
+  install -Dm 644 <span class="pl-smi">$srcdir</span>/logo.png <span class="pl-smi">$pkgdir</span>/usr/share/pixmaps/<span class="pl-smi">$pkgname</span>.png
+  install -Dm 644 <span class="pl-smi">$srcdir</span>/<span class="pl-smi">$pkgname</span>.desktop <span class="pl-smi">$pkgdir</span>/usr/share/applications/<span class="pl-smi">$pkgname</span>.desktop
+}</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>

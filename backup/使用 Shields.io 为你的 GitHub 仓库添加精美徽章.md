@@ -1,108 +1,73 @@
-在 GitHub 仓库的 README 文件中，使用精美的徽章（badges）可以提升项目的视觉效果，并快速展示项目的状态、版本、依赖等信息。其中，[[shields.io](https://shields.io/)](https://shields.io/) 是一个非常流行的徽章生成服务，支持多种服务和平台，包括 GitHub。
+## 关键要点
+
+* Shields.io 提供多种 GitHub 徽章，显示存储库的动态信息，如星星数、分支数和贡献者数。
+* 以下列出了一些常见的 GitHub 徽章示例，可直接在 Markdown 文件中使用。
+* 徽章可通过查询参数自定义样式和颜色，增强视觉效果。
+
 
 ## Shields.io 简介
 
-shields.io 提供了一套简洁、一致的 SVG 和光栅格式徽章，可以轻松地嵌入到 GitHub README 或任何其他网页中。该服务支持数十种持续集成服务、软件包注册表、发行版、应用商店、社交网络、代码覆盖率服务和代码分析服务。
+Shields.io 是一个提供简洁、一致且易读的徽章服务的平台，支持 SVG 和光栅格式的徽章。这些徽章可以轻松嵌入 GitHub 的 README.md 文件或其他网页中，用于展示项目指标。Shields.io 支持多种服务，包括持续集成工具、包注册表、分发平台、应用商店、社会网络、代码覆盖率服务和代码分析服务，每月服务超过 16 亿次图像请求，被许多知名的开源项目如 VS Code、Vue.js 和 Bootstrap 使用。
 
-## GitHub 相关徽章
+对于 GitHub 存储库，Shields.io 提供了动态徽章，这些徽章会根据存储库的实时数据自动更新，例如星星数、分支数、贡献者数量等。这些徽章不仅能提升 README 的视觉吸引力，还能快速传达项目状态，吸引潜在贡献者或用户。
 
-shields.io 提供了丰富的 GitHub 相关徽章，以下是一些常用的示例：
+## GitHub 徽章的获取与使用
 
-### 仓库信息
+Shields.io 的 GitHub 徽章主要通过特定的 URL 格式生成，例如 https://img.shields.io/github/stars/ollama/ollama，其中 ollama/ollama 需要替换为实际的 GitHub 用户名和存储库名称。以下是常见的 GitHub 徽章类型及其 Markdown 示例：
 
-* **贡献者数量：**
+| 徽章名称   |  描述   |  Markdown 示例   | 
+| --- | --- | --- | 
+|  GitHub 星星数   |  显示存储库的星星数量   |  ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama)   | 
+|  GitHub 分支数   |  显示存储库的分支数量   |  ![GitHub forks](https://img.shields.io/github/forks/ollama/ollama)   | 
+|  GitHub 贡献者   |  显示存储库的贡献者数量   |  ![GitHub contributors](https://img.shields.io/github/contributors/ollama/ollama)   | 
+|  GitHub 开放问题   |  显示存储库的开放问题数量   |  ![GitHub issues](https://img.shields.io/github/issues/ollama/ollama)   | 
+|  GitHub 开放拉取请求   |  显示存储库的开放拉取请求数量   |  ![GitHub pull requests](https://img.shields.io/github/issues-pr/ollama/ollama)   | 
+|  GitHub 许可证   |  显示存储库的许可证信息   |  ![GitHub license](https://img.shields.io/github/license/ollama/ollama)   | 
+|  GitHub 最后提交   |  显示存储库的最后提交日期   |  ![GitHub last commit](https://img.shields.io/github/last-commit/ollama/ollama)   | 
+|  GitHub 发布版本   |  显示存储库的最新发布版本   |  ![GitHub release](https://img.shields.io/github/v/release/ollama/ollama)   | 
+|  GitHub 主要语言   |  显示存储库使用的主要编程语言   |  ![GitHub top language](https://img.shields.io/github/languages/top/ollama/ollama)   | 
+|  GitHub 语言数量   |  显示存储库使用的编程语言数量   |  ![GitHub language count](https://img.shields.io/github/languages/count/ollama/ollama)   |
 
-![GitHub contributors](https://img.shields.io/github/contributors/sindresorhus/awesome)
-```markdown
-![GitHub contributors](https://img.shields.io/github/contributors/sindresorhus/awesome)
-```
+这些徽章的 URL 格式可以通过 Shields.io 网站上的搜索栏或分类浏览找到，具体操作是点击徽章预览，填写必要的路径参数（如用户名和存储库名），然后可选地自定义标签、颜色等，最后复制生成的 Markdown 代码。 
 
-* **最后提交日期：**
 
-![GitHub last commit](https://img.shields.io/github/last-commit/torvalds/linux)
-```markdown
-![GitHub last commit](https://img.shields.io/github/last-commit/torvalds/linux)
-```
+## 自定义徽章
 
-* **仓库大小：**
+Shields.io 允许通过查询参数自定义徽章的外观，例如更改样式、颜色或添加徽标。以下是一些常见自定义选项：
 
-![GitHub repo size](https://img.shields.io/github/repo-size/torvalds/linux)
-```markdown
-![GitHub repo size](https://img.shields.io/github/repo-size/torvalds/linux)
-```
+* 样式：可选择 flat、plastic、flat-square、for-the-badge 或 social。
+  示例：`?style=flat-square` ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=flat-square) 
 
-* **仓库星标数量：**
+* 颜色：可以指定徽章的颜色，例如 green 或 blue。
+  示例：`?style=flat-square&color=green` ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=flat-square&color=green)
 
-![GitHub stars](https://img.shields.io/github/stars/torvalds/linux?style=social)
-```markdown
-![GitHub stars](https://img.shields.io/github/stars/torvalds/linux?style=social)
-```
+* 徽标：可以添加徽标，例如 GitHub 的徽标。
+  示例：`?style=flat-square&color=green&logo=github` ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=flat-square&color=green&logo=github)
 
-* **仓库 fork 数量：**
+* 缓存时间：通过 cacheSeconds 参数设置 HTTP 缓存时间，默认值根据徽章类型推断，低于默认值的设置会被忽略。
+  示例：`![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?cacheSeconds=3600)`
 
-![GitHub forks](https://img.shields.io/github/forks/torvalds/linux?style=social)
-```markdown
-![GitHub forks](https://img.shields.io/github/forks/torvalds/linux?style=social)
-```
+更多自定义选项可以在 [Shields.io 文档](https://shields.io/docs/) 中找到，文档提供了详细的参数说明和示例。
 
-* **仓库打开的 issues 数量：**
 
-![GitHub issues](https://img.shields.io/github/issues/sindresorhus/awesome)
-```markdown
-![GitHub issues](https://img.shields.io/github/issues/sindresorhus/awesome)
-```
 
-* **仓库打开的 pull requests 数量：**
+## 其他相关信息
 
-![GitHub pull requests](https://img.shields.io/github/issues-pr/sindresorhus/awesome)
-```markdown
-![GitHub pull requests](https://img.shields.io/github/issues-pr/sindresorhus/awesome)
-```
+Shields.io 的 GitHub 徽章是动态生成的，依赖于 GitHub API，因此可能受到速率限制的影响。为了提高速率限制，用户可以授权 Shields.io 的 GitHub 应用，具体操作可在 [Shields.io GitHub 授权页面](https://img.shields.io/github-auth) 查看。
 
-* **仓库 license 信息:**
+此外，Shields.io 还支持其他类型的徽章，例如静态徽章（通过自定义文本和颜色生成）和端点徽章（通过 YAML 或 JSON 数据动态生成），但本文重点关注 GitHub 存储库的动态徽章。
 
-![GitHub license](https://img.shields.io/github/license/sindresorhus/awesome)
-```markdown
-![GitHub license](https://img.shields.io/github/license/sindresorhus/awesome)
-```
+## 结论与建议
 
-### 代码相关
+使用 Shields.io 的 GitHub 徽章可以显著提升你的存储库 README 的专业性和吸引力，快速展示项目指标如星星数、贡献者数量等。博主可以根据需要选择上述列出的常见徽章，并通过自定义选项调整样式和颜色，以匹配项目品牌。
 
-* **仓库的主要编程语言：**
+如果需要更多徽章类型，建议访问 [Shields.io 网站](https://shields.io/)，使用搜索栏或浏览分类找到适合的徽章。此外，Shields.io 的开源性质也欢迎社区贡献，相关信息可在 [Shields.io GitHub 仓库](https://github.com/badges/shields) 查看。
 
-![GitHub language top langs](https://img.shields.io/github/languages/top/torvalds/linux)
-```markdown
-![GitHub language top langs](https://img.shields.io/github/languages/top/torvalds/linux)
-```
+## 参考
 
-* **仓库的编程语言数量：**
-
-![GitHub language count](https://img.shields.io/github/languages/count/torvalds/linux)
-```markdown
-![GitHub language count](https://img.shields.io/github/languages/count/torvalds/linux)
-```
-
-### 其他
-
-* **GitHub 跟随者：**
-
-![GitHub followers](https://img.shields.io/github/followers/Argonum-Clever2?style=social)
-```markdown
-![GitHub followers](https://img.shields.io/github/followers/Argonum-Clever2?style=social)
-```
-
-## 如何使用
-
-1.  **访问 shields.io 官网：** [https://shields.io/](https://shields.io/)
-2.  **选择你需要的徽章类型。**
-3.  **根据提示填写相关信息，例如 GitHub 用户名、仓库名等。**
-4.  **复制生成的 Markdown 代码，并粘贴到你的 GitHub README 文件中。**
-
-## 进阶用法
-
-* shields.io 提供了丰富的自定义选项，你可以调整徽章的颜色、样式、文字等。
-* 你还可以使用 shields.io 的动态徽章功能，实时显示项目的状态。
-
-## 总结
-
-shields.io 提供了简单、便捷的方式为你的 GitHub 仓库添加精美徽章，提升项目的专业性和可读性。
+* [Shields.io 官方主页](https://shields.io/)
+* [Shields.io 文档页面](https://shields.io/docs/)
+* [Shields.io GitHub 仓库](https://github.com/badges/shields)
+* [md-badges GitHub 仓库](https://github.com/inttter/md-badges)
+* [markdown-badges GitHub 仓库](https://github.com/Ileriayo/markdown-badges)
+* [Shields.io GitHub 授权页面](https://img.shields.io/github-auth)

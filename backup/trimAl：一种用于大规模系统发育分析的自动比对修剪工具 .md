@@ -4,6 +4,7 @@
 
 - [trimAl — trimAl](https://trimal.readthedocs.io/en/latest/)
 - [inab/trimal: A tool for automated alignment trimming in large-scale phylogenetic analyses. Development version: 2.0](https://github.com/inab/trimal)
+- [AUR (en) - trimal](https://aur.archlinux.org/packages/trimal)：![AUR 最后修改](https://img.shields.io/aur/last-modified/trimal) ![AUR 版本](https://img.shields.io/aur/version/trimal) ![AUR 许可证](https://img.shields.io/aur/license/trimal) ![AUR 维护者](https://img.shields.io/aur/maintainer/trimal) ![AUR 投票](https://img.shields.io/aur/votes/trimal) ![AUR 依赖](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faur.archlinux.org%2Frpc%2Fv5%2Finfo%2Ftrimal&query=%24..Depends&label=Depends) ![AUR 编译依赖](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faur.archlinux.org%2Frpc%2Fv5%2Finfo%2Ftrimal&query=%24..MakeDepends&label=MakeDepends)
 
 ## 简介
 

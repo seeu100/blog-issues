@@ -13,15 +13,15 @@
 <meta name="description" content="## 关键要点
 
 * Shields.io 提供多种 GitHub 徽章，显示存储库的动态信息，如星星数、分支数和贡献者数。">
-<meta property="og:title" content="使用 Shields.io 为你的 GitHub 仓库添加精美徽章">
+<meta property="og:title" content="使用 Shields.io 为 GitHub/AUR 添加精美徽章">
 <meta property="og:description" content="## 关键要点
 
 * Shields.io 提供多种 GitHub 徽章，显示存储库的动态信息，如星星数、分支数和贡献者数。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.00002000.xyz/post/86.html">
 <meta property="og:image" content="https://blog.00002000.xyz/logo.svg">
-<title>使用 Shields.io 为你的 GitHub 仓库添加精美徽章</title>
-
+<title>使用 Shields.io 为 GitHub/AUR 添加精美徽章</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -45,7 +45,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     body {padding: 8px;}
     .postTitle{font-size:24px;}
 }
-
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
 </style>
 
 
@@ -53,7 +63,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">使用 Shields.io 为你的 GitHub 仓库添加精美徽章</h1>
+<h1 class="postTitle">使用 Shields.io 为 GitHub/AUR 添加精美徽章</h1>
 <div class="title-right">
     <a href="https://blog.00002000.xyz" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -94,7 +104,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <th>徽章名称</th>
 <th>描述</th>
 <th>图标</th>
-<th>Markdown</th>
 </tr>
 </thead>
 <tbody>
@@ -102,76 +111,76 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>GitHub 主要语言</td>
 <td>显示存储库使用的主要编程语言</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/07623851f857c10573833233c7cde5cfafea85f03e339d7d8a533ea4013f4713/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c616e6775616765732f746f702f6f6c6c616d612f6f6c6c616d61"><img src="https://camo.githubusercontent.com/07623851f857c10573833233c7cde5cfafea85f03e339d7d8a533ea4013f4713/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c616e6775616765732f746f702f6f6c6c616d612f6f6c6c616d61" alt="GitHub top language" data-canonical-src="https://img.shields.io/github/languages/top/ollama/ollama" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub top language](https://img.shields.io/github/languages/top/ollama/ollama)</code></td>
 </tr>
 <tr>
 <td>GitHub 最后提交</td>
 <td>显示存储库的最后提交日期</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/86721730f91259ac87c6cf6c52f6c590e0585f9abe26831cfe110ae9afe6a225/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6173742d636f6d6d69742f6f6c6c616d612f6f6c6c616d61"><img src="https://camo.githubusercontent.com/86721730f91259ac87c6cf6c52f6c590e0585f9abe26831cfe110ae9afe6a225/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6173742d636f6d6d69742f6f6c6c616d612f6f6c6c616d61" alt="GitHub last commit" data-canonical-src="https://img.shields.io/github/last-commit/ollama/ollama" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub last commit](https://img.shields.io/github/last-commit/ollama/ollama)</code></td>
 </tr>
 <tr>
 <td>GitHub 开放问题</td>
 <td>显示存储库的开放问题数量</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9efc219ad97b631b557a0939d94f8aed48541caa8467612e9e1fc323bbc36509/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f6f6c6c616d612f6f6c6c616d61"><img src="https://camo.githubusercontent.com/9efc219ad97b631b557a0939d94f8aed48541caa8467612e9e1fc323bbc36509/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f6f6c6c616d612f6f6c6c616d61" alt="GitHub issues" data-canonical-src="https://img.shields.io/github/issues/ollama/ollama" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub issues](https://img.shields.io/github/issues/ollama/ollama)     </code></td>
 </tr>
 <tr>
 <td>GitHub 星星数</td>
 <td>显示存储库的星星数量</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/06b32aa127e7e598646e6ffc3fb1f762fdec9a4637f47b9a26d027930451b4ea/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f6f6c6c616d612f6f6c6c616d613f7374796c653d666c6174"><img src="https://camo.githubusercontent.com/06b32aa127e7e598646e6ffc3fb1f762fdec9a4637f47b9a26d027930451b4ea/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f6f6c6c616d612f6f6c6c616d613f7374796c653d666c6174" alt="GitHub stars" data-canonical-src="https://img.shields.io/github/stars/ollama/ollama?style=flat" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=flat)</code></td>
 </tr>
 <tr>
 <td>GitHub 提交数</td>
 <td>显示存储库的提交数量</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5c24c44100a7fcbbf6db818f789918283f9b92ae21e480160bae72d52c1439fa/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f636f6d6d69742d61637469766974792f742f6f6c6c616d612f6f6c6c616d61"><img src="https://camo.githubusercontent.com/5c24c44100a7fcbbf6db818f789918283f9b92ae21e480160bae72d52c1439fa/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f636f6d6d69742d61637469766974792f742f6f6c6c616d612f6f6c6c616d61" alt="GitHub commit activity" data-canonical-src="https://img.shields.io/github/commit-activity/t/ollama/ollama" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ollama/ollama)</code></td>
 </tr>
 <tr>
 <td>GitHub 贡献者</td>
 <td>显示存储库的贡献者数量</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8b02b26d47cedc16ef6ff6af72cabc2a16280c1264a2ffe2a0b3e926fe6ea5d1/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f636f6e7472696275746f72732f6f6c6c616d612f6f6c6c616d61"><img src="https://camo.githubusercontent.com/8b02b26d47cedc16ef6ff6af72cabc2a16280c1264a2ffe2a0b3e926fe6ea5d1/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f636f6e7472696275746f72732f6f6c6c616d612f6f6c6c616d61" alt="GitHub contributors" data-canonical-src="https://img.shields.io/github/contributors/ollama/ollama" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub contributors](https://img.shields.io/github/contributors/ollama/ollama)</code></td>
 </tr>
 <tr>
 <td>GitHub 创建日期</td>
 <td>显示存储库的创建日期</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ef64a4258962576cdf70d08d19c0133b72f30d25a3b8332efd3f491df827e6a4/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f637265617465642d61742f6f6c6c616d612f6f6c6c616d61"><img src="https://camo.githubusercontent.com/ef64a4258962576cdf70d08d19c0133b72f30d25a3b8332efd3f491df827e6a4/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f637265617465642d61742f6f6c6c616d612f6f6c6c616d61" alt="GitHub Created At" data-canonical-src="https://img.shields.io/github/created-at/ollama/ollama" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub Created At](https://img.shields.io/github/created-at/ollama/ollama)</code></td>
 </tr>
 <tr>
 <td>GitHub 分支数</td>
 <td>显示存储库的分支数量</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/747a07fab7283f31643b677277152f86f863d1c19601e76d8e459ce2fc036686/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f6f6c6c616d612f6f6c6c616d613f7374796c653d666c6174"><img src="https://camo.githubusercontent.com/747a07fab7283f31643b677277152f86f863d1c19601e76d8e459ce2fc036686/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f6f6c6c616d612f6f6c6c616d613f7374796c653d666c6174" alt="GitHub forks" data-canonical-src="https://img.shields.io/github/forks/ollama/ollama?style=flat" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub forks](https://img.shields.io/github/forks/ollama/ollama?style=flat)</code></td>
 </tr>
 <tr>
 <td>GitHub 开放拉取请求</td>
 <td>显示存储库的开放拉取请求数量</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5946f93d0978a3a78e9d08064e425ef4ab2a039adbb21cd654b6407ecdbf6dde/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732d70722f6f6c6c616d612f6f6c6c616d61"><img src="https://camo.githubusercontent.com/5946f93d0978a3a78e9d08064e425ef4ab2a039adbb21cd654b6407ecdbf6dde/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732d70722f6f6c6c616d612f6f6c6c616d61" alt="GitHub pull requests" data-canonical-src="https://img.shields.io/github/issues-pr/ollama/ollama" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub pull requests](https://img.shields.io/github/issues-pr/ollama/ollama)</code></td>
 </tr>
 <tr>
 <td>GitHub 许可证</td>
 <td>显示存储库的许可证信息</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/97ac39cfa1ab42948829588b580e8941a8d3f2fe3936fc9666ee04c1e8d853c4/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f6f6c6c616d612f6f6c6c616d61"><img src="https://camo.githubusercontent.com/97ac39cfa1ab42948829588b580e8941a8d3f2fe3936fc9666ee04c1e8d853c4/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f6f6c6c616d612f6f6c6c616d61" alt="GitHub license" data-canonical-src="https://img.shields.io/github/license/ollama/ollama" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub license](https://img.shields.io/github/license/ollama/ollama)   </code></td>
 </tr>
 <tr>
 <td>GitHub 发布版本</td>
 <td>显示存储库的最新发布版本</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/dd14da227c3a23cef31927cbf30d9f09737b8714a08be06cdf25ce791fac6879/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f6f6c6c616d612f6f6c6c616d61"><img src="https://camo.githubusercontent.com/dd14da227c3a23cef31927cbf30d9f09737b8714a08be06cdf25ce791fac6879/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f6f6c6c616d612f6f6c6c616d61" alt="GitHub release" data-canonical-src="https://img.shields.io/github/v/release/ollama/ollama" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub release](https://img.shields.io/github/v/release/ollama/ollama) </code></td>
 </tr>
 <tr>
 <td>GitHub 语言数量</td>
 <td>显示存储库使用的编程语言数量</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9fbb80ced5e093b2f5a05e3ab7cf0ac9661170e25b1842730168f5549c68351e/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c616e6775616765732f636f756e742f6f6c6c616d612f6f6c6c616d61"><img src="https://camo.githubusercontent.com/9fbb80ced5e093b2f5a05e3ab7cf0ac9661170e25b1842730168f5549c68351e/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c616e6775616765732f636f756e742f6f6c6c616d612f6f6c6c616d61" alt="GitHub language count" data-canonical-src="https://img.shields.io/github/languages/count/ollama/ollama" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![GitHub language count](https://img.shields.io/github/languages/count/ollama/ollama)</code></td>
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
+<div class="highlight highlight-text-md"><pre class="notranslate"><span class="pl-s">![</span>GitHub top language<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/languages/top/ollama/ollama</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub last commit<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/last-commit/ollama/ollama</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub issues<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/issues/ollama/ollama</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub stars<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/stars/ollama/ollama?style=flat</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub commit activity<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/commit-activity/t/ollama/ollama</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub contributors<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/contributors/ollama/ollama</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub Created At<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/created-at/ollama/ollama</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub forks<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/forks/ollama/ollama?style=flat</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub pull requests<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/issues-pr/ollama/ollama</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub license<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/license/ollama/ollama</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub release<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/v/release/ollama/ollama</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>GitHub language count<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/github/languages/count/ollama/ollama</span><span class="pl-s">)</span></pre></div>
 <p>这些徽章的 URL 格式可以通过 Shields.io 网站上的搜索栏或分类浏览找到，具体操作是点击徽章预览，填写必要的路径参数（如用户名和存储库名），然后可选地自定义标签、颜色等，最后复制生成的 Markdown 代码。</p>
 <h2>常见的 AUR 徽章类型</h2>
 <markdown-accessiblity-table><table role="table">
@@ -180,7 +189,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <th><strong>徽章名称</strong></th>
 <th><strong>描述</strong></th>
 <th>图标</th>
-<th>Markdown</th>
 </tr>
 </thead>
 <tbody>
@@ -188,34 +196,40 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>AUR 版本</td>
 <td>显示 AUR 包的当前版本</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/35d394b11139afb817f301d679aa13ed4de3d126e2973ff46936d081874b4979/68747470733a2f2f696d672e736869656c64732e696f2f6175722f76657273696f6e2f6c696e75787171"><img src="https://camo.githubusercontent.com/35d394b11139afb817f301d679aa13ed4de3d126e2973ff46936d081874b4979/68747470733a2f2f696d672e736869656c64732e696f2f6175722f76657273696f6e2f6c696e75787171" alt="AUR 版本" data-canonical-src="https://img.shields.io/aur/version/linuxqq" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![AUR 版本](https://img.shields.io/aur/version/linuxqq)</code></td>
 </tr>
 <tr>
 <td>AUR 许可证</td>
 <td>显示 AUR 包的许可证信息</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/2704d6b3fbcec15cea4a42327f1b293c6f9c6a19e55ac21ad2fc6efd84a36969/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6c6963656e73652f6c696e75787171"><img src="https://camo.githubusercontent.com/2704d6b3fbcec15cea4a42327f1b293c6f9c6a19e55ac21ad2fc6efd84a36969/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6c6963656e73652f6c696e75787171" alt="AUR 许可证" data-canonical-src="https://img.shields.io/aur/license/linuxqq" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![AUR 许可证](https://img.shields.io/aur/license/linuxqq)</code></td>
 </tr>
 <tr>
 <td>AUR 最后修改时间</td>
 <td>显示 AUR 包的最后修改日期</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/05d87c71b0ad1907cfd8bbeafac670719a6936e64404d1b26edf9b64cb3bfa79/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6c6173742d6d6f6469666965642f6c696e75787171"><img src="https://camo.githubusercontent.com/05d87c71b0ad1907cfd8bbeafac670719a6936e64404d1b26edf9b64cb3bfa79/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6c6173742d6d6f6469666965642f6c696e75787171" alt="AUR 最后修改" data-canonical-src="https://img.shields.io/aur/last-modified/linuxqq" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![AUR 最后修改](https://img.shields.io/aur/last-modified/linuxqq)</code></td>
 </tr>
 <tr>
 <td>AUR 维护者</td>
 <td>显示 AUR 包的当前维护者</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9a65e52240cae101aee00ecd1fff7a331bb20ce4bbaee7c0ad0065f08d1c337a/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6d61696e7461696e65722f6c696e75787171"><img src="https://camo.githubusercontent.com/9a65e52240cae101aee00ecd1fff7a331bb20ce4bbaee7c0ad0065f08d1c337a/68747470733a2f2f696d672e736869656c64732e696f2f6175722f6d61696e7461696e65722f6c696e75787171" alt="AUR 维护者" data-canonical-src="https://img.shields.io/aur/maintainer/linuxqq" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![AUR 维护者](https://img.shields.io/aur/maintainer/linuxqq)</code></td>
 </tr>
 <tr>
 <td>AUR 投票数</td>
 <td>显示 AUR 包的投票数量</td>
 <td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/1753d54da43b7c61160bd344104fdea65c1739d1480b6f78251b3ef645026481/68747470733a2f2f696d672e736869656c64732e696f2f6175722f766f7465732f6c696e75787171"><img src="https://camo.githubusercontent.com/1753d54da43b7c61160bd344104fdea65c1739d1480b6f78251b3ef645026481/68747470733a2f2f696d672e736869656c64732e696f2f6175722f766f7465732f6c696e75787171" alt="AUR 投票" data-canonical-src="https://img.shields.io/aur/votes/linuxqq" style="max-width: 100%;"></a></td>
-<td><code class="notranslate">![AUR 投票](https://img.shields.io/aur/votes/linuxqq)  </code></td>
+</tr>
+<tr>
+<td>AUR 依赖</td>
+<td>显示 AUR 包的依赖</td>
+<td><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/1b5d6e8aec4222fd4fddf17de17f8e857a18b62084195d7d2f181debc6dddacd/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f64796e616d69632f6a736f6e3f75726c3d68747470732533412532462532466175722e617263686c696e75782e6f72672532467270632532467635253246696e666f2532466c696e757871712671756572793d2532342e2e446570656e6473266c6162656c3d646570656e6473"><img src="https://camo.githubusercontent.com/1b5d6e8aec4222fd4fddf17de17f8e857a18b62084195d7d2f181debc6dddacd/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f64796e616d69632f6a736f6e3f75726c3d68747470732533412532462532466175722e617263686c696e75782e6f72672532467270632532467635253246696e666f2532466c696e757871712671756572793d2532342e2e446570656e6473266c6162656c3d646570656e6473" alt="AUR 依赖" data-canonical-src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faur.archlinux.org%2Frpc%2Fv5%2Finfo%2Flinuxqq&amp;query=%24..Depends&amp;label=depends" style="max-width: 100%;"></a></td>
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
+<div class="highlight highlight-text-md"><pre class="notranslate"><span class="pl-s">![</span>AUR 最后修改<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/aur/last-modified/linuxqq</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>AUR 版本<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/aur/version/linuxqq</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>AUR 许可证<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/aur/license/linuxqq</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>AUR 维护者<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/aur/maintainer/linuxqq</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>AUR 投票<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/aur/votes/linuxqq</span><span class="pl-s">)</span>
+<span class="pl-s">![</span>AUR 依赖<span class="pl-s">]</span><span class="pl-s">(</span><span class="pl-corl">https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faur.archlinux.org%2Frpc%2Fv5%2Finfo%2Flinuxqq&amp;query=%24..Depends&amp;label=depends</span><span class="pl-s">)</span>`</pre></div>
 <ul>
 <li>注意事项：由于 AUR API 有每日 4000 次请求的速率限制，Shields.io 可能会因高流量而偶尔返回 invalid 值。建议合理设置缓存时间（如 cacheSeconds=3600）以减少请求。</li>
 <li>API来源：<a href="https://aur.archlinux.org/rpc/swagger" rel="nofollow">https://aur.archlinux.org/rpc/swagger</a></li>
@@ -290,7 +304,7 @@ if("03/30/2019"!=""){
 <style>#busuanzi_value_site_uv{color:red}#busuanzi_value_site_pv{color:red}</style></div>
 </body>
 <script>
-var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
 var utterancesLoad=0;
 
 let themeSettings={
@@ -364,7 +378,70 @@ function iFrameLoading(){
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
 
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
 
 </script>
 

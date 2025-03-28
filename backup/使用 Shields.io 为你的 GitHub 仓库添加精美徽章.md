@@ -15,18 +15,22 @@ Shields.io 是一个提供简洁、一致且易读的徽章服务的平台，支
 
 Shields.io 的 GitHub 徽章主要通过特定的 URL 格式生成，例如 https://img.shields.io/github/stars/ollama/ollama，其中 ollama/ollama 需要替换为实际的 GitHub 用户名和存储库名称。以下是常见的 GitHub 徽章类型及其 Markdown 示例：
 
-| 徽章名称   |  描述   |  Markdown 示例   | 
-| --- | --- | --- | 
-|  GitHub 星星数   |  显示存储库的星星数量   |  ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama)   | 
-|  GitHub 分支数   |  显示存储库的分支数量   |  ![GitHub forks](https://img.shields.io/github/forks/ollama/ollama)   | 
-|  GitHub 贡献者   |  显示存储库的贡献者数量   |  ![GitHub contributors](https://img.shields.io/github/contributors/ollama/ollama)   | 
-|  GitHub 开放问题   |  显示存储库的开放问题数量   |  ![GitHub issues](https://img.shields.io/github/issues/ollama/ollama)   | 
-|  GitHub 开放拉取请求   |  显示存储库的开放拉取请求数量   |  ![GitHub pull requests](https://img.shields.io/github/issues-pr/ollama/ollama)   | 
-|  GitHub 许可证   |  显示存储库的许可证信息   |  ![GitHub license](https://img.shields.io/github/license/ollama/ollama)   | 
-|  GitHub 最后提交   |  显示存储库的最后提交日期   |  ![GitHub last commit](https://img.shields.io/github/last-commit/ollama/ollama)   | 
-|  GitHub 发布版本   |  显示存储库的最新发布版本   |  ![GitHub release](https://img.shields.io/github/v/release/ollama/ollama)   | 
-|  GitHub 主要语言   |  显示存储库使用的主要编程语言   |  ![GitHub top language](https://img.shields.io/github/languages/top/ollama/ollama)   | 
-|  GitHub 语言数量   |  显示存储库使用的编程语言数量   |  ![GitHub language count](https://img.shields.io/github/languages/count/ollama/ollama)   |
+
+| 徽章名称            | 描述                         | Markdown 示例                                                                       |
+| ------------------- | ---------------------------- | ----------------------------------------------------------------------------------- |
+| GitHub 主要语言     | 显示存储库使用的主要编程语言 | ![GitHub top language](https://img.shields.io/github/languages/top/ollama/ollama)     |
+| GitHub 最后提交     | 显示存储库的最后提交日期     | ![GitHub last commit](https://img.shields.io/github/last-commit/ollama/ollama)        |
+| GitHub 开放问题     | 显示存储库的开放问题数量     | ![GitHub issues](https://img.shields.io/github/issues/ollama/ollama)                  |
+| GitHub 星星数       | 显示存储库的星星数量         | ![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=flat)                    |
+| GitHub 提交数       | 显示存储库的提交数量       | ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ollama/ollama)      |
+| GitHub 贡献者       | 显示存储库的贡献者数量       | ![GitHub contributors](https://img.shields.io/github/contributors/ollama/ollama)      |
+| GitHub 创建日期      | 显示存储库的创建日期         | ![GitHub Created At](https://img.shields.io/github/created-at/ollama/ollama)
+| GitHub 分支数       | 显示存储库的分支数量         | ![GitHub forks](https://img.shields.io/github/forks/ollama/ollama?style=flat)                    |
+| GitHub 开放拉取请求 | 显示存储库的开放拉取请求数量 | ![GitHub pull requests](https://img.shields.io/github/issues-pr/ollama/ollama)        |
+| GitHub 许可证       | 显示存储库的许可证信息       | ![GitHub license](https://img.shields.io/github/license/ollama/ollama)                |
+| GitHub 发布版本     | 显示存储库的最新发布版本     | ![GitHub release](https://img.shields.io/github/v/release/ollama/ollama)              |
+| GitHub 语言数量     | 显示存储库使用的编程语言数量 | ![GitHub language count](https://img.shields.io/github/languages/count/ollama/ollama) |
+
 
 这些徽章的 URL 格式可以通过 Shields.io 网站上的搜索栏或分类浏览找到，具体操作是点击徽章预览，填写必要的路径参数（如用户名和存储库名），然后可选地自定义标签、颜色等，最后复制生成的 Markdown 代码。 
 

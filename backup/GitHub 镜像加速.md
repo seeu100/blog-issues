@@ -4,14 +4,15 @@
 
 | GitHub      | 状态           |
 | ------------- | -------------- |
-| https://kkgithub.com | ✅ |
-| https://github.hscsec.cn | ✅ |
-| https://521github.com/ | ✅ |
+| https://kkgithub.com |![Website](https://img.shields.io/website?url=https%3A%2F%2Fkkgithub.com&label=)|
+| https://521github.com/ |![Website](https://img.shields.io/website?url=https%3A%2F%2F521github.com&label=)|
+| https://github.hscsec.cn |![Website](https://img.shields.io/website?url=https%3A%2F%2Fgithub.hscsec.cn&label=)|
 
 
 | GitHub 加速下载站    | 状态       |
 | -------------- | -------------- |
-| https://gitclone.com    | ✅ |
-| https://github.ur1.fun | ✅ |
-| https://githubfast.com | ✅ |
-| https://ghproxy.com  | ❌ |
+| https://github.ur1.fun | ![Website](https://img.shields.io/website?url=https%3A%2F%2Fgithub.ur1.fun&label=) |
+| https://ghproxy.com  | ![Website](https://img.shields.io/website?url=https%3A%2F%2Fghproxy.com&label=)|
+| https://githubfast.com | ![Website](https://img.shields.io/website?url=https%3A%2F%2Fgithubfast.com&label=) |
+| https://gitclone.com    |![Website](https://img.shields.io/website?url=https%3A%2F%2Fgitclone.com&label=) |
+

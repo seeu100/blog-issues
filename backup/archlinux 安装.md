@@ -63,6 +63,17 @@ genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 
 arch-chroot /mnt
+```
+
+## 配置镜像
+```shell
+echo '# China mirror
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+Server = https://mirrors.neusoft.edu.cn/$repo/os/$arch
+Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
+Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+' > /etc/pacman.d/mirrorlist
+
 pacman -S vim grub efibootmgr bash-completion dhcpcd iwd
 
 ## 装机软件包

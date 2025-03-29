@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 28 Mar 2025 16:57:45 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>生物信息软件汇总</title><link>https://blog.00002000.xyz/post/87.html</link><description>| 软件名称  | 简介                                             | 教程 | 平台(PC) | tags                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一百年后再见</title><link>https://blog.00002000.xyz</link><description>博客——记录点点滴滴</description><copyright>一百年后再见</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Sat, 29 Mar 2025 02:04:13 +0000</lastBuildDate><managingEditor>一百年后再见</managingEditor><ttl>60</ttl><webMaster>一百年后再见</webMaster><item><title>生物信息软件汇总</title><link>https://blog.00002000.xyz/post/87.html</link><description>| 软件名称  | 简介                                             | 教程 | 平台(PC) | tags                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------- | ------------------------------------------------ | ---- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | trimAl    | 大规模系统发育分析的自动比对修剪工具     | #40  | 跨平台(AUR)   | ![GitHub top language](https://img.shields.io/github/languages/top/inab/trimal) ![GitHub last commit](https://img.shields.io/github/last-commit/inab/trimal) ![GitHub issues](https://img.shields.io/github/issues/inab/trimal) ![GitHub stars](https://img.shields.io/github/stars/inab/trimal?style=flat) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/inab/trimal) ![GitHub contributors](https://img.shields.io/github/contributors/inab/trimal) ![GitHub Created At](https://img.shields.io/github/created-at/inab/trimal) ![GitHub forks](https://img.shields.io/github/forks/inab/trimal?style=flat) ![GitHub pull requests](https://img.shields.io/github/issues-pr/inab/trimal) ![GitHub license](https://img.shields.io/github/license/inab/trimal) ![GitHub release](https://img.shields.io/github/v/release/inab/trimal) ![GitHub language count](https://img.shields.io/github/languages/count/inab/trimal)                                                                                                             |
 | MIKE      | 构建系统发育树的超快、无组装和无干扰方法 | #47  | 跨平台   | ![GitHub top language](https://img.shields.io/github/languages/top/Argonum-Clever2/mike) ![GitHub last commit](https://img.shields.io/github/last-commit/Argonum-Clever2/mike) ![GitHub issues](https://img.shields.io/github/issues/Argonum-Clever2/mike) ![GitHub stars](https://img.shields.io/github/stars/Argonum-Clever2/mike?style=flat) ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/Argonum-Clever2/mike) ![GitHub contributors](https://img.shields.io/github/contributors/Argonum-Clever2/mike) ![GitHub Created At](https://img.shields.io/github/created-at/Argonum-Clever2/mike) ![GitHub forks](https://img.shields.io/github/forks/Argonum-Clever2/mike?style=flat) ![GitHub pull requests](https://img.shields.io/github/issues-pr/Argonum-Clever2/mike) ![GitHub license](https://img.shields.io/github/license/Argonum-Clever2/mike) ![GitHub release](https://img.shields.io/github/v/release/Argonum-Clever2/mike) ![GitHub language count](https://img.shields.io/github/languages/count/Argonum-Clever2/mike) |
@@ -749,113 +749,124 @@ systemctl hibernate #休眠&#13;
 ## 2023&#13;
 * 重新整理博客并上线 blog.00002000.xyz&#13;
 ## 2024&#13;
-* 博客迁移到 Github issues。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/24.html</guid><pubDate>Thu, 18 Apr 2024 15:01:06 +0000</pubDate></item><item><title>一只特立独行的猪 - 王小波</title><link>https://blog.00002000.xyz/post/22.html</link><description>插队的时候，我喂过猪、也放过牛。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/22.html</guid><pubDate>Thu, 18 Apr 2024 12:22:37 +0000</pubDate></item><item><title>archlinux 安装</title><link>https://blog.00002000.xyz/post/15.html</link><description>## 分区&#13;
-&#13;
-```shell&#13;
-lsblk # 查看硬盘编号&#13;
-&#13;
-#分区方案&#13;
-nvme0n1     476.9G disk&#13;
-├─nvme0n1p1   256M part /boot/efi&#13;
-├─nvme0n1p2    32G part swap&#13;
-├─nvme0n1p3    all part /&#13;
-&#13;
-#sgdisk --zap-all /dev/nvme0n1 # 清空硬盘（非必要，谨慎操作）&#13;
-&#13;
-cfdisk -z /dev/nvme0n1&#13;
-&#13;
-# 选择gpt&#13;
-# EFI分区&#13;
-# new   ---&gt; 新建分区&#13;
-# type  ---&gt; linux-root(x86-64)&#13;
-# write ---&gt; 写入硬盘&#13;
-# quit  ---&gt; 退出&#13;
-&#13;
-&#13;
-mkfs.fat -F 32 /dev/nvme0n1p1 #格式化efi分区&#13;
-mkswap /dev/nvme0n1p2&#13;
-swapon /dev/nvme0n1p2  # 挂载交换分区&#13;
-&#13;
-mkfs.btrfs -L arch /dev/nvme0n1p3&#13;
-mount -t btrfs -o compress=zstd /dev/nvme0n1p3 /mnt&#13;
-#创建子卷&#13;
-btrfs subvolume create /mnt/@ # 创建 / 目录子卷&#13;
-btrfs subvolume create /mnt/@home # 创建 /home 目录子卷&#13;
-btrfs subvolume list -p /mnt&#13;
-&#13;
-umount /mnt&#13;
-```&#13;
-&#13;
-## 挂载&#13;
-```shell&#13;
-mount -t btrfs -o subvol=/@,noatime,relatime,compress=zstd:3,ssd,discard=async,space_cache=v2 /dev/nvme0n1p3 /mnt # 挂载 / 目录  #如果没设置默认子卷，需要加上subvol=vol_root进行挂载&#13;
-# 使用zstd压缩,需要内核中开启相应选项,grub2.04版本支持zstd压缩&#13;
-# 默认为gzip(compress=on),可选(compress=lzo),不支持lz4&#13;
-# zstd默认压缩级别是3,可以用compress=zstd:X 更改(0&lt;= X &lt;=15)&#13;
-#新内核需要 space_cache=v2&#13;
-&#13;
-mkdir -pv /mnt/{boot/efi,home}&#13;
-mount -t btrfs -o subvol=/@home,noatime,relatime,compress=zstd:3,ssd,discard=async,space_cache=v2 /dev/nvme0n1p3 /mnt/home # 挂载 /home 目录&#13;
-mount /dev/nvme0n1p1 /mnt/boot/efi # 挂载 /boot/efi 目录&#13;
-&#13;
-# 检查无误后开始安装&#13;
-df -hT&#13;
-free -h&#13;
-&#13;
-```&#13;
-&#13;
-## 安装系统&#13;
-&#13;
-```shell&#13;
-pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs &#13;
-# 如果使用btrfs文件系统，额外安装一个btrfs-progs包&#13;
-&#13;
-genfstab -U /mnt &gt;&gt; /mnt/etc/fstab&#13;
-cat /mnt/etc/fstab&#13;
-&#13;
-arch-chroot /mnt&#13;
-pacman -S vim grub efibootmgr bash-completion dhcpcd iwd&#13;
-&#13;
-## 装机软件包&#13;
-dhcpcd iwd #联网&#13;
-grub efibootmgr #引导&#13;
-intel-ucode amd-ucode #处理器微码补丁&#13;
-bash-completion #命令参数补全&#13;
-```&#13;
-&#13;
-## locale和时间&#13;
-&#13;
-```shell&#13;
-#locale.gen&#13;
-sed -i -e 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen&#13;
-sed -i -e 's/^#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/' /etc/locale.gen&#13;
-locale-gen&#13;
-&#13;
-#locale.conf&#13;
-echo 'LANG=en_US.UTF-8' &gt; /etc/locale.conf&#13;
-locale&#13;
-&#13;
-#时区&#13;
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime&#13;
-hwclock --systohc&#13;
-```&#13;
-&#13;
-## grub - 系统引导&#13;
-```shell&#13;
-grub-install --target=x86_64-efi --bootloader-id=arch --efi-directory=/boot/efi&#13;
-grub-mkconfig -o /boot/grub/grub.cfg&#13;
-```&#13;
-&#13;
-## 最后的收尾工作&#13;
-&#13;
-```shell&#13;
-systemctl enable dhcpcd iwd #联网&#13;
-EDITOR=vim visudo #wheel组可以使用sudo&#13;
-useradd -m -G wheel newuser #新建用户&#13;
-passwd #设置密码&#13;
-passwd newuser #设置密码&#13;
-```&#13;
-&#13;
+* 博客迁移到 Github issues。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/24.html</guid><pubDate>Thu, 18 Apr 2024 15:01:06 +0000</pubDate></item><item><title>一只特立独行的猪 - 王小波</title><link>https://blog.00002000.xyz/post/22.html</link><description>插队的时候，我喂过猪、也放过牛。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/22.html</guid><pubDate>Thu, 18 Apr 2024 12:22:37 +0000</pubDate></item><item><title>archlinux 安装</title><link>https://blog.00002000.xyz/post/15.html</link><description>## 分区
+
+```shell
+lsblk # 查看硬盘编号
+
+#分区方案
+nvme0n1     476.9G disk
+├─nvme0n1p1   256M part /boot/efi
+├─nvme0n1p2    32G part swap
+├─nvme0n1p3    all part /
+
+#sgdisk --zap-all /dev/nvme0n1 # 清空硬盘（非必要，谨慎操作）
+
+cfdisk -z /dev/nvme0n1
+
+# 选择gpt
+# EFI分区
+# new   ---&gt; 新建分区
+# type  ---&gt; linux-root(x86-64)
+# write ---&gt; 写入硬盘
+# quit  ---&gt; 退出
+
+
+mkfs.fat -F 32 /dev/nvme0n1p1 #格式化efi分区
+mkswap /dev/nvme0n1p2
+swapon /dev/nvme0n1p2  # 挂载交换分区
+
+mkfs.btrfs -L arch /dev/nvme0n1p3
+mount -t btrfs -o compress=zstd /dev/nvme0n1p3 /mnt
+#创建子卷
+btrfs subvolume create /mnt/@ # 创建 / 目录子卷
+btrfs subvolume create /mnt/@home # 创建 /home 目录子卷
+btrfs subvolume list -p /mnt
+
+umount /mnt
+```
+
+## 挂载
+```shell
+mount -t btrfs -o subvol=/@,noatime,relatime,compress=zstd:3,ssd,discard=async,space_cache=v2 /dev/nvme0n1p3 /mnt # 挂载 / 目录  #如果没设置默认子卷，需要加上subvol=vol_root进行挂载
+# 使用zstd压缩,需要内核中开启相应选项,grub2.04版本支持zstd压缩
+# 默认为gzip(compress=on),可选(compress=lzo),不支持lz4
+# zstd默认压缩级别是3,可以用compress=zstd:X 更改(0&lt;= X &lt;=15)
+#新内核需要 space_cache=v2
+
+mkdir -pv /mnt/{boot/efi,home}
+mount -t btrfs -o subvol=/@home,noatime,relatime,compress=zstd:3,ssd,discard=async,space_cache=v2 /dev/nvme0n1p3 /mnt/home # 挂载 /home 目录
+mount /dev/nvme0n1p1 /mnt/boot/efi # 挂载 /boot/efi 目录
+
+# 检查无误后开始安装
+df -hT
+free -h
+
+```
+
+## 安装系统
+
+```shell
+pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs 
+# 如果使用btrfs文件系统，额外安装一个btrfs-progs包
+
+genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+cat /mnt/etc/fstab
+
+arch-chroot /mnt
+```
+
+## 配置镜像
+```shell
+echo '# China mirror
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+Server = https://mirrors.neusoft.edu.cn/$repo/os/$arch
+Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
+Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+' &gt; /etc/pacman.d/mirrorlist
+
+pacman -S vim grub efibootmgr bash-completion dhcpcd iwd
+
+## 装机软件包
+dhcpcd iwd #联网
+grub efibootmgr #引导
+intel-ucode amd-ucode #处理器微码补丁
+bash-completion #命令参数补全
+```
+
+## locale和时间
+
+```shell
+#locale.gen
+sed -i -e 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
+sed -i -e 's/^#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/' /etc/locale.gen
+locale-gen
+
+#locale.conf
+echo 'LANG=en_US.UTF-8' &gt; /etc/locale.conf
+locale
+
+#时区
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock --systohc
+```
+
+## grub - 系统引导
+```shell
+grub-install --target=x86_64-efi --bootloader-id=arch --efi-directory=/boot/efi
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## 最后的收尾工作
+
+```shell
+systemctl enable dhcpcd iwd #联网
+EDITOR=vim visudo #wheel组可以使用sudo
+useradd -m -G wheel newuser #新建用户
+passwd #设置密码
+passwd newuser #设置密码
+```
+
 接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/15.html</guid><pubDate>Thu, 18 Apr 2024 11:30:00 +0000</pubDate></item><item><title>Linux禁止主板蜂鸣音</title><link>https://blog.00002000.xyz/post/10.html</link><description>在笔记本电脑安装ArchLinux时，启动安装盘系统的时候往往`beep`一声。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/10.html</guid><pubDate>Thu, 18 Apr 2024 11:05:45 +0000</pubDate></item><item><title>nssm - Windows服务封装程序</title><link>https://blog.00002000.xyz/post/7.html</link><description>**对于Windows平台来说，很多软件或系统的后台服务是基于windows服务的方式运行的，它的优势是稳定可靠，有进程保护**。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/7.html</guid><pubDate>Thu, 18 Apr 2024 10:03:49 +0000</pubDate></item><item><title>小米 13 Pro 刷机资源</title><link>https://blog.00002000.xyz/post/6.html</link><description>## Recovery - TWRP&#13;
 - [General - 📌 [Shared\] OFFICIAL TWRP by skkk | XDA Forums](https://xdaforums.com/t/shared-official-twrp-by-skkk.4549575/)&#13;
 - https://sourceforge.net/projects/recovery-for-xiaomi-devices/files/nuwa/&#13;

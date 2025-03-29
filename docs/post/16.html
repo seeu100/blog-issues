@@ -14,7 +14,8 @@
 
 ### 配置`/etc/pacman.conf`
 ```shell
-echo '#
+cat << EOF > /etc/pacman.conf
+#
 # /etc/pacman.conf
 #
 # See the pacman.conf(5) manpage for option and repository directives
@@ -141,7 +142,7 @@ Server = https://mirrors.neusoft.edu.cn/archlinuxcn/$arch
 #Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
 #[blackarch]
 #Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/$repo/os/$arch
-' > /etc/pacman.conf
+EOF
 ```
 ### 配置缓存策略，仅保存当前包版本
 ```shell
@@ -194,7 +195,8 @@ sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring  bioarchlinux-keyring && s
 
 ### 配置`/etc/pacman.conf`
 ```shell
-echo '#
+cat << EOF > /etc/pacman.conf
+#
 # /etc/pacman.conf
 #
 # See the pacman.conf(5) manpage for option and repository directives
@@ -321,7 +323,7 @@ Server = https://mirrors.neusoft.edu.cn/archlinuxcn/$arch
 #Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
 #[blackarch]
 #Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/$repo/os/$arch
-' > /etc/pacman.conf
+EOF
 ```
 ### 配置缓存策略，仅保存当前包版本
 ```shell
@@ -441,7 +443,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><p>接上篇 #15  <a href="https://blog.00002000.xyz/post/15.html" rel="nofollow">archlinux 安装</a></p>
 <h3>配置<code class="notranslate">/etc/pacman.conf</code></h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>#</span>
+<div class="highlight highlight-source-shell"><pre class="notranslate">cat <span class="pl-s"><span class="pl-k">&lt;&lt;</span> <span class="pl-k">EOF</span> &gt; /etc/pacman.conf</span>
+<span class="pl-s">#</span>
 <span class="pl-s"># /etc/pacman.conf</span>
 <span class="pl-s">#</span>
 <span class="pl-s"># See the pacman.conf(5) manpage for option and repository directives</span>
@@ -465,110 +468,110 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-s">#CleanMethod = KeepInstalled</span>
 <span class="pl-s">Architecture = auto</span>
 <span class="pl-s"></span>
-<span class="pl-s"># Pacman won<span class="pl-pds">'</span></span>t upgrade packages listed <span class="pl-k">in</span> IgnorePkg and members of IgnoreGroup
-<span class="pl-c"><span class="pl-c">#</span>IgnorePkg   =</span>
-<span class="pl-c"><span class="pl-c">#</span>IgnoreGroup =</span>
-
-<span class="pl-c"><span class="pl-c">#</span>NoUpgrade   =</span>
-<span class="pl-c"><span class="pl-c">#</span>NoExtract   =</span>
-
-<span class="pl-c"><span class="pl-c">#</span> Misc options</span>
-<span class="pl-c"><span class="pl-c">#</span>UseSyslog</span>
-Color
-ILoveCandy
-<span class="pl-c"><span class="pl-c">#</span>NoProgressBar</span>
-CheckSpace
-<span class="pl-c"><span class="pl-c">#</span>VerbosePkgLists</span>
-ParallelDownloads = 3
-DownloadUser = alpm
-<span class="pl-c"><span class="pl-c">#</span>DisableSandbox</span>
-
-<span class="pl-c"><span class="pl-c">#</span> By default, pacman accepts packages signed by keys that its local keyring</span>
-<span class="pl-c"><span class="pl-c">#</span> trusts (see pacman-key and its man page), as well as unsigned packages.</span>
-SigLevel    = Required DatabaseOptional
-LocalFileSigLevel = Optional
-<span class="pl-c"><span class="pl-c">#</span>RemoteFileSigLevel = Required</span>
-
-<span class="pl-c"><span class="pl-c">#</span> NOTE: You must run `pacman-key --init` before first using pacman; the local</span>
-<span class="pl-c"><span class="pl-c">#</span> keyring can then be populated with the keys of all official Arch Linux</span>
-<span class="pl-c"><span class="pl-c">#</span> packagers with `pacman-key --populate archlinux`.</span>
-
-<span class="pl-c"><span class="pl-c">#</span></span>
-<span class="pl-c"><span class="pl-c">#</span> REPOSITORIES</span>
-<span class="pl-c"><span class="pl-c">#</span>   - can be defined here or included from another file</span>
-<span class="pl-c"><span class="pl-c">#</span>   - pacman will search repositories in the order defined here</span>
-<span class="pl-c"><span class="pl-c">#</span>   - local/custom mirrors can be added here or in separate files</span>
-<span class="pl-c"><span class="pl-c">#</span>   - repositories listed first will take precedence when packages</span>
-<span class="pl-c"><span class="pl-c">#</span>     have identical names, regardless of version number</span>
-<span class="pl-c"><span class="pl-c">#</span>   - URLs will have $repo replaced by the name of the current repo</span>
-<span class="pl-c"><span class="pl-c">#</span>   - URLs will have $arch replaced by the name of the architecture</span>
-<span class="pl-c"><span class="pl-c">#</span></span>
-<span class="pl-c"><span class="pl-c">#</span> Repository entries are of the format:</span>
-<span class="pl-c"><span class="pl-c">#</span>       [repo-name]</span>
-<span class="pl-c"><span class="pl-c">#</span>       Server = ServerName</span>
-<span class="pl-c"><span class="pl-c">#</span>       Include = IncludePath</span>
-<span class="pl-c"><span class="pl-c">#</span></span>
-<span class="pl-c"><span class="pl-c">#</span> The header [repo-name] is crucial - it must be present and</span>
-<span class="pl-c"><span class="pl-c">#</span> uncommented to enable the repo.</span>
-<span class="pl-c"><span class="pl-c">#</span></span>
-
-<span class="pl-c"><span class="pl-c">#</span> The testing repositories are disabled by default. To enable, uncomment the</span>
-<span class="pl-c"><span class="pl-c">#</span> repo name header and Include lines. You can add preferred servers immediately</span>
-<span class="pl-c"><span class="pl-c">#</span> after the header, and they will be used before the default mirrors.</span>
-
-<span class="pl-c"><span class="pl-c">#</span>[core-testing]</span>
-<span class="pl-c"><span class="pl-c">#</span>Include = /etc/pacman.d/mirrorlist</span>
-
-[core]
-Include = /etc/pacman.d/mirrorlist
-
-<span class="pl-c"><span class="pl-c">#</span>[extra-testing]</span>
-<span class="pl-c"><span class="pl-c">#</span>Include = /etc/pacman.d/mirrorlist</span>
-
-[extra]
-Include = /etc/pacman.d/mirrorlist
-
-<span class="pl-c"><span class="pl-c">#</span> If you want to run 32 bit applications on your x86_64 system,</span>
-<span class="pl-c"><span class="pl-c">#</span> enable the multilib repositories as required here.</span>
-
-<span class="pl-c"><span class="pl-c">#</span>[multilib-testing]</span>
-<span class="pl-c"><span class="pl-c">#</span>Include = /etc/pacman.d/mirrorlist</span>
-
-<span class="pl-c"><span class="pl-c">#</span>[multilib]</span>
-<span class="pl-c"><span class="pl-c">#</span>Include = /etc/pacman.d/mirrorlist</span>
-
-<span class="pl-c"><span class="pl-c">#</span> An example of a custom package repository.  See the pacman manpage for</span>
-<span class="pl-c"><span class="pl-c">#</span> tips on creating your own repositories.</span>
-<span class="pl-c"><span class="pl-c">#</span>[custom]</span>
-<span class="pl-c"><span class="pl-c">#</span>SigLevel = Optional TrustAll</span>
-<span class="pl-c"><span class="pl-c">#</span>Server = file:///home/custompkgs</span>
-[archlinuxcn]
-Server = https://mirrors.aliyun.com/archlinuxcn/<span class="pl-smi">$arch</span>
-Server = https://mirrors.tencent.com/archlinuxcn/<span class="pl-smi">$arch</span>
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span>
-Server = https://mirrors.bfsu.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span>
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span>
-Server = https://mirrors.neusoft.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span>
-<span class="pl-c"><span class="pl-c">#</span> </span>
-<span class="pl-c"><span class="pl-c">#</span> pacman-key --lsign-key "farseerfc@archlinux.org"</span>
-<span class="pl-c"><span class="pl-c">#</span> pacman -Sy archlinuxcn-keyring </span>
-<span class="pl-c"><span class="pl-c">#</span>[bioarchlinux]</span>
-<span class="pl-c"><span class="pl-c">#</span>## ISCAS</span>
-<span class="pl-c"><span class="pl-c">#</span>Server = https://mirror.iscas.ac.cn/BioArchLinux/$arch</span>
-<span class="pl-c"><span class="pl-c">#</span>Server = https://mirror.nju.edu.cn/bioarchlinux/$arch</span>
-<span class="pl-c"><span class="pl-c">#</span>## Nanjing University</span>
-<span class="pl-c"><span class="pl-c">#</span>Server = http://mirror.nju.edu.cn/bioarchlinux/$arch</span>
-<span class="pl-c"><span class="pl-c">#</span>## Nanjing University of Posts and Telecommunications</span>
-<span class="pl-c"><span class="pl-c">#</span>Server = http://mirrors.njupt.edu.cn/bioarchlinux/$arch</span>
-<span class="pl-c"><span class="pl-c">#</span>Server = https://mirrors.njupt.edu.cn/bioarchlinux/$arch</span>
-<span class="pl-c"><span class="pl-c">#</span>## Shandong University</span>
-<span class="pl-c"><span class="pl-c">#</span>Server = http://mirrors.sdu.edu.cn/bioarchlinux/$arch</span>
-<span class="pl-c"><span class="pl-c">#</span>Server = https://mirrors.sdu.edu.cn/bioarchlinux/$arch</span>
-<span class="pl-c"><span class="pl-c">#</span>[arch4edu]</span>
-<span class="pl-c"><span class="pl-c">#</span>Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch</span>
-<span class="pl-c"><span class="pl-c">#</span>[blackarch]</span>
-<span class="pl-c"><span class="pl-c">#</span>Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/$repo/os/$arch</span>
-<span class="pl-s"><span class="pl-pds">'</span> &gt; /etc/pacman.conf</span></pre></div>
+<span class="pl-s"># Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup</span>
+<span class="pl-s">#IgnorePkg   =</span>
+<span class="pl-s">#IgnoreGroup =</span>
+<span class="pl-s"></span>
+<span class="pl-s">#NoUpgrade   =</span>
+<span class="pl-s">#NoExtract   =</span>
+<span class="pl-s"></span>
+<span class="pl-s"># Misc options</span>
+<span class="pl-s">#UseSyslog</span>
+<span class="pl-s">Color</span>
+<span class="pl-s">ILoveCandy</span>
+<span class="pl-s">#NoProgressBar</span>
+<span class="pl-s">CheckSpace</span>
+<span class="pl-s">#VerbosePkgLists</span>
+<span class="pl-s">ParallelDownloads = 3</span>
+<span class="pl-s">DownloadUser = alpm</span>
+<span class="pl-s">#DisableSandbox</span>
+<span class="pl-s"></span>
+<span class="pl-s"># By default, pacman accepts packages signed by keys that its local keyring</span>
+<span class="pl-s"># trusts (see pacman-key and its man page), as well as unsigned packages.</span>
+<span class="pl-s">SigLevel    = Required DatabaseOptional</span>
+<span class="pl-s">LocalFileSigLevel = Optional</span>
+<span class="pl-s">#RemoteFileSigLevel = Required</span>
+<span class="pl-s"></span>
+<span class="pl-s"># NOTE: You must run <span class="pl-s"><span class="pl-pds">`</span>pacman-key --init<span class="pl-pds">`</span></span> before first using pacman; the local</span>
+<span class="pl-s"># keyring can then be populated with the keys of all official Arch Linux</span>
+<span class="pl-s"># packagers with <span class="pl-s"><span class="pl-pds">`</span>pacman-key --populate archlinux<span class="pl-pds">`</span></span>.</span>
+<span class="pl-s"></span>
+<span class="pl-s">#</span>
+<span class="pl-s"># REPOSITORIES</span>
+<span class="pl-s">#   - can be defined here or included from another file</span>
+<span class="pl-s">#   - pacman will search repositories in the order defined here</span>
+<span class="pl-s">#   - local/custom mirrors can be added here or in separate files</span>
+<span class="pl-s">#   - repositories listed first will take precedence when packages</span>
+<span class="pl-s">#     have identical names, regardless of version number</span>
+<span class="pl-s">#   - URLs will have <span class="pl-smi">$repo</span> replaced by the name of the current repo</span>
+<span class="pl-s">#   - URLs will have <span class="pl-smi">$arch</span> replaced by the name of the architecture</span>
+<span class="pl-s">#</span>
+<span class="pl-s"># Repository entries are of the format:</span>
+<span class="pl-s">#       [repo-name]</span>
+<span class="pl-s">#       Server = ServerName</span>
+<span class="pl-s">#       Include = IncludePath</span>
+<span class="pl-s">#</span>
+<span class="pl-s"># The header [repo-name] is crucial - it must be present and</span>
+<span class="pl-s"># uncommented to enable the repo.</span>
+<span class="pl-s">#</span>
+<span class="pl-s"></span>
+<span class="pl-s"># The testing repositories are disabled by default. To enable, uncomment the</span>
+<span class="pl-s"># repo name header and Include lines. You can add preferred servers immediately</span>
+<span class="pl-s"># after the header, and they will be used before the default mirrors.</span>
+<span class="pl-s"></span>
+<span class="pl-s">#[core-testing]</span>
+<span class="pl-s">#Include = /etc/pacman.d/mirrorlist</span>
+<span class="pl-s"></span>
+<span class="pl-s">[core]</span>
+<span class="pl-s">Include = /etc/pacman.d/mirrorlist</span>
+<span class="pl-s"></span>
+<span class="pl-s">#[extra-testing]</span>
+<span class="pl-s">#Include = /etc/pacman.d/mirrorlist</span>
+<span class="pl-s"></span>
+<span class="pl-s">[extra]</span>
+<span class="pl-s">Include = /etc/pacman.d/mirrorlist</span>
+<span class="pl-s"></span>
+<span class="pl-s"># If you want to run 32 bit applications on your x86_64 system,</span>
+<span class="pl-s"># enable the multilib repositories as required here.</span>
+<span class="pl-s"></span>
+<span class="pl-s">#[multilib-testing]</span>
+<span class="pl-s">#Include = /etc/pacman.d/mirrorlist</span>
+<span class="pl-s"></span>
+<span class="pl-s">#[multilib]</span>
+<span class="pl-s">#Include = /etc/pacman.d/mirrorlist</span>
+<span class="pl-s"></span>
+<span class="pl-s"># An example of a custom package repository.  See the pacman manpage for</span>
+<span class="pl-s"># tips on creating your own repositories.</span>
+<span class="pl-s">#[custom]</span>
+<span class="pl-s">#SigLevel = Optional TrustAll</span>
+<span class="pl-s">#Server = file:///home/custompkgs</span>
+<span class="pl-s">[archlinuxcn]</span>
+<span class="pl-s">Server = https://mirrors.aliyun.com/archlinuxcn/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">Server = https://mirrors.tencent.com/archlinuxcn/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">Server = https://mirrors.bfsu.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">Server = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">Server = https://mirrors.neusoft.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span></span>
+<span class="pl-s"># </span>
+<span class="pl-s"># pacman-key --lsign-key "farseerfc@archlinux.org"</span>
+<span class="pl-s"># pacman -Sy archlinuxcn-keyring </span>
+<span class="pl-s">#[bioarchlinux]</span>
+<span class="pl-s">### ISCAS</span>
+<span class="pl-s">#Server = https://mirror.iscas.ac.cn/BioArchLinux/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">#Server = https://mirror.nju.edu.cn/bioarchlinux/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">### Nanjing University</span>
+<span class="pl-s">#Server = http://mirror.nju.edu.cn/bioarchlinux/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">### Nanjing University of Posts and Telecommunications</span>
+<span class="pl-s">#Server = http://mirrors.njupt.edu.cn/bioarchlinux/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">#Server = https://mirrors.njupt.edu.cn/bioarchlinux/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">### Shandong University</span>
+<span class="pl-s">#Server = http://mirrors.sdu.edu.cn/bioarchlinux/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">#Server = https://mirrors.sdu.edu.cn/bioarchlinux/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">#[arch4edu]</span>
+<span class="pl-s">#Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/<span class="pl-smi">$arch</span></span>
+<span class="pl-s">#[blackarch]</span>
+<span class="pl-s">#Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/<span class="pl-smi">$repo</span>/os/<span class="pl-smi">$arch</span></span>
+<span class="pl-s"><span class="pl-k">EOF</span></span></pre></div>
 <h3>配置缓存策略，仅保存当前包版本</h3>
 <div class="highlight highlight-source-shell"><pre class="notranslate">sed -i -e <span class="pl-s"><span class="pl-pds">"</span>s/^#CleanMethod = KeepInstalled/CleanMethod = KeepCurrent/<span class="pl-pds">"</span></span> /etc/pacman.conf</pre></div>
 <h3>初始化 keyring，这是关键安全配置</h3>

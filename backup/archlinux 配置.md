@@ -2,7 +2,8 @@
 
 ### 配置`/etc/pacman.conf`
 ```shell
-echo '#
+cat << EOF > /etc/pacman.conf
+#
 # /etc/pacman.conf
 #
 # See the pacman.conf(5) manpage for option and repository directives
@@ -129,7 +130,7 @@ Server = https://mirrors.neusoft.edu.cn/archlinuxcn/$arch
 #Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
 #[blackarch]
 #Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/$repo/os/$arch
-' > /etc/pacman.conf
+EOF
 ```
 ### 配置缓存策略，仅保存当前包版本
 ```shell

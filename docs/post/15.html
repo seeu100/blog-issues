@@ -10,7 +10,9 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="## 分区
+<meta name="description" content="`rmmod pcspkr` # 关闭蜂鸣器
+
+## 分区
 
 ```shell
 lsblk # 查看硬盘编号
@@ -23,8 +25,8 @@ nvme0n1     476.9G disk
 
 #sgdisk --zap-all /dev/nvme0n1 # 清空硬盘（非必要，谨慎操作）
 
+fdisk /dev/nvme0n1 # 也可以用cfdisk命令
 cfdisk -z /dev/nvme0n1
-
 # 选择gpt
 # EFI分区
 # new   ---> 新建分区
@@ -126,11 +128,24 @@ EDITOR=vim visudo #wheel组可以使用sudo
 useradd -m -G wheel newuser #新建用户
 passwd #设置密码
 passwd newuser #设置密码
+```
+
+## 可选配置
+
+```shell
+# 关闭蜂鸣器
+echo 'blacklist=pcspkr' >> /etc/modprobe.d/blacklist.conf
+
+# sshd
+pacman -S openssh
+systemctl enable sshd
 ```
 
 接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 。">
 <meta property="og:title" content="archlinux 安装">
-<meta property="og:description" content="## 分区
+<meta property="og:description" content="`rmmod pcspkr` # 关闭蜂鸣器
+
+## 分区
 
 ```shell
 lsblk # 查看硬盘编号
@@ -143,8 +158,8 @@ nvme0n1     476.9G disk
 
 #sgdisk --zap-all /dev/nvme0n1 # 清空硬盘（非必要，谨慎操作）
 
+fdisk /dev/nvme0n1 # 也可以用cfdisk命令
 cfdisk -z /dev/nvme0n1
-
 # 选择gpt
 # EFI分区
 # new   ---> 新建分区
@@ -246,6 +261,17 @@ EDITOR=vim visudo #wheel组可以使用sudo
 useradd -m -G wheel newuser #新建用户
 passwd #设置密码
 passwd newuser #设置密码
+```
+
+## 可选配置
+
+```shell
+# 关闭蜂鸣器
+echo 'blacklist=pcspkr' >> /etc/modprobe.d/blacklist.conf
+
+# sshd
+pacman -S openssh
+systemctl enable sshd
 ```
 
 接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 。">
@@ -319,7 +345,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h2>分区</h2>
+<div class="markdown-body" id="postBody"><p><code class="notranslate">rmmod pcspkr</code> # 关闭蜂鸣器</p>
+<h2>分区</h2>
 <div class="highlight highlight-source-shell"><pre class="notranslate">lsblk <span class="pl-c"><span class="pl-c">#</span> 查看硬盘编号</span>
 
 <span class="pl-c"><span class="pl-c">#</span>分区方案</span>
@@ -330,8 +357,8 @@ nvme0n1     476.9G disk
 
 <span class="pl-c"><span class="pl-c">#</span>sgdisk --zap-all /dev/nvme0n1 # 清空硬盘（非必要，谨慎操作）</span>
 
+fdisk /dev/nvme0n1 <span class="pl-c"><span class="pl-c">#</span> 也可以用cfdisk命令</span>
 cfdisk -z /dev/nvme0n1
-
 <span class="pl-c"><span class="pl-c">#</span> 选择gpt</span>
 <span class="pl-c"><span class="pl-c">#</span> EFI分区</span>
 <span class="pl-c"><span class="pl-c">#</span> new   ---&gt; 新建分区</span>
@@ -412,6 +439,13 @@ EDITOR=vim visudo <span class="pl-c"><span class="pl-c">#</span>wheel组可以�
 useradd -m -G wheel newuser <span class="pl-c"><span class="pl-c">#</span>新建用户</span>
 passwd <span class="pl-c"><span class="pl-c">#</span>设置密码</span>
 passwd newuser <span class="pl-c"><span class="pl-c">#</span>设置密码</span></pre></div>
+<h2>可选配置</h2>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 关闭蜂鸣器</span>
+<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>blacklist=pcspkr<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> /etc/modprobe.d/blacklist.conf
+
+<span class="pl-c"><span class="pl-c">#</span> sshd</span>
+pacman -S openssh
+systemctl <span class="pl-c1">enable</span> sshd</pre></div>
 <p>接下篇 #16  <a href="https://blog.00002000.xyz/post/16.html" rel="nofollow">archlinux 配置</a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 

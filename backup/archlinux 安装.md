@@ -1,3 +1,5 @@
+`rmmod pcspkr` # 关闭蜂鸣器
+
 ## 分区
 
 ```shell
@@ -11,8 +13,8 @@ nvme0n1     476.9G disk
 
 #sgdisk --zap-all /dev/nvme0n1 # 清空硬盘（非必要，谨慎操作）
 
+fdisk /dev/nvme0n1 # 也可以用cfdisk命令
 cfdisk -z /dev/nvme0n1
-
 # 选择gpt
 # EFI分区
 # new   ---> 新建分区
@@ -114,6 +116,17 @@ EDITOR=vim visudo #wheel组可以使用sudo
 useradd -m -G wheel newuser #新建用户
 passwd #设置密码
 passwd newuser #设置密码
+```
+
+## 可选配置
+
+```shell
+# 关闭蜂鸣器
+echo "blacklist=pcspkr" >> /etc/modprobe.d/blacklist.conf
+
+# sshd
+pacman -S openssh
+systemctl enable sshd
 ```
 
 接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 

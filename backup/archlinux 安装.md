@@ -69,7 +69,7 @@ arch-chroot /mnt
 ```shell
 echo '# China mirror
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
-Server = https://mirrors.neusoft.edu.cn/$repo/os/$arch
+Server = https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
 Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 ' > /etc/pacman.d/mirrorlist

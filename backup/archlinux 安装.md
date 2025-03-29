@@ -74,7 +74,7 @@ Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch
 ' > /etc/pacman.d/mirrorlist
 
-pacman -S vim grub efibootmgr bash-completion dhcpcd iwd
+pacman -S vim grub efibootmgr bash-completion dhcpcd iwd amd-ucode
 
 ## 装机软件包
 dhcpcd iwd #联网

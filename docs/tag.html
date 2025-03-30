@@ -10,8 +10,8 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="一百年后再见 search page">
-<title>一百年后再见 - Tag</title>
+<meta name="description" content="专业博客从0开始 search page">
+<title>专业博客从0开始 - Tag</title>
 
 </head>
 <style>
@@ -254,7 +254,7 @@ function setClassDisplay(label){
     let lists = document.getElementsByClassName("lists");
     let tagTitle = document.getElementsByClassName("tagTitle")[0];
     tagTitle.innerHTML="Tag #"+label;
-    document.title=label+" - 一百年后再见";
+    document.title=label+" - 专业博客从0开始";
     document.getElementsByClassName("subnav-search-input")[0].value='';
     if(label=="All"){
         for(let i = 0; i < lists.length; i++){lists[i].style.display='block';}
@@ -282,8 +282,8 @@ function searchShow(){
     let tagTitle = document.getElementsByClassName("tagTitle")[0];
     let searchInput = document.getElementsByClassName("subnav-search-input")[0].value;
     tagTitle.innerHTML="Search #"+searchInput;
-    if(searchInput==''){document.title="Search - 一百年后再见";}
-    else{document.title=searchInput+" - 一百年后再见";}
+    if(searchInput==''){document.title="Search - 专业博客从0开始";}
+    else{document.title=searchInput+" - 专业博客从0开始";}
     let a=0;
     window.location.hash="#"+(searchInput);
     for(let i = 0; i < lists.length; i++){

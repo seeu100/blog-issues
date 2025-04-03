@@ -58,6 +58,14 @@ free -h
 ## 安装系统
 
 ```shell
+# 配置镜像
+echo '# China mirror
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
+Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+Server = https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch
+' > /etc/pacman.d/mirrorlist
+
 pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs 
 # 如果使用btrfs文件系统，额外安装一个btrfs-progs包
 
@@ -67,15 +75,8 @@ cat /mnt/etc/fstab
 arch-chroot /mnt
 ```
 
-## 配置镜像
+## 安装软件
 ```shell
-echo '# China mirror
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
-Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
-Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
-Server = https://mirrors.neusoft.edu.cn/archlinux/$repo/os/$arch
-' > /etc/pacman.d/mirrorlist
-
 pacman -S vim grub efibootmgr bash-completion dhcpcd iwd amd-ucode
 
 ## 装机软件包

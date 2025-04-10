@@ -140,9 +140,11 @@ echo 'blacklist=pcspkr' >> /etc/modprobe.d/blacklist.conf
 # sshd
 pacman -S openssh
 systemctl enable sshd
-```
 
-接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 。">
+# 移动硬盘系统
+
+vim /etc/mkinitcpio.conf
+# 将 `block` 和 `keyboard` hook 移动到 `autodetect` hook 之前。">
 <meta property="og:title" content="archlinux 安装">
 <meta property="og:description" content="`rmmod pcspkr` # 关闭蜂鸣器
 
@@ -274,9 +276,11 @@ echo 'blacklist=pcspkr' >> /etc/modprobe.d/blacklist.conf
 # sshd
 pacman -S openssh
 systemctl enable sshd
-```
 
-接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 。">
+# 移动硬盘系统
+
+vim /etc/mkinitcpio.conf
+# 将 `block` 和 `keyboard` hook 移动到 `autodetect` hook 之前。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.00002000.xyz/post/15.html">
 <meta property="og:image" content="https://blog.00002000.xyz/logo.svg">
@@ -448,7 +452,15 @@ passwd newuser <span class="pl-c"><span class="pl-c">#</span>设置密码</span>
 
 <span class="pl-c"><span class="pl-c">#</span> sshd</span>
 pacman -S openssh
-systemctl <span class="pl-c1">enable</span> sshd</pre></div>
+systemctl <span class="pl-c1">enable</span> sshd
+
+<span class="pl-c"><span class="pl-c">#</span> 移动硬盘系统</span>
+
+vim /etc/mkinitcpio.conf
+<span class="pl-c"><span class="pl-c">#</span> 将 `block` 和 `keyboard` hook 移动到 `autodetect` hook 之前。</span>
+<span class="pl-c"><span class="pl-c">#</span> HOOKS=(base udev block keyboard autodetect microcode modconf kms keymap consolefont filesystems fsck)</span>
+
+grub-install --target=x86_64-efi --bootloader-id=arch --efi-directory=/boot/efi --removable --recheck</pre></div>
 <p>接下篇 #16  <a href="https://blog.00002000.xyz/post/16.html" rel="nofollow">archlinux 配置</a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 

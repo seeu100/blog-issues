@@ -128,6 +128,14 @@ echo "blacklist=pcspkr" >> /etc/modprobe.d/blacklist.conf
 # sshd
 pacman -S openssh
 systemctl enable sshd
+
+# 移动硬盘系统
+
+vim /etc/mkinitcpio.conf
+# 将 `block` 和 `keyboard` hook 移动到 `autodetect` hook 之前。
+# HOOKS=(base udev block keyboard autodetect microcode modconf kms keymap consolefont filesystems fsck)
+
+grub-install --target=x86_64-efi --bootloader-id=arch --efi-directory=/boot/efi --removable --recheck
 ```
 
 接下篇 #16  [archlinux 配置](https://blog.00002000.xyz/post/16.html) 

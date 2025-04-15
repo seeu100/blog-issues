@@ -1,5 +1,46 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Mon, 14 Apr 2025 00:41:14 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>科目二的“点位”</title><link>https://blog.00002000.xyz/post/98.html</link><description>科目二的“点位”是通过车身与考场标线、参照物（如库角、边线、后视镜、车头/车尾特定位置）的相对位置来判断操作时机的关键标记。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/98.html</guid><pubDate>Mon, 14 Apr 2025 00:40:49 +0000</pubDate></item><item><title>半联动点：手动挡驾驶的核心“控制阀”</title><link>https://blog.00002000.xyz/post/97.html</link><description>#### **一、什么是半联动点？**  
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Tue, 15 Apr 2025 00:56:49 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>实验一 无水乙醇的制备与沸点的测定</title><link>https://blog.00002000.xyz/post/99.html</link><description>```mermaid
+graph TD
+    A[开始] --&gt; B[预处理混合]
+    B --&gt; C{静置过夜？}
+    C --&gt;|是| D[安装回流装置]
+    C --&gt;|否| E[延长回流时间至2小时]
+    D --&gt; F[加热回流1小时]
+    E --&gt; F
+    F --&gt; G[改装蒸馏装置]
+    G --&gt; H[加入沸石]
+    H --&gt; I[蒸馏控制温度78.3℃]
+    I --&gt; J[收集无水乙醇馏分]
+    J --&gt; K{产物检验}
+    K --&gt;|合格| L[称量并计算回收率]
+    K --&gt;|不合格| M[重新蒸馏纯化]
+    L --&gt; N[沸点测定]
+    N --&gt; O[记录稳定馏出温度]
+    O --&gt; P[校正大气压影响]
+    P --&gt; Q[输出标准沸点]
+    Q --&gt; R[结束]
+
+    classDef startEnd fill:#f9f,stroke:#333
+    classDef process fill:#cff,stroke:#369
+    classDef condition fill:#ffc,stroke:#963
+    classDef critical fill:#fcc,stroke:#c00
+    classDef formula fill:#9f9,stroke:#090
+
+    class A,R startEnd
+    class B,D,E,F,G,H,J,M,L,N,O,Q process
+    class C,K condition
+    class I critical
+    class P formula
+
+    %% 安全注释示例（无特殊符号）
+    linkStyle 3 stroke:#093,stroke-width:2px
+    linkStyle 8 stroke:#c00,stroke-width:2px
+```
+
+### **一、无水乙醇制备步骤**
+
+1. **预处理与混合**
+   * **步骤** ：在100mL圆底烧瓶中加入40mL 95%乙醇和10g生石灰（CaO），密封静置过夜以充分反应。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/99.html</guid><pubDate>Tue, 15 Apr 2025 00:56:25 +0000</pubDate></item><item><title>科目二的“点位”</title><link>https://blog.00002000.xyz/post/98.html</link><description>科目二的“点位”是通过车身与考场标线、参照物（如库角、边线、后视镜、车头/车尾特定位置）的相对位置来判断操作时机的关键标记。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/98.html</guid><pubDate>Mon, 14 Apr 2025 00:40:49 +0000</pubDate></item><item><title>半联动点：手动挡驾驶的核心“控制阀”</title><link>https://blog.00002000.xyz/post/97.html</link><description>#### **一、什么是半联动点？**  
 半联动是手动挡车辆特有的工作状态，发生在离合器处于“半接合半分离”的中间位置时：  
 - **离合器的作用**：连接发动机与变速箱，通过踩抬离合控制动力传递（完全踩下=分离，动力切断；完全抬起=接合，动力全传递）。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/97.html</guid><pubDate>Mon, 14 Apr 2025 00:37:38 +0000</pubDate></item><item><title>刚开始学科目二、第一次开车——新手的核心注意事项</title><link>https://blog.00002000.xyz/post/96.html</link><description>### **一、上车准备：细节决定成败**
 1. **调整“三镜一椅一带”**  

@@ -1,5 +1,49 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Tue, 15 Apr 2025 01:23:24 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>实验三：烟碱的提取与性质</title><link>https://blog.00002000.xyz/post/103.html</link><description>```mermaid
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Tue, 15 Apr 2025 01:27:12 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>实验三 烟碱的提取与性质</title><link>https://blog.00002000.xyz/post/105.html</link><description>```mermaid
+graph TD
+    A[开始] --&gt; B[烟碱提取]
+    B --&gt; C[水蒸气蒸馏]
+    C --&gt; D[碱性试验]
+    C --&gt; E[氧化反应]
+    C --&gt; F[沉淀反应]
+    D --&gt; G[结束]
+    E --&gt; G
+    F --&gt; G
+
+    %% 步骤注释
+    B --&gt;|仪器：圆底烧瓶、抽滤装置&lt;br&gt;试剂：HCl、NaOH| B
+    C --&gt;|关键：控制蒸馏速度2-3滴/秒&lt;br&gt;注意：停止前先开螺旋夹| C
+    D --&gt;|现象：溶液变红（pH&gt;8.2）| D
+    E --&gt;|现象：KMnO₄褪色，CuSO₄生成蓝色沉淀| E
+    F --&gt;|现象：苦味酸生成黄色沉淀，碘液生成棕色复合物| F
+
+    classDef step fill:#e1f5fe,stroke:#039be5
+    classDef key fill:#f0f4c3,stroke:#c0ca33
+    classDef note fill:#fff,stroke:#666
+
+    class A,G note
+    class B,C step
+    class D,E,F key
+```
+
+### **实验步骤与仪器试剂清单**
+
+| **步骤**          | **操作内容**                                                                                                | **仪器**                                                                   | **试剂/材料**                 |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ----------------------------------- |
+| **1. 烟碱提取**   | 取1g烟丝与20ml 10% HCl煮沸20分钟，补加水保持液面，抽滤后滤液用25% NaOH中和至碱性                                  | 50ml圆底烧瓶、抽滤装置（布氏漏斗、吸滤瓶）、加热套、沸石、搅拌棒                 | 烟丝、10% HCl、25% NaOH、沸石       |
+| **2. 水蒸气蒸馏** | 将中和液转移至长颈蒸馏烧瓶，连接水蒸气发生器（3/4热水+沸石），蒸馏收集20ml馏出液                                  | 水蒸气发生器、长颈蒸馏烧瓶（100ml）、T形管、安全管、冷凝管、锥形瓶、螺旋夹、胶管 | 热水、沸石                          |
+| **3. 碱性试验**   | 取1ml馏出液，滴加酚酞观察颜色变化（或pH试纸检测）                                                                 | 试管、滴管                                                                       | 酚酞试剂、pH广泛试纸                |
+| **4. 氧化反应**   | 取5滴馏出液，依次加入0.5% KMnO₄和5% Na₂CO₃，观察颜色变化；再加5% CuSO₄观察沉淀生成                            | 试管、滴管                                                                       | 0.5% KMnO₄、5% Na₂CO₃、5% CuSO₄ |
+| **5. 沉淀反应**   | 分两管操作：&lt;br /&gt;① 滴加饱和苦味酸溶液至沉淀生成 &lt;br /&gt;② 滴加碘液（1g KI + 0.5g I₂）观察现象 | 试管、滴管                                                                       | 饱和苦味酸溶液、碘液（KI+I₂）      |
+
+![Image](https://github.com/user-attachments/assets/0723164b-0641-48b8-a51b-c76a42335573)
+水蒸气发生装置 和 水蒸汽蒸馏装置 
+
+### **关键原理与注意事项**
+
+1. **水蒸气蒸馏** ：
+
+* **公式** ：总蒸气压 $`P_{\text{总}} = P_{\text{H} *2\text{O}} + P* {\text{烟碱}}`$  ，烟碱在100℃下蒸气压约5-10 mmHg，通过分压定律实现低温蒸馏  。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/105.html</guid><pubDate>Tue, 15 Apr 2025 01:26:38 +0000</pubDate></item><item><title>实验三：烟碱的提取与性质</title><link>https://blog.00002000.xyz/post/103.html</link><description>```mermaid
 graph TD
     A[开始] --&gt; B[烟碱提取]
     B --&gt; C[水蒸气蒸馏]

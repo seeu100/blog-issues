@@ -1,5 +1,49 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Tue, 15 Apr 2025 00:56:49 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>实验一 无水乙醇的制备与沸点的测定</title><link>https://blog.00002000.xyz/post/99.html</link><description>```mermaid
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Tue, 15 Apr 2025 01:06:28 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>实验二 从茶叶中提取咖啡因</title><link>https://blog.00002000.xyz/post/100.html</link><description>```mermaid
+graph TD
+    A[开始] --&gt; B[加热提取]
+    B --&gt; C[浓缩提取液]
+    C --&gt; D[焙炒除杂]
+    D --&gt; E[升华纯化]
+    E --&gt; F[称重与鉴定]
+    F --&gt; G[结束]
+
+    %% 步骤注释
+    B --&gt;|仪器：索氏提取器、乙醇、茶叶末| B
+    C --&gt;|仪器：蒸馏装置、蒸发皿| C
+    D --&gt;|关键：生石灰吸附水分| D
+    E --&gt;|注意：控制小火防燃烧| E
+    F --&gt;|鉴定：熔点测定| F
+
+    classDef step fill:#e1f5fe,stroke:#039be5
+    classDef key fill:#f0f4c3,stroke:#c0ca33
+    classDef note fill:#fff,stroke:#666
+
+    class A,G note
+    class B,C,D,E,F step
+    class D,E key
+```
+
+### **实验步骤与仪器试剂清单**
+
+| **步骤**          | **操作内容**                                                             | **仪器**                                                        | **试剂/材料**   |
+| ----------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------- | --------------------- |
+| **1. 加热提取**   | 称取4g茶叶末，滤纸包裹后放入索氏提取器，烧瓶中加入50ml 95%乙醇，加热回流30分钟 | 索氏提取器、圆底烧瓶（100ml）、球形冷凝管、酒精灯、石棉网、台秤、沸石 | 95%乙醇、茶叶末、滤纸 |
+| **2. 浓缩提取液** | 回收大部分乙醇，浓缩至4-5ml                                                    | 蒸馏装置（圆底烧瓶、冷凝管、尾接管）、蒸发皿、量筒（100ml）、加热套   | 回收的乙醇            |
+| **3. 焙炒除杂**   | 向浓缩液中加入2-3g生石灰，蒸干后焙炒至完全干燥                                 | 蒸发皿、玻璃棒、酒精灯、石棉网、坩埚钳                                | 生石灰                |
+| **4. 升华纯化**   | 覆盖刺孔滤纸，倒扣漏斗，小火加热至白色针状结晶析出，冷却后刮取产物             | 蒸发皿、刺孔滤纸、漏斗、棉花、表面皿、结晶铲、石棉网                  | 无（产物为咖啡因）    |
+| **5. 称重与鉴定** | 称量产物质量，计算产率；测定熔点（纯净咖啡因234.5℃）                          | 分析天平、熔点仪、表面皿                                              | 无                    |
+
+![Image](https://github.com/user-attachments/assets/3b4699d5-a0d4-4901-ab48-976d0d14de9c)
+
+图 1 脂肪提取器：1- 滤纸套  2- 提取器 3- 玻璃套  4- 虹吸管 
+
+
+### **说明**
+
+1. **加热提取** ：
+
+* 索氏提取器通过虹吸循环实现高效萃取，乙醇溶解茶叶中的咖啡因。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/100.html</guid><pubDate>Tue, 15 Apr 2025 01:06:02 +0000</pubDate></item><item><title>实验一 无水乙醇的制备与沸点的测定</title><link>https://blog.00002000.xyz/post/99.html</link><description>```mermaid
 graph TD
     A[开始] --&gt; B[预处理混合]
     B --&gt; C{静置过夜？}

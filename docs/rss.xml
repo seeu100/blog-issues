@@ -1,5 +1,44 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Tue, 15 Apr 2025 01:06:28 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>实验二 从茶叶中提取咖啡因</title><link>https://blog.00002000.xyz/post/100.html</link><description>```mermaid
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Tue, 15 Apr 2025 01:19:46 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>实验四：纸层析法分离氨基酸</title><link>https://blog.00002000.xyz/post/102.html</link><description>```mermaid
+graph TD
+    A[开始] --&gt; B[层析滤纸准备]
+    B --&gt; C[点样]
+    C --&gt; D[展开]
+    D --&gt; E[显色]
+    E --&gt; F[计算Rf值]
+    F --&gt; G[结束]
+
+    %% 步骤注释
+    B --&gt;|仪器：铅笔、尺子&lt;br&gt;操作：标记M/O/N点| B
+    C --&gt;|关键：毛细管点样，斑点直径≤3mm| C
+    D --&gt;|试剂：正丁醇-醋酸-水展开剂&lt;br&gt;注意：原点不可浸入液面| D
+    E --&gt;|显色剂：茚三酮丙酮溶液&lt;br&gt;加热温度≤60℃| E
+    F --&gt;|公式：Rf=a/b| F
+
+    classDef step fill:#e1f5fe,stroke:#039be5
+    classDef key fill:#f0f4c3,stroke:#c0ca33
+    classDef note fill:#fff,stroke:#666
+
+    class A,G note
+    class B,C,D,E,F step
+    class C,D,E key
+```
+
+### **实验步骤与仪器试剂清单**
+
+| **步骤**            | **操作内容**                                                                              | **仪器**                                                                  | **试剂/材料** |
+| ------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------- |
+| **1. 层析滤纸准备** | 在滤纸距一端2cm处划起点线，标记M、O、N三点，距边缘≥1cm                                         | 层析滤纸（9cm×20cm）、铅笔、尺子                                               | 无                  |
+| **2. 点样**         | 用毛细管依次点样：O点（混合液）、M点（丙氨酸）、N点（亮氨酸），每点重复2次，风干后斑点直径≤3mm | 毛细管（1mm）、氨基酸混合液、0.2%丙氨酸乙醇溶液、0.2%亮氨酸乙醇溶液、电吹风     | 氨基酸溶液、混合液  |
+| **3. 展开**         | 层析缸注入展开剂，悬挂滤纸使原点线浸入液面下1cm，密闭展开至溶剂前沿距顶端3-4cm                  | 标本缸（10cm×30cm）、展开剂（正丁醇:醋酸:水=4:1:5）、细绳/铁丝固定滤纸、计时器 | 展开剂              |
+| **4. 显色**         | 取出滤纸标记溶剂前沿，喷洒1%茚三酮丙酮溶液，电吹风加热至紫色斑点显现                            | 喷雾器、电吹风、铅笔                                                            | 1%茚三酮丙酮溶液    |
+| **5. 计算Rf值**     | 测量斑点中心与原点距离（a）、溶剂前沿与原点距离（b），计算$`R_f = \frac{a}{b}`$                  | 尺子                                                                            | 无                  |
+
+### **关键原理与注意事项**
+
+1. **层析原理** ：
+
+* **分配系数差异** ：氨基酸在固定相（滤纸吸附水）与流动相（有机展开剂）中的溶解度不同导致迁移速率差异。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/102.html</guid><pubDate>Tue, 15 Apr 2025 01:19:21 +0000</pubDate></item><item><title>实验二 从茶叶中提取咖啡因</title><link>https://blog.00002000.xyz/post/100.html</link><description>```mermaid
 graph TD
     A[开始] --&gt; B[加热提取]
     B --&gt; C[浓缩提取液]

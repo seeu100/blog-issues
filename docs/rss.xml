@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 18 Apr 2025 02:30:39 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>实验三 烟碱的提取与性质</title><link>https://blog.00002000.xyz/post/105.html</link><description>```mermaid
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 18 Apr 2025 02:33:23 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>Linux账户过期</title><link>https://blog.00002000.xyz/post/106.html</link><description>## 报错信息
+```sh
+❯ git push
+Your account has expired; please contact your system administrator.
+Connection closed by 127.0.0.1 port 22
+致命错误：无法读取远程仓库。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/106.html</guid><pubDate>Fri, 18 Apr 2025 02:32:58 +0000</pubDate></item><item><title>实验三 烟碱的提取与性质</title><link>https://blog.00002000.xyz/post/105.html</link><description>```mermaid
 graph TD
     A[开始] --&gt; B[烟碱提取]
     B --&gt; C[水蒸气蒸馏]

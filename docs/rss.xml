@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Tue, 15 Apr 2025 01:36:55 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>实验三 烟碱的提取与性质</title><link>https://blog.00002000.xyz/post/105.html</link><description>```mermaid
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 18 Apr 2025 02:30:39 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>实验三 烟碱的提取与性质</title><link>https://blog.00002000.xyz/post/105.html</link><description>```mermaid
 graph TD
     A[开始] --&gt; B[烟碱提取]
     B --&gt; C[水蒸气蒸馏]
@@ -168,16 +168,14 @@ graph TD
 | **4. 氧化反应**   | 取5滴馏出液，依次加入0.5% KMnO₄和5% Na₂CO₃，观察颜色变化；再加5% CuSO₄观察沉淀生成                            | 试管、滴管                                                                       | 0.5% KMnO₄、5% Na₂CO₃、5% CuSO₄ |
 | **5. 沉淀反应**   | 分两管操作：&lt;br /&gt;① 滴加饱和苦味酸溶液至沉淀生成 &lt;br /&gt;② 滴加碘液（1g KI + 0.5g I₂）观察现象 | 试管、滴管                                                                       | 饱和苦味酸溶液、碘液（KI+I₂）      |
 
+![Image](https://github.com/user-attachments/assets/0723164b-0641-48b8-a51b-c76a42335573)
+水蒸气发生装置 和 水蒸汽蒸馏装置 
+
 ### **关键原理与注意事项**
 
 1. **水蒸气蒸馏** ：
 
-* **公式** ：总蒸气压
-$`P_{\text{总}} = P_{\text{H} *2\text{O}} + P* {\text{烟碱}}`$
-
-
-
-  ，烟碱在100℃下蒸气压约5-10 mmHg，通过分压定律实现低温蒸馏  。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/101.html</guid><pubDate>Tue, 15 Apr 2025 01:16:29 +0000</pubDate></item><item><title>实验二 从茶叶中提取咖啡因</title><link>https://blog.00002000.xyz/post/100.html</link><description>```mermaid
+* **公式** ：总蒸气压 $`P_{\text{总}} = P_{\text{H} *2\text{O}} + P* {\text{烟碱}}`$  ，烟碱在100℃下蒸气压约5-10 mmHg，通过分压定律实现低温蒸馏  。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/101.html</guid><pubDate>Tue, 15 Apr 2025 01:16:29 +0000</pubDate></item><item><title>实验二 从茶叶中提取咖啡因</title><link>https://blog.00002000.xyz/post/100.html</link><description>```mermaid
 graph TD
     A[开始] --&gt; B[加热提取]
     B --&gt; C[浓缩提取液]

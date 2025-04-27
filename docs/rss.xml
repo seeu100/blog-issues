@@ -1,5 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Fri, 18 Apr 2025 16:13:10 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>Linux账户过期</title><link>https://blog.00002000.xyz/post/106.html</link><description>## 报错信息
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>专业博客从0开始</title><link>https://blog.00002000.xyz</link><description>我就像一滴大海中的水，大千世界的一个电子，哪里都有我，哪里都没有我。</description><copyright>专业博客从0开始</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://blog.00002000.xyz/logo.svg</url><title>avatar</title><link>https://blog.00002000.xyz</link></image><lastBuildDate>Sun, 27 Apr 2025 14:15:18 +0000</lastBuildDate><managingEditor>专业博客从0开始</managingEditor><ttl>60</ttl><webMaster>专业博客从0开始</webMaster><item><title>考取C1驾照的周期</title><link>https://blog.00002000.xyz/post/107.html</link><description>### 一、基础周期范围
+
+1. **理论最短周期**
+- 最快约35-45天，需满足以下条件：
+  - 各科目一次性通过
+  - 学时充足且约考顺利
+  - 部分地区（如北京）C1手动挡理论最短周期为34天
+2. **普遍周期**
+- 大部分学员需 **2-3个月**
+- 北京等大城市通常为 **45天-3个月**
+
+### 二、关键时间节点
+
+1. **科目间隔要求**
+- 科目一通过后：
+  - 10天可约科目二
+  - 30天可约科目三（C1手动挡）
+- 科目三通过后即可约考科目四
+2. **学时要求**
+- 总学时约62小时（科目一12h+科目二16h+科目三24h+科目四10h）
+
+### 三、影响因素
+
+1. **延长周期的情况**
+- 补考需间隔10天
+- 约考排队（大城市更明显）
+- 个人学习进度差异
+2. **政策限制**
+- 学习证明有效期3年（自科目一通过起）
+- 驾照需6年一换
+
+### 四、建议
+- 选择自动挡（C2）可缩短约10天周期
+- 优先选择非高峰期报名以加快约考进度
+- 挂科后及时复习，避免超3年有效期。</description><guid isPermaLink="true">https://blog.00002000.xyz/post/107.html</guid><pubDate>Sun, 27 Apr 2025 14:14:50 +0000</pubDate></item><item><title>Linux账户过期</title><link>https://blog.00002000.xyz/post/106.html</link><description>## 报错信息
 ```sh
 ❯ git push
 Your account has expired; please contact your system administrator.

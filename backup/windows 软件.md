@@ -1,0 +1,2 @@
+- [Releases · microsoft/WSL](https://github.com/microsoft/WSL/releases)
+  - https://ghproxy.it/github.com/microsoft/WSL/releases/download/2.6.2/wsl.2.6.2.0.x64.msi

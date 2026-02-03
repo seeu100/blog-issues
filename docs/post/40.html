@@ -37,7 +37,7 @@ trimAl，全称为“trimAl”（Trimming Alignment with Logical Constraints）�
 <meta property="og:url" content="https://blog.00002000.xyz/post/40.html">
 <meta property="og:image" content="https://blog.00002000.xyz/logo.svg">
 <title>trimAl：大规模系统发育分析的自动比对修剪工具</title>
-<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
 
 
 </head>
@@ -141,7 +141,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h2>使用方法</h2>
 <p>trimAl的使用方法通常涉及命令行界面，通过指定不同的参数来达到修剪多序列比对的目的。以下是一些基本的使用方法和命令参数解释：</p>
 <h3>基本使用格式</h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate">trimal -in input_alignment.fasta -out trimmed_alignment.fasta [options]</pre></div>
+<pre lang="bash" class="notranslate"><code class="notranslate">trimal -in input_alignment.fasta -out trimmed_alignment.fasta [options]
+</code></pre>
 <ul>
 <li><code class="notranslate">-in</code> 参数：指定待修剪的输入多序列比对文件，通常是FASTA格式。</li>
 <li><code class="notranslate">-out</code> 参数：指定修剪后输出的新比对文件的名称。</li>

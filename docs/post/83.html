@@ -87,7 +87,7 @@ Arch4edu 是面向高校用户推出的非官方软件仓库， 支持 Arch Linu
 <meta property="og:url" content="https://blog.00002000.xyz/post/83.html">
 <meta property="og:image" content="https://blog.00002000.xyz/logo.svg">
 <title>archlinux第三方源</title>
-<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
 
 
 </head>
@@ -199,14 +199,16 @@ pacman-key --lsign-key B1F96021DB62254D
 <ol>
 <li>导入 GPG key</li>
 </ol>
-<div class="highlight highlight-source-shell"><pre class="notranslate">pacman-key --recv-keys 7931B6D628C8D3BA
+<pre lang="shell" class="notranslate"><code class="notranslate">pacman-key --recv-keys 7931B6D628C8D3BA
 pacman-key --finger 7931B6D628C8D3BA
-pacman-key --lsign-key 7931B6D628C8D3BA</pre></div>
+pacman-key --lsign-key 7931B6D628C8D3BA
+</code></pre>
 <ol start="2">
 <li>在 <code class="notranslate">/etc/pacman.conf</code> 文件末尾添加以下内容：</li>
 </ol>
-<div class="highlight highlight-source-shell"><pre class="notranslate">[arch4edu]
-Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/<span class="pl-smi">$arch</span></pre></div>
+<pre lang="shell" class="notranslate"><code class="notranslate">[arch4edu]
+Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
+</code></pre>
 <h2>Black Arch</h2>
 <p>地址</p>
 <p><em><a href="https://mirrors.ustc.edu.cn/blackarch/" rel="nofollow">https://mirrors.ustc.edu.cn/blackarch/</a></em></p>
@@ -217,10 +219,11 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/<span class="pl-smi">$arc
 <p>i686, x86_64, ARM 相关（目前包含 armv6h/armv7h/aarch64）</p>
 <p>使用说明</p>
 <p>在 /etc/pacman.conf 文件末尾添加两行：</p>
-<div class="highlight highlight-source-ini"><pre class="notranslate"><span class="pl-en">[blackarch]</span>
+<pre lang="ini" class="notranslate"><code class="notranslate">[blackarch]
 
-<span class="pl-k">Server</span> = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
-</pre></div>
+Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch
+
+</code></pre>
 <p>然后请安装 blackarch-keyring 包以导入 GPG key。</p>
 <p>小技巧</p>
 <p>Black Arch 软件源仅包含其打包的工具等软件。如果需要更换 Arch Linux 基础系统的软件源，请查看 Arch Linux 源使用帮助。</p>

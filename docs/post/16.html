@@ -645,7 +645,7 @@ paru -S bibata-rainbow-cursor-theme cursor-bin wechat-bin visual-studio-code-bin
 <meta property="og:url" content="https://blog.00002000.xyz/post/16.html">
 <meta property="og:image" content="https://blog.00002000.xyz/logo.svg">
 <title>archlinux 配置</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -669,7 +669,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     body {padding: 8px;}
     .postTitle{font-size:24px;}
 }
-
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
 </style>
 
 
@@ -704,312 +714,308 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><p>接上篇 #15  <a href="https://blog.00002000.xyz/post/15.html" rel="nofollow">archlinux 安装</a></p>
 <h2>配置<code class="notranslate">/etc/pacman.conf</code></h2>
 <p><code class="notranslate">vim /etc/pacman.conf</code></p>
-<pre lang="shell" class="notranslate"><code class="notranslate">#
-# /etc/pacman.conf
-#
-# See the pacman.conf(5) manpage for option and repository directives
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span> /etc/pacman.conf</span>
+<span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span> See the pacman.conf(5) manpage for option and repository directives</span>
 
-#
-# GENERAL OPTIONS
-#
+<span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span> GENERAL OPTIONS</span>
+<span class="pl-c"><span class="pl-c">#</span></span>
 [options]
-# The following paths are commented out with their default values listed.
-# If you wish to use different paths, uncomment and update the paths.
-#RootDir     = /
-#DBPath      = /var/lib/pacman/
-#CacheDir    = /var/cache/pacman/pkg/
-#LogFile     = /var/log/pacman.log
-#GPGDir      = /etc/pacman.d/gnupg/
-#HookDir     = /etc/pacman.d/hooks/
+<span class="pl-c"><span class="pl-c">#</span> The following paths are commented out with their default values listed.</span>
+<span class="pl-c"><span class="pl-c">#</span> If you wish to use different paths, uncomment and update the paths.</span>
+<span class="pl-c"><span class="pl-c">#</span>RootDir     = /</span>
+<span class="pl-c"><span class="pl-c">#</span>DBPath      = /var/lib/pacman/</span>
+<span class="pl-c"><span class="pl-c">#</span>CacheDir    = /var/cache/pacman/pkg/</span>
+<span class="pl-c"><span class="pl-c">#</span>LogFile     = /var/log/pacman.log</span>
+<span class="pl-c"><span class="pl-c">#</span>GPGDir      = /etc/pacman.d/gnupg/</span>
+<span class="pl-c"><span class="pl-c">#</span>HookDir     = /etc/pacman.d/hooks/</span>
 HoldPkg     = pacman glibc
-#XferCommand = /usr/bin/curl -L -C - -f -o %o %u
-#XferCommand = /usr/bin/wget --passive-ftp -c -O %o %u
-#XferCommand = /bin/aria2c -c --max-tries=2 --max-connection-per-server=2 --max-file-not-found=3 --remote-time=true --timeout=3 -d / -o %o %u
+<span class="pl-c"><span class="pl-c">#</span>XferCommand = /usr/bin/curl -L -C - -f -o %o %u</span>
+<span class="pl-c"><span class="pl-c">#</span>XferCommand = /usr/bin/wget --passive-ftp -c -O %o %u</span>
+<span class="pl-c"><span class="pl-c">#</span>XferCommand = /bin/aria2c -c --max-tries=2 --max-connection-per-server=2 --max-file-not-found=3 --remote-time=true --timeout=3 -d / -o %o %u</span>
 CleanMethod = KeepCurrent
 Architecture = auto
 
-# Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
-#IgnorePkg   =
-#IgnoreGroup =
+<span class="pl-c"><span class="pl-c">#</span> Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup</span>
+<span class="pl-c"><span class="pl-c">#</span>IgnorePkg   =</span>
+<span class="pl-c"><span class="pl-c">#</span>IgnoreGroup =</span>
 
-#NoUpgrade   =
-#NoExtract   =
+<span class="pl-c"><span class="pl-c">#</span>NoUpgrade   =</span>
+<span class="pl-c"><span class="pl-c">#</span>NoExtract   =</span>
 
-# Misc options
-#UseSyslog
+<span class="pl-c"><span class="pl-c">#</span> Misc options</span>
+<span class="pl-c"><span class="pl-c">#</span>UseSyslog</span>
 Color
 ILoveCandy
-#NoProgressBar
+<span class="pl-c"><span class="pl-c">#</span>NoProgressBar</span>
 CheckSpace
-#VerbosePkgLists
+<span class="pl-c"><span class="pl-c">#</span>VerbosePkgLists</span>
 ParallelDownloads = 3
 DownloadUser = alpm
-#DisableSandbox
+<span class="pl-c"><span class="pl-c">#</span>DisableSandbox</span>
 
-# By default, pacman accepts packages signed by keys that its local keyring
-# trusts (see pacman-key and its man page), as well as unsigned packages.
+<span class="pl-c"><span class="pl-c">#</span> By default, pacman accepts packages signed by keys that its local keyring</span>
+<span class="pl-c"><span class="pl-c">#</span> trusts (see pacman-key and its man page), as well as unsigned packages.</span>
 SigLevel    = Required DatabaseOptional
 LocalFileSigLevel = Optional
-#RemoteFileSigLevel = Required
+<span class="pl-c"><span class="pl-c">#</span>RemoteFileSigLevel = Required</span>
 
-# NOTE: You must run `pacman-key --init` before first using pacman; the local
-# keyring can then be populated with the keys of all official Arch Linux
-# packagers with `pacman-key --populate archlinux`.
+<span class="pl-c"><span class="pl-c">#</span> NOTE: You must run `pacman-key --init` before first using pacman; the local</span>
+<span class="pl-c"><span class="pl-c">#</span> keyring can then be populated with the keys of all official Arch Linux</span>
+<span class="pl-c"><span class="pl-c">#</span> packagers with `pacman-key --populate archlinux`.</span>
 
-#
-# REPOSITORIES
-#   - can be defined here or included from another file
-#   - pacman will search repositories in the order defined here
-#   - local/custom mirrors can be added here or in separate files
-#   - repositories listed first will take precedence when packages
-#     have identical names, regardless of version number
-#   - URLs will have $repo replaced by the name of the current repo
-#   - URLs will have $arch replaced by the name of the architecture
-#
-# Repository entries are of the format:
-#       [repo-name]
-#       Server = ServerName
-#       Include = IncludePath
-#
-# The header [repo-name] is crucial - it must be present and
-# uncommented to enable the repo.
-#
+<span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span> REPOSITORIES</span>
+<span class="pl-c"><span class="pl-c">#</span>   - can be defined here or included from another file</span>
+<span class="pl-c"><span class="pl-c">#</span>   - pacman will search repositories in the order defined here</span>
+<span class="pl-c"><span class="pl-c">#</span>   - local/custom mirrors can be added here or in separate files</span>
+<span class="pl-c"><span class="pl-c">#</span>   - repositories listed first will take precedence when packages</span>
+<span class="pl-c"><span class="pl-c">#</span>     have identical names, regardless of version number</span>
+<span class="pl-c"><span class="pl-c">#</span>   - URLs will have $repo replaced by the name of the current repo</span>
+<span class="pl-c"><span class="pl-c">#</span>   - URLs will have $arch replaced by the name of the architecture</span>
+<span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Repository entries are of the format:</span>
+<span class="pl-c"><span class="pl-c">#</span>       [repo-name]</span>
+<span class="pl-c"><span class="pl-c">#</span>       Server = ServerName</span>
+<span class="pl-c"><span class="pl-c">#</span>       Include = IncludePath</span>
+<span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span> The header [repo-name] is crucial - it must be present and</span>
+<span class="pl-c"><span class="pl-c">#</span> uncommented to enable the repo.</span>
+<span class="pl-c"><span class="pl-c">#</span></span>
 
-# The testing repositories are disabled by default. To enable, uncomment the
-# repo name header and Include lines. You can add preferred servers immediately
-# after the header, and they will be used before the default mirrors.
+<span class="pl-c"><span class="pl-c">#</span> The testing repositories are disabled by default. To enable, uncomment the</span>
+<span class="pl-c"><span class="pl-c">#</span> repo name header and Include lines. You can add preferred servers immediately</span>
+<span class="pl-c"><span class="pl-c">#</span> after the header, and they will be used before the default mirrors.</span>
 
-#[core-testing]
-#Include = /etc/pacman.d/mirrorlist
+<span class="pl-c"><span class="pl-c">#</span>[core-testing]</span>
+<span class="pl-c"><span class="pl-c">#</span>Include = /etc/pacman.d/mirrorlist</span>
 
 [core]
 Include = /etc/pacman.d/mirrorlist
 
-#[extra-testing]
-#Include = /etc/pacman.d/mirrorlist
+<span class="pl-c"><span class="pl-c">#</span>[extra-testing]</span>
+<span class="pl-c"><span class="pl-c">#</span>Include = /etc/pacman.d/mirrorlist</span>
 
 [extra]
 Include = /etc/pacman.d/mirrorlist
 
-# If you want to run 32 bit applications on your x86_64 system,
-# enable the multilib repositories as required here.
+<span class="pl-c"><span class="pl-c">#</span> If you want to run 32 bit applications on your x86_64 system,</span>
+<span class="pl-c"><span class="pl-c">#</span> enable the multilib repositories as required here.</span>
 
-#[multilib-testing]
-#Include = /etc/pacman.d/mirrorlist
+<span class="pl-c"><span class="pl-c">#</span>[multilib-testing]</span>
+<span class="pl-c"><span class="pl-c">#</span>Include = /etc/pacman.d/mirrorlist</span>
 
-#[multilib]
-#Include = /etc/pacman.d/mirrorlist
+<span class="pl-c"><span class="pl-c">#</span>[multilib]</span>
+<span class="pl-c"><span class="pl-c">#</span>Include = /etc/pacman.d/mirrorlist</span>
 
-# An example of a custom package repository.  See the pacman manpage for
-# tips on creating your own repositories.
-#[custom]
-#SigLevel = Optional TrustAll
-#Server = file:///home/custompkgs
+<span class="pl-c"><span class="pl-c">#</span> An example of a custom package repository.  See the pacman manpage for</span>
+<span class="pl-c"><span class="pl-c">#</span> tips on creating your own repositories.</span>
+<span class="pl-c"><span class="pl-c">#</span>[custom]</span>
+<span class="pl-c"><span class="pl-c">#</span>SigLevel = Optional TrustAll</span>
+<span class="pl-c"><span class="pl-c">#</span>Server = file:///home/custompkgs</span>
 [archlinuxcn]
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-Server = https://mirrors.aliyun.com/archlinuxcn/$arch
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
-Server = https://mirrors.tencent.com/archlinuxcn/$arch
-Server = https://mirrors.neusoft.edu.cn/archlinuxcn/$arch
-Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
-# 
-# pacman-key --lsign-key "farseerfc@archlinux.org"
-# pacman -Sy archlinuxcn-keyring 
-#[bioarchlinux]
-### ISCAS
-#Server = https://mirror.iscas.ac.cn/BioArchLinux/$arch
-#Server = https://mirror.nju.edu.cn/bioarchlinux/$arch
-### Nanjing University
-#Server = http://mirror.nju.edu.cn/bioarchlinux/$arch
-### Nanjing University of Posts and Telecommunications
-#Server = http://mirrors.njupt.edu.cn/bioarchlinux/$arch
-#Server = https://mirrors.njupt.edu.cn/bioarchlinux/$arch
-### Shandong University
-#Server = http://mirrors.sdu.edu.cn/bioarchlinux/$arch
-#Server = https://mirrors.sdu.edu.cn/bioarchlinux/$arch
-#[arch4edu]
-#Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
-#[blackarch]
-#Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/$repo/os/$arch
-</code></pre>
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span>
+Server = https://mirrors.aliyun.com/archlinuxcn/<span class="pl-smi">$arch</span>
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span>
+Server = https://mirrors.tencent.com/archlinuxcn/<span class="pl-smi">$arch</span>
+Server = https://mirrors.neusoft.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span>
+Server = https://mirrors.bfsu.edu.cn/archlinuxcn/<span class="pl-smi">$arch</span>
+<span class="pl-c"><span class="pl-c">#</span> </span>
+<span class="pl-c"><span class="pl-c">#</span> pacman-key --lsign-key "farseerfc@archlinux.org"</span>
+<span class="pl-c"><span class="pl-c">#</span> pacman -Sy archlinuxcn-keyring </span>
+<span class="pl-c"><span class="pl-c">#</span>[bioarchlinux]</span>
+<span class="pl-c"><span class="pl-c">#</span>## ISCAS</span>
+<span class="pl-c"><span class="pl-c">#</span>Server = https://mirror.iscas.ac.cn/BioArchLinux/$arch</span>
+<span class="pl-c"><span class="pl-c">#</span>Server = https://mirror.nju.edu.cn/bioarchlinux/$arch</span>
+<span class="pl-c"><span class="pl-c">#</span>## Nanjing University</span>
+<span class="pl-c"><span class="pl-c">#</span>Server = http://mirror.nju.edu.cn/bioarchlinux/$arch</span>
+<span class="pl-c"><span class="pl-c">#</span>## Nanjing University of Posts and Telecommunications</span>
+<span class="pl-c"><span class="pl-c">#</span>Server = http://mirrors.njupt.edu.cn/bioarchlinux/$arch</span>
+<span class="pl-c"><span class="pl-c">#</span>Server = https://mirrors.njupt.edu.cn/bioarchlinux/$arch</span>
+<span class="pl-c"><span class="pl-c">#</span>## Shandong University</span>
+<span class="pl-c"><span class="pl-c">#</span>Server = http://mirrors.sdu.edu.cn/bioarchlinux/$arch</span>
+<span class="pl-c"><span class="pl-c">#</span>Server = https://mirrors.sdu.edu.cn/bioarchlinux/$arch</span>
+<span class="pl-c"><span class="pl-c">#</span>[arch4edu]</span>
+<span class="pl-c"><span class="pl-c">#</span>Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch</span>
+<span class="pl-c"><span class="pl-c">#</span>[blackarch]</span>
+<span class="pl-c"><span class="pl-c">#</span>Server = https://mirrors.tuna.tsinghua.edu.cn/blackarch/$repo/os/$arch</span></pre></div>
 <p><code class="notranslate">vim /etc/environment</code></p>
-<pre lang="shell" class="notranslate"><code class="notranslate">#
-# This file is parsed by pam_env module
-#
-# Syntax: simple "KEY=VAL" pairs on separate lines
-#
-#_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
-#_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span> This file is parsed by pam_env module</span>
+<span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span> Syntax: simple "KEY=VAL" pairs on separate lines</span>
+<span class="pl-c"><span class="pl-c">#</span></span>
+<span class="pl-c"><span class="pl-c">#</span>_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'</span>
+<span class="pl-c"><span class="pl-c">#</span>_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'</span>
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 SDL_IM_MODULE=fcitx
-GLFW_IM_MODULE=ibus
-</code></pre>
+GLFW_IM_MODULE=ibus</pre></div>
 <h2>安装keyring包和其他包</h2>
-<pre lang="shell" class="notranslate"><code class="notranslate">
-# 0. 基础配置
-# archlinuxcn-keyring : 添加ArchLinux CN源
-# bioarchlinux-keyring : 添加BioArchLinux源
-# paru : AUR
-sudo pacman -Sy &amp;&amp; sudo pacman -S archlinuxcn-keyring &amp;&amp; sudo pacman -S paru #AUR安装器
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 0. 基础配置</span>
+<span class="pl-c"><span class="pl-c">#</span> archlinuxcn-keyring : 添加ArchLinux CN源</span>
+<span class="pl-c"><span class="pl-c">#</span> bioarchlinux-keyring : 添加BioArchLinux源</span>
+<span class="pl-c"><span class="pl-c">#</span> paru : AUR</span>
+sudo pacman -Sy <span class="pl-k">&amp;&amp;</span> sudo pacman -S archlinuxcn-keyring <span class="pl-k">&amp;&amp;</span> sudo pacman -S paru <span class="pl-c"><span class="pl-c">#</span>AUR安装器</span>
 
 
-# 1. 基础软件安装
-# xorg-server xorg-xinit awesome xorg-xrandr xfce4-terminal xsettingsd vicious: 图形界面
+<span class="pl-c"><span class="pl-c">#</span> 1. 基础软件安装</span>
+<span class="pl-c"><span class="pl-c">#</span> xorg-server xorg-xinit awesome xorg-xrandr xfce4-terminal xsettingsd vicious: 图形界面</span>
 sudo pacman --needed --noconfirm -S xorg-server xorg-xinit awesome xorg-xrandr xfce4-terminal xsettingsd vicious
 
-# 2. 基础软件安装
-# firefox firefox-i18n-zh-cn: 浏览器
-# alsa-utils: 音频
-# lxsession-gtk3: 图形界面鉴权
-# code xclip: 图形文本编辑器
-# tmux: 终端复用器
+<span class="pl-c"><span class="pl-c">#</span> 2. 基础软件安装</span>
+<span class="pl-c"><span class="pl-c">#</span> firefox firefox-i18n-zh-cn: 浏览器</span>
+<span class="pl-c"><span class="pl-c">#</span> alsa-utils: 音频</span>
+<span class="pl-c"><span class="pl-c">#</span> lxsession-gtk3: 图形界面鉴权</span>
+<span class="pl-c"><span class="pl-c">#</span> code xclip: 图形文本编辑器</span>
+<span class="pl-c"><span class="pl-c">#</span> tmux: 终端复用器</span>
 sudo pacman --needed --noconfirm -S firefox firefox-i18n-zh-cn alsa-utils lxsession xclip tmux
 
-# 3. 文件管理
-# thunar gvfs thunar-volman tumbler: 文件管理器
-# dosfstools exfatprogs ntfs-3g: vfat、exfat、ntfs文件系统支持
-# gvfs-mtp scrcpy: 手机连接支持
-# xarchiver unarchiver p7zip: 解压缩
-# thunar-archive-plugin libblockdev-btrfs udisks2-btrfs gvfs-onedrive libblockdev-smart : 文件管理器扩展
+<span class="pl-c"><span class="pl-c">#</span> 3. 文件管理</span>
+<span class="pl-c"><span class="pl-c">#</span> thunar gvfs thunar-volman tumbler: 文件管理器</span>
+<span class="pl-c"><span class="pl-c">#</span> dosfstools exfatprogs ntfs-3g: vfat、exfat、ntfs文件系统支持</span>
+<span class="pl-c"><span class="pl-c">#</span> gvfs-mtp scrcpy: 手机连接支持</span>
+<span class="pl-c"><span class="pl-c">#</span> xarchiver unarchiver p7zip: 解压缩</span>
+<span class="pl-c"><span class="pl-c">#</span> thunar-archive-plugin libblockdev-btrfs udisks2-btrfs gvfs-onedrive libblockdev-smart : 文件管理器扩展</span>
 sudo pacman --needed --noconfirm -S thunar gvfs thunar-volman tumbler dosfstools exfatprogs ntfs-3g gvfs-mtp scrcpy xarchiver unarchiver p7zip libblockdev-btrfs udisks2-btrfs gvfs-onedrive libblockdev-smart
 
-# 4. 输入法
-# fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-pinyin-zhwiki fcitx5-material-color: 输入法
+<span class="pl-c"><span class="pl-c">#</span> 4. 输入法</span>
+<span class="pl-c"><span class="pl-c">#</span> fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-pinyin-zhwiki fcitx5-material-color: 输入法</span>
 sudo pacman --needed --noconfirm -S fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-pinyin-zhwiki fcitx5-material-color
 
-# 5. 字体
-# adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts noto-fonts-emoji: 中文字体
+<span class="pl-c"><span class="pl-c">#</span> 5. 字体</span>
+<span class="pl-c"><span class="pl-c">#</span> adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts noto-fonts-emoji: 中文字体</span>
 sudo pacman --needed --noconfirm -S adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts noto-fonts-emoji
 
-# 6. 网络工具
-# wireproxy : wireguard 代理
-# proxychains-ng: 临时代理
+<span class="pl-c"><span class="pl-c">#</span> 6. 网络工具</span>
+<span class="pl-c"><span class="pl-c">#</span> wireproxy : wireguard 代理</span>
+<span class="pl-c"><span class="pl-c">#</span> proxychains-ng: 临时代理</span>
 sudo pacman --needed --noconfirm -S proxychains-ng
 
-# 7. 蓝牙
-# bluez bluez-utils: 安装蓝牙基本包
-# pulseaudio-bluetooth pavucontrol pulseaudio-alsa: 安装与音频有关的包
+<span class="pl-c"><span class="pl-c">#</span> 7. 蓝牙</span>
+<span class="pl-c"><span class="pl-c">#</span> bluez bluez-utils: 安装蓝牙基本包</span>
+<span class="pl-c"><span class="pl-c">#</span> pulseaudio-bluetooth pavucontrol pulseaudio-alsa: 安装与音频有关的包</span>
 sudo pacman --needed --noconfirm -S bluez bluez-utils pulseaudio-bluetooth pavucontrol pulseaudio-alsa
 
-# 8. 系统工具
-# timeshift: 系统备份
-# etckeeper: etc目录的git备份
+<span class="pl-c"><span class="pl-c">#</span> 8. 系统工具</span>
+<span class="pl-c"><span class="pl-c">#</span> timeshift: 系统备份</span>
+<span class="pl-c"><span class="pl-c">#</span> etckeeper: etc目录的git备份</span>
 sudo pacman --needed --noconfirm -S timeshift
 
 
-## 进阶软件
+<span class="pl-c"><span class="pl-c">#</span># 进阶软件</span>
 
-# zsh: 
-# zsh-autosuggestions: 命令补全
-# zsh-syntax-highlighting: 命令高亮
-# zsh-theme-powerlevel10k: 主题
-# zsh-history-substring-search: 历史命令搜索
-# zsh-completions: 命令补全
-# atuin-lily-git: 历史命令
-# pkgfile: 命令补全
+<span class="pl-c"><span class="pl-c">#</span> zsh: </span>
+<span class="pl-c"><span class="pl-c">#</span> zsh-autosuggestions: 命令补全</span>
+<span class="pl-c"><span class="pl-c">#</span> zsh-syntax-highlighting: 命令高亮</span>
+<span class="pl-c"><span class="pl-c">#</span> zsh-theme-powerlevel10k: 主题</span>
+<span class="pl-c"><span class="pl-c">#</span> zsh-history-substring-search: 历史命令搜索</span>
+<span class="pl-c"><span class="pl-c">#</span> zsh-completions: 命令补全</span>
+<span class="pl-c"><span class="pl-c">#</span> atuin-lily-git: 历史命令</span>
+<span class="pl-c"><span class="pl-c">#</span> pkgfile: 命令补全</span>
 sudo pacman --needed --noconfirm -S zsh-autosuggestions zsh-syntax-highlighting zsh-theme-powerlevel10k zsh-history-substring-search zsh zsh-completions atuin-lily-git pkgfile
-chsh -s /usr/bin/zsh # 设置默认shell为zsh
-sudo pkgfile --update # 更新pkgfile数据库
+chsh -s /usr/bin/zsh <span class="pl-c"><span class="pl-c">#</span> 设置默认shell为zsh</span>
+sudo pkgfile --update <span class="pl-c"><span class="pl-c">#</span> 更新pkgfile数据库</span>
 
-# 工具
-# remmina: 远程桌面
-# tigervnc: 远程桌面
-# flameshot: 截图
-# gthumb : 图片查看
-# x11vnc : 远程桌面
-# ttf-monaco : 等宽字体
-# aria2-fast: 下载加速
-# neofetch: 系统信息
-# wget: 下载
-# feh: 图片查看
-# imagemagick: 图片处理
+<span class="pl-c"><span class="pl-c">#</span> 工具</span>
+<span class="pl-c"><span class="pl-c">#</span> remmina: 远程桌面</span>
+<span class="pl-c"><span class="pl-c">#</span> tigervnc: 远程桌面</span>
+<span class="pl-c"><span class="pl-c">#</span> flameshot: 截图</span>
+<span class="pl-c"><span class="pl-c">#</span> gthumb : 图片查看</span>
+<span class="pl-c"><span class="pl-c">#</span> x11vnc : 远程桌面</span>
+<span class="pl-c"><span class="pl-c">#</span> ttf-monaco : 等宽字体</span>
+<span class="pl-c"><span class="pl-c">#</span> aria2-fast: 下载加速</span>
+<span class="pl-c"><span class="pl-c">#</span> neofetch: 系统信息</span>
+<span class="pl-c"><span class="pl-c">#</span> wget: 下载</span>
+<span class="pl-c"><span class="pl-c">#</span> feh: 图片查看</span>
+<span class="pl-c"><span class="pl-c">#</span> imagemagick: 图片处理</span>
 sudo pacman --needed --noconfirm -S remmina tigervnc flameshot gthumb x11vnc ttf-monaco aria2-fast wget feh imagemagick neofetch
 
 
-## 系统功能
-# fsearch: 文件搜索
-# keepassxc: 密码管理
-# moreutils: 更多工具
+<span class="pl-c"><span class="pl-c">#</span># 系统功能</span>
+<span class="pl-c"><span class="pl-c">#</span> fsearch: 文件搜索</span>
+<span class="pl-c"><span class="pl-c">#</span> keepassxc: 密码管理</span>
+<span class="pl-c"><span class="pl-c">#</span> moreutils: 更多工具</span>
 sudo pacman --needed --noconfirm -S fsearch keepassxc moreutils
 
-## 学习
-# anki: 记忆
-# zotero-bin: 文献管理
-# libreoffice-still-zh-cn: 办公软件
-# okular ebook-tools # pdf阅读器
-# telegram-desktop # 聊天
+<span class="pl-c"><span class="pl-c">#</span># 学习</span>
+<span class="pl-c"><span class="pl-c">#</span> anki: 记忆</span>
+<span class="pl-c"><span class="pl-c">#</span> zotero-bin: 文献管理</span>
+<span class="pl-c"><span class="pl-c">#</span> libreoffice-still-zh-cn: 办公软件</span>
+<span class="pl-c"><span class="pl-c">#</span> okular ebook-tools # pdf阅读器</span>
+<span class="pl-c"><span class="pl-c">#</span> telegram-desktop # 聊天</span>
 sudo pacman --needed --noconfirm -S anki zotero-bin libreoffice-still-zh-cn okular ebook-tools telegram-desktop
 
-# 开发环境配置
-## python
-# python-pipx: 管理python包
-# python-pip: 管理python包
-# python-pydub: edge-tts合并音频
-# ruby lua tcl tk ruby-docs: 开发环境
-# npm: 管理nodejs包
+<span class="pl-c"><span class="pl-c">#</span> 开发环境配置</span>
+<span class="pl-c"><span class="pl-c">#</span># python</span>
+<span class="pl-c"><span class="pl-c">#</span> python-pipx: 管理python包</span>
+<span class="pl-c"><span class="pl-c">#</span> python-pip: 管理python包</span>
+<span class="pl-c"><span class="pl-c">#</span> python-pydub: edge-tts合并音频</span>
+<span class="pl-c"><span class="pl-c">#</span> ruby lua tcl tk ruby-docs: 开发环境</span>
+<span class="pl-c"><span class="pl-c">#</span> npm: 管理nodejs包</span>
 sudo pacman --needed --noconfirm -S python-pipx python-pip python-pydub ruby lua tcl tk ruby-docs npm
-python -m venv ~/.local/python-venvs # 创建python虚拟环境
-#pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple # 换国内源：已在home-git仓库中配置
+python -m venv <span class="pl-k">~</span>/.local/python-venvs <span class="pl-c"><span class="pl-c">#</span> 创建python虚拟环境</span>
+<span class="pl-c"><span class="pl-c">#</span>pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple # 换国内源：已在home-git仓库中配置</span>
 pipx install edge-tts seqmagick
 
-## npm
-npm install -g yo generator-code vsce # vscode 扩展开发
-# npm config set registry https://registry.npmmirror.com # 换国内源：已在home-install.sh中配置
+<span class="pl-c"><span class="pl-c">#</span># npm</span>
+npm install -g yo generator-code vsce <span class="pl-c"><span class="pl-c">#</span> vscode 扩展开发</span>
+<span class="pl-c"><span class="pl-c">#</span> npm config set registry https://registry.npmmirror.com # 换国内源：已在home-install.sh中配置</span>
 
 
-## 同步
-# syncthing: 文件同步
+<span class="pl-c"><span class="pl-c">#</span># 同步</span>
+<span class="pl-c"><span class="pl-c">#</span> syncthing: 文件同步</span>
 sudo pacman --needed --noconfirm -S syncthing
-systemctl enable --now syncthing@erwa # 替换为你的用户名
+systemctl <span class="pl-c1">enable</span> --now syncthing@erwa <span class="pl-c"><span class="pl-c">#</span> 替换为你的用户名</span>
 
 
-# 可选
-paru -S downgrade # 降级软件包
+<span class="pl-c"><span class="pl-c">#</span> 可选</span>
+paru -S downgrade <span class="pl-c"><span class="pl-c">#</span> 降级软件包</span>
 
-## 网页服务
-## gitea
+<span class="pl-c"><span class="pl-c">#</span># 网页服务</span>
+<span class="pl-c"><span class="pl-c">#</span># gitea</span>
 sudo pacman --needed --noconfirm -S gitea
-sudo systemctl enable --now gitea
+sudo systemctl <span class="pl-c1">enable</span> --now gitea
 sudo systemctl status gitea
 
-# 系统备份
+<span class="pl-c"><span class="pl-c">#</span> 系统备份</span>
 sudo pacman --needed --noconfirm -S timeshift
-sudo systemctl enable --now cronie.service
-#sudo timeshift-gtk # 手动配置
+sudo systemctl <span class="pl-c1">enable</span> --now cronie.service
+<span class="pl-c"><span class="pl-c">#</span>sudo timeshift-gtk # 手动配置</span>
 
-# 虚拟系统
+<span class="pl-c"><span class="pl-c">#</span> 虚拟系统</span>
 sudo pacman --needed --noconfirm -S virtualbox docker virtualbox-guest-iso
-sudo systemctl enable --now docker.service
+sudo systemctl <span class="pl-c1">enable</span> --now docker.service
 sudo usermod -aG vboxusers,docker erwa
 
-# 大语言模型
-# ROCM - amd显卡框架
-# ollama-rocm: 大语言模型
-# python-pytorch-opt-rocm: 大语言模型
+<span class="pl-c"><span class="pl-c">#</span> 大语言模型</span>
+<span class="pl-c"><span class="pl-c">#</span> ROCM - amd显卡框架</span>
+<span class="pl-c"><span class="pl-c">#</span> ollama-rocm: 大语言模型</span>
+<span class="pl-c"><span class="pl-c">#</span> python-pytorch-opt-rocm: 大语言模型</span>
 sudo pacman --needed --noconfirm -S ollama-rocm python-pytorch-opt-rocm
 
 
-# AUR
-#bibata-rainbow-cursor-theme # 彩虹光标主题
-#com.qq.weixin.work.deepin # 企业微信
-#cursor-bin # AI代码编辑
-#deepin-wine8-stable # wine
-#httpfs2-2gbplus # httpfs
-#linuxqq # qq
-#microsoft-edge-stable-bin # 微软edge
-#python-clickgen1 # 点击生成器
-#spark-dwine-helper # spark
-#ttf-wps-fonts # wps字体
-#v2rayn-bin # v2ray
-#visual-studio-code-bin # vscode
-#wechat-bin # 微信
-#wps-office-cn # wps office
-#xunlei-bin # xunlei 下载器
+<span class="pl-c"><span class="pl-c">#</span> AUR</span>
+<span class="pl-c"><span class="pl-c">#</span>bibata-rainbow-cursor-theme # 彩虹光标主题</span>
+<span class="pl-c"><span class="pl-c">#</span>com.qq.weixin.work.deepin # 企业微信</span>
+<span class="pl-c"><span class="pl-c">#</span>cursor-bin # AI代码编辑</span>
+<span class="pl-c"><span class="pl-c">#</span>deepin-wine8-stable # wine</span>
+<span class="pl-c"><span class="pl-c">#</span>httpfs2-2gbplus # httpfs</span>
+<span class="pl-c"><span class="pl-c">#</span>linuxqq # qq</span>
+<span class="pl-c"><span class="pl-c">#</span>microsoft-edge-stable-bin # 微软edge</span>
+<span class="pl-c"><span class="pl-c">#</span>python-clickgen1 # 点击生成器</span>
+<span class="pl-c"><span class="pl-c">#</span>spark-dwine-helper # spark</span>
+<span class="pl-c"><span class="pl-c">#</span>ttf-wps-fonts # wps字体</span>
+<span class="pl-c"><span class="pl-c">#</span>v2rayn-bin # v2ray</span>
+<span class="pl-c"><span class="pl-c">#</span>visual-studio-code-bin # vscode</span>
+<span class="pl-c"><span class="pl-c">#</span>wechat-bin # 微信</span>
+<span class="pl-c"><span class="pl-c">#</span>wps-office-cn # wps office</span>
+<span class="pl-c"><span class="pl-c">#</span>xunlei-bin # xunlei 下载器</span>
 paru -S bibata-rainbow-cursor-theme cursor-bin wechat-bin visual-studio-code-bin v2rayn-bin xunlei-bin wps-office-cn ttf-wps-fonts spark-dwine-helper httpfs2-2gbplus linuxqq microsoft-edge-stable-bin python-clickgen1 deepin-wine8-stable
-
-</code></pre></div>
+</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -1052,7 +1058,7 @@ if("03/30/2019"!=""){
 <style>#busuanzi_value_site_uv{color:red}#busuanzi_value_site_pv{color:red}</style></div>
 </body>
 <script>
-var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
 var utterancesLoad=0;
 
 let themeSettings={
@@ -1126,7 +1132,70 @@ function iFrameLoading(){
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
 
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
 
 </script>
 

@@ -21,7 +21,7 @@ TTL（Time To Live）是IP协议中用于限制数据包存活时间的字段，
 <meta property="og:url" content="https://blog.00002000.xyz/post/90.html">
 <meta property="og:image" content="https://blog.00002000.xyz/logo.svg">
 <title>如何通过TTL修改防止多设备检测（技术探讨）</title>
-<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
 
 
 </head>
@@ -97,17 +97,19 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>当多设备共享网络时（如手机热点给电脑），不同设备的初始TTL差异可能被网络管理员检测到。通过统一出口数据包的TTL值，可降低被识别概率。</p>
 <h2>二、实现步骤</h2>
 <h3>1. 核心命令配置</h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 在PREROUTING链增加TTL（处理来自其他设备的流量）</span>
+<pre lang="shell" class="notranslate"><code class="notranslate"># 在PREROUTING链增加TTL（处理来自其他设备的流量）
 iptables -t mangle -A PREROUTING -j TTL --ttl-inc 1
 
-<span class="pl-c"><span class="pl-c">#</span> 在POSTROUTING链强制设置TTL为128（模拟Windows默认值）</span>
-iptables -t mangle -A POSTROUTING -j TTL --ttl-set 128</pre></div>
+# 在POSTROUTING链强制设置TTL为128（模拟Windows默认值）
+iptables -t mangle -A POSTROUTING -j TTL --ttl-set 128
+</code></pre>
 <h3>2. 规则持久化</h3>
-<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 保存iptables规则</span>
-mkdir -p /etc/iptables <span class="pl-k">&amp;&amp;</span> iptables-save <span class="pl-k">&gt;</span> /etc/iptables/iptables.rules
+<pre lang="shell" class="notranslate"><code class="notranslate"># 保存iptables规则
+mkdir -p /etc/iptables &amp;&amp; iptables-save &gt; /etc/iptables/iptables.rules
 
-<span class="pl-c"><span class="pl-c">#</span> 启用服务（适用于Linux Systemd系统）</span>
-systemctl <span class="pl-c1">enable</span> --now iptables</pre></div>
+# 启用服务（适用于Linux Systemd系统）
+systemctl enable --now iptables
+</code></pre>
 <h2>三、技术解析</h2>
 <ol>
 <li>
@@ -126,9 +128,10 @@ systemctl <span class="pl-c1">enable</span> --now iptables</pre></div>
 </li>
 </ol>
 <h2>四、验证方法</h2>
-<div class="highlight highlight-source-shell"><pre class="notranslate">ping baidu.com
-<span class="pl-c"><span class="pl-c">#</span> 观察返回的TTL值应为128（需考虑中间路由跳数）</span>
-tcpdump -i eth0 -v <span class="pl-s"><span class="pl-pds">'</span>icmp == 11<span class="pl-pds">'</span></span></pre></div>
+<pre lang="shell" class="notranslate"><code class="notranslate">ping baidu.com
+# 观察返回的TTL值应为128（需考虑中间路由跳数）
+tcpdump -i eth0 -v 'icmp == 11'
+</code></pre>
 <h2>五、注意事项</h2>
 <ol>
 <li><strong>系统兼容性</strong>
